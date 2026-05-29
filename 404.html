@@ -48,6 +48,31 @@
       name="google-site-verification"
       content="2CveeZ8bFUCJ8dNyPdcSqegZfA5GRLo31Kofua6M7rw"
     />
+    <script>
+      (function () {
+        if (window.location.pathname === "/member-area") {
+          window.location.replace("/");
+          return;
+        }
+
+        function hideMemberAreaLinks() {
+          document.querySelectorAll('a[href="/member-area"]').forEach(function (link) {
+            var container = link.closest("li, div, a");
+            if (container) {
+              container.style.display = "none";
+            } else {
+              link.style.display = "none";
+            }
+          });
+        }
+
+        document.addEventListener("DOMContentLoaded", hideMemberAreaLinks);
+        new MutationObserver(hideMemberAreaLinks).observe(document.documentElement, {
+          childList: true,
+          subtree: true,
+        });
+      })();
+    </script>
     <script type="module" crossorigin src="/assets/index-DcIiukqN-r3.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-C1rHpr10.css">
   </head>
