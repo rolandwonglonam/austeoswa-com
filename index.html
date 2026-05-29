@@ -52,7 +52,8 @@
       (function () {
         if (
           window.location.pathname === "/member-area" ||
-          window.location.pathname === "/notice"
+          window.location.pathname === "/notice" ||
+          window.location.pathname === "/organization"
         ) {
           window.location.replace("/");
           return;
@@ -60,7 +61,9 @@
 
         function hideRestrictedLinks() {
           document
-            .querySelectorAll('a[href="/member-area"], a[href="/notice"]')
+            .querySelectorAll(
+              'a[href="/member-area"], a[href="/notice"], a[href="/organization"]'
+            )
             .forEach(function (link) {
               var container = link.closest("li, div, a");
               if (container) {
@@ -69,6 +72,10 @@
                 link.style.display = "none";
               }
             });
+
+          document.querySelectorAll('img[alt="logo_two"]').forEach(function (logo) {
+            logo.style.display = "none";
+          });
         }
 
         document.addEventListener("DOMContentLoaded", hideRestrictedLinks);
