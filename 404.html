@@ -50,24 +50,29 @@
     />
     <script>
       (function () {
-        if (window.location.pathname === "/member-area") {
+        if (
+          window.location.pathname === "/member-area" ||
+          window.location.pathname === "/notice"
+        ) {
           window.location.replace("/");
           return;
         }
 
-        function hideMemberAreaLinks() {
-          document.querySelectorAll('a[href="/member-area"]').forEach(function (link) {
-            var container = link.closest("li, div, a");
-            if (container) {
-              container.style.display = "none";
-            } else {
-              link.style.display = "none";
-            }
-          });
+        function hideRestrictedLinks() {
+          document
+            .querySelectorAll('a[href="/member-area"], a[href="/notice"]')
+            .forEach(function (link) {
+              var container = link.closest("li, div, a");
+              if (container) {
+                container.style.display = "none";
+              } else {
+                link.style.display = "none";
+              }
+            });
         }
 
-        document.addEventListener("DOMContentLoaded", hideMemberAreaLinks);
-        new MutationObserver(hideMemberAreaLinks).observe(document.documentElement, {
+        document.addEventListener("DOMContentLoaded", hideRestrictedLinks);
+        new MutationObserver(hideRestrictedLinks).observe(document.documentElement, {
           childList: true,
           subtree: true,
         });
