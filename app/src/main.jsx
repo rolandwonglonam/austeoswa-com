@@ -35,7 +35,7 @@ const pageTitles = {
   "/news": "新闻活动",
   "/membership": "会员权益",
   "/publications": "文化会讯",
-  "/gallery": "图库 FAQ",
+  "/gallery": "图库问答",
   "/programs/medical-summer-school": "医学研修",
   "/contact": "联系我们",
 };
@@ -438,7 +438,7 @@ function PublicationsPage() {
 
 function GalleryPage() {
   return (
-    <PageShell eyebrow="Gallery & FAQ" title="图库 FAQ" image="/assets/logan-meeting.jpg">
+    <PageShell eyebrow="Gallery & FAQ" title="图库问答" image="/assets/logan-meeting.jpg">
       <SectionTitle
         eyebrow="Material map"
         title="按授权风险组织图库"

@@ -19,7 +19,7 @@ export const navItems = [
   { label: "新闻活动", href: "/news" },
   { label: "会员权益", href: "/membership" },
   { label: "文化会讯", href: "/publications" },
-  { label: "图库 FAQ", href: "/gallery" },
+  { label: "图库问答", href: "/gallery" },
   { label: "医学研修", href: "/programs/medical-summer-school" },
   { label: "联系我们", href: "/contact" },
 ];
@@ -51,6 +51,7 @@ export const principles = [
 
 export const associationBoard = [
   { role: "创会会长", names: ["龙啸"] },
+  { role: "荣誉会长", names: ["方灿", "赖文峰", "李刚勇", "卢霄霓", "吴友和", "吴子强", "杨友斌", "张培孚"] },
   { role: "会长", names: ["黄璐璐"] },
   { role: "执行会长", names: ["黄雪莲"] },
   { role: "副会长", names: ["陈泽宁", "黄挺", "李希", "林泽辉", "王罗湳", "辛卓阳", "杨璇钰", "张翼", "郑少杰"] },
@@ -63,6 +64,7 @@ export const associationBoard = [
 
 export const youthBoard = [
   { role: "创会会长", names: ["陈少伟 太平绅士"] },
+  { role: "荣誉会长", names: ["杜艇", "吴子强", "张桂芳", "郑茂强"] },
   { role: "会长", names: ["王泽平"] },
   { role: "执行会长", names: ["王罗湳"] },
   { role: "副会长", names: ["陈泽宁", "辛卓阳", "杨孟钊", "杨璇钰", "杨子辉", "张俊"] },
