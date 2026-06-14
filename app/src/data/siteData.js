@@ -20,6 +20,7 @@ export const navItems = [
   { label: "会员权益", href: "/membership" },
   { label: "文化会讯", href: "/publications" },
   { label: "图库 FAQ", href: "/gallery" },
+  { label: "医学研修", href: "/programs/medical-summer-school" },
   { label: "联系我们", href: "/contact" },
 ];
 
@@ -318,4 +319,65 @@ export const contentModels = [
   { label: "Leader", purpose: "会长、理事、委员会成员" },
   { label: "MemberOrg", purpose: "团体会员、合作社团、合作伙伴" },
   { label: "FormSubmission", purpose: "入会、活动报名、合作咨询、志愿者申请" },
+];
+
+export const medicalProgram = {
+  title: "澳大利亚医学研修与职业探索项目",
+  eyebrow: "Australia 2026 Medicine Summer School",
+  heroImage: "/assets/medical-sydney-banner.jpg",
+  organizer: "Australia Teoswa Association & Youth Association",
+  operator: "Wayne InsightSpring Consulting Co., Ltd.",
+  summary:
+    "面向医学、康复、公共卫生、健康管理相关学生与专业人士的澳大利亚研修项目，结合高校学习、研究中心参访、临床观察、专家交流与案例研讨。",
+  note:
+    "当前页面只展示公开项目介绍。申请表、合同、费用、免责协议和个人资料不在官网公开发布，需由项目方确认后单独提供。",
+};
+
+export const medicalProgramPillars = [
+  {
+    title: "教育层面",
+    text: "从灌输知识转向能力培养，强调跨学科思考、批判性分析、团队协作和终身学习习惯。",
+  },
+  {
+    title: "临床层面",
+    text: "通过真实案例、模拟情境和临床问题相关学习，帮助参与者理解临床思维与职业责任。",
+  },
+  {
+    title: "科研层面",
+    text: "围绕医学研究方法、问题发现、研究设计、数据解释和成果转化，建立科研素养。",
+  },
+];
+
+export const medicalProgramModules = [
+  "高校与研究中心学习",
+  "临床观察与专家对话",
+  "医学科研与案例工作坊",
+  "社区健康与康复实践",
+  "健康政策与医疗体系观察",
+  "城市文化与职业探索",
+];
+
+export const medicalProgramStops = [
+  {
+    city: "Sydney",
+    title: "医学科研与城市研学",
+    text: "项目资料包含悉尼段行程结构，可承接开幕介绍、医学科研研讨、案例工作坊、城市探索和行业交流。",
+  },
+  {
+    city: "Queensland",
+    title: "高校、社区健康与研究机构",
+    text: "资料提及昆士兰大学、社区健康与福祉中心、昆士兰医学研究所等方向，适合展示澳洲健康体系和科研协作。",
+  },
+  {
+    city: "Melbourne",
+    title: "康复医学与职业发展观察",
+    text: "项目素材包含莫纳什大学、康复医学、家庭护理、辅具技术和作业治疗相关内容，可作为后续细化模块。",
+  },
+];
+
+export const medicalProgramAudience = [
+  "医学、康复、护理、公共卫生、健康管理相关学生",
+  "希望了解澳大利亚医学教育与职业路径的青年",
+  "关注临床创新、社区健康、康复医学和科研训练的专业人士",
+  "高校、机构或社团组织的短期研学合作项目负责人",
 ];

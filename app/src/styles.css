@@ -182,7 +182,8 @@ img {
 .hero-grid,
 .page-hero-grid,
 .split-layout,
-.contact-layout {
+.contact-layout,
+.program-intro {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(360px, 0.86fr);
   gap: 2rem;
@@ -563,6 +564,63 @@ p {
   box-shadow: var(--shadow);
 }
 
+.program-intro {
+  align-items: start;
+  padding-bottom: 2rem;
+}
+
+.program-intro h2 {
+  max-width: 12ch;
+}
+
+.program-intro > img,
+.program-journey > img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.program-intro > img {
+  aspect-ratio: 0.72;
+  object-fit: cover;
+  object-position: top;
+}
+
+.program-meta {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 1.3rem;
+}
+
+.program-meta span {
+  display: block;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+  color: var(--brand-dark);
+  font-weight: 900;
+}
+
+.program-layout,
+.program-journey {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.44fr);
+  gap: 1.2rem;
+  align-items: start;
+}
+
+.program-journey > img {
+  aspect-ratio: 0.72;
+  object-fit: cover;
+  object-position: top;
+}
+
+.action-band.warning {
+  border-color: rgba(242, 189, 47, 0.55);
+  background: #fffaf0;
+}
+
 .content-panel {
   min-height: 18rem;
 }
@@ -719,7 +777,8 @@ p {
   .hero-grid,
   .page-hero-grid,
   .split-layout,
-  .contact-layout {
+  .contact-layout,
+  .program-intro {
     grid-template-columns: 1fr;
   }
 
@@ -731,7 +790,9 @@ p {
   .tier-grid,
   .album-grid,
   .publication-layout,
-  .gallery-layout {
+  .gallery-layout,
+  .program-layout,
+  .program-journey {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -783,6 +844,8 @@ p {
   .album-grid,
   .publication-layout,
   .gallery-layout,
+  .program-layout,
+  .program-journey,
   .timeline-list article {
     grid-template-columns: 1fr;
   }

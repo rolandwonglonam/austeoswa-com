@@ -11,6 +11,11 @@ import {
   galleryMoments,
   governanceUnits,
   heroStats,
+  medicalProgram,
+  medicalProgramAudience,
+  medicalProgramModules,
+  medicalProgramPillars,
+  medicalProgramStops,
   memberBenefits,
   membershipTiers,
   navItems,
@@ -31,6 +36,7 @@ const pageTitles = {
   "/membership": "会员权益",
   "/publications": "文化会讯",
   "/gallery": "图库 FAQ",
+  "/programs/medical-summer-school": "医学研修",
   "/contact": "联系我们",
 };
 
@@ -82,6 +88,7 @@ function App() {
         {path === "/membership" && <MembershipPage navigate={navigate} />}
         {path === "/publications" && <PublicationsPage />}
         {path === "/gallery" && <GalleryPage />}
+        {path === "/programs/medical-summer-school" && <MedicalProgramPage navigate={navigate} />}
         {path === "/contact" && <ContactPage />}
       </main>
       <Footer navigate={navigate} />
@@ -475,6 +482,78 @@ function GalleryPage() {
           </div>
         </aside>
       </section>
+    </PageShell>
+  );
+}
+
+function MedicalProgramPage({ navigate }) {
+  return (
+    <PageShell eyebrow="Program" title="医学研修" image={medicalProgram.heroImage}>
+      <section className="program-intro">
+        <div>
+          <p className="eyebrow">{medicalProgram.eyebrow}</p>
+          <h2>{medicalProgram.title}</h2>
+          <p>{medicalProgram.summary}</p>
+          <div className="program-meta">
+            <span>组织：{medicalProgram.organizer}</span>
+            <span>承办：{medicalProgram.operator}</span>
+          </div>
+        </div>
+        <img src="/assets/medical-program-background.jpg" alt="澳大利亚医学研修项目背景说明" />
+      </section>
+
+      <section className="subsection">
+        <SectionTitle eyebrow="Learning layers" title="三层能力目标" />
+        <div className="principle-grid">
+          {medicalProgramPillars.map((pillar) => (
+            <article className="info-card" key={pillar.title}>
+              <h3>{pillar.title}</h3>
+              <p>{pillar.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="subsection program-layout">
+        <div>
+          <SectionTitle eyebrow="Modules" title="可公开展示的项目模块" />
+          <div className="unit-grid">
+            {medicalProgramModules.map((module) => <span key={module}>{module}</span>)}
+          </div>
+        </div>
+        <aside className="model-panel">
+          <p className="eyebrow">Audience</p>
+          <h3>适合人群</h3>
+          {medicalProgramAudience.map((item) => (
+            <div key={item}>
+              <strong>{item}</strong>
+            </div>
+          ))}
+        </aside>
+      </section>
+
+      <section className="subsection">
+        <SectionTitle eyebrow="Journey" title="研学城市与内容方向" />
+        <div className="program-journey">
+          <img src="/assets/medical-program-journey.jpg" alt="澳大利亚医学研修项目路径资料" />
+          <div className="timeline-list">
+            {medicalProgramStops.map((stop) => (
+              <article key={stop.city}>
+                <strong>{stop.city}</strong>
+                <div>
+                  <h3>{stop.title}</h3>
+                  <p>{stop.text}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <div className="action-band warning">
+        <p>{medicalProgram.note}</p>
+        <button className="button primary" type="button" onClick={() => navigate("/contact")}>咨询项目合作</button>
+      </div>
     </PageShell>
   );
 }
