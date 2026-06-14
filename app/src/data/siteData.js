@@ -16,13 +16,17 @@ export const navItems = [
   { label: "首页", href: "/" },
   { label: "关于我们", href: "/about" },
   { label: "组织架构", href: "/organization" },
+  { label: "新闻活动", href: "/news" },
+  { label: "会员权益", href: "/membership" },
+  { label: "文化会讯", href: "/publications" },
+  { label: "图库 FAQ", href: "/gallery" },
   { label: "联系我们", href: "/contact" },
 ];
 
 export const heroStats = [
   { value: "2025", label: "第二届理事会与青年会成立资料" },
   { value: "QLD", label: "立足昆士兰，连接全澳社群" },
-  { value: "4", label: "门面版核心页面" },
+  { value: "8", label: "门户版公开页面" },
 ];
 
 export const principles = [
@@ -101,3 +105,217 @@ export const activities = [
 ];
 
 export const contactTopics = ["入会咨询", "活动合作", "媒体与社群合作", "青年会项目", "素材或会务对接"];
+
+export const newsArticles = [
+  {
+    category: "总会新闻",
+    title: "澳大利亚潮汕同乡会暨青年会官网升级计划启动",
+    date: "2026-06",
+    image: "/assets/ceremony-group.jpg",
+    summary:
+      "第一阶段聚焦组织可信度、组织架构、公开联系入口和后续内容系统底座，逐步把活动、会讯、会员服务沉淀到官网。",
+  },
+  {
+    category: "青年会动态",
+    title: "青年会将建立职业发展、校园合作与志愿者项目入口",
+    date: "Phase 2",
+    image: "/assets/ceremony-speech.jpg",
+    summary:
+      "面向留学生、新移民和青年专业人士，青年会专区将承载职业沙龙、校园合作、创业交流和公益实践。",
+  },
+  {
+    category: "活动回顾",
+    title: "会员活动与社区参与素材完成首轮归档",
+    date: "素材待确认",
+    image: "/assets/cruise-boat.jpg",
+    summary:
+      "新春游轮、成立大会、对外交流等素材已进入官网候选池，公开前仍需确认人物照片和活动授权范围。",
+  },
+  {
+    category: "外联合作",
+    title: "对外拜访与社区合作资料进入官网规划",
+    date: "素材待确认",
+    image: "/assets/logan-meeting.jpg",
+    summary:
+      "外联会面照片可作为合作证明素材，但市政会面、人物正脸照和说明文字需要会方确认后再正式公开。",
+  },
+];
+
+export const eventCalendar = [
+  {
+    title: "青年职业发展沙龙",
+    date: "规划中",
+    location: "Queensland",
+    audience: "学生 / 新移民 / 青年专业人士",
+    summary: "用于承接青年会职业发展、校园合作、导师分享和志愿者招募。",
+  },
+  {
+    title: "潮汕文化家庭日",
+    date: "规划中",
+    location: "Gold Coast / Brisbane",
+    audience: "会员 / 家庭 / 社区伙伴",
+    summary: "围绕潮汕节庆、工夫茶、潮汕美食和亲子体验建立可复用文化活动。",
+  },
+  {
+    title: "医学研修与职业探索项目",
+    date: "2026 项目资料待审",
+    location: "Sydney / Australia",
+    audience: "医学相关学生与合作院校",
+    summary: "夏令营资料已形成独立项目素材池，申请表、合同、费用与免责材料默认不公开。",
+  },
+];
+
+export const membershipTiers = [
+  {
+    name: "普通会员",
+    price: "待定",
+    bestFor: "潮汕乡亲、新移民、社区朋友",
+    benefits: ["活动优先通知", "会员会讯", "公开活动报名", "社群资源连接"],
+  },
+  {
+    name: "青年会员",
+    price: "待定",
+    bestFor: "学生、职场初期、创业青年",
+    benefits: ["青年会项目", "职业沙龙", "志愿者机会", "校园合作资源"],
+  },
+  {
+    name: "团体 / 合作伙伴",
+    price: "定制",
+    bestFor: "企业、社团、高校、媒体与公益机构",
+    benefits: ["联合活动", "品牌展示", "合作资源对接", "项目共创"],
+  },
+];
+
+export const memberBenefits = [
+  {
+    title: "活动优先权",
+    text: "会员可优先获知活动预告、报名名额、志愿者机会和会讯发布。",
+  },
+  {
+    title: "青年项目入口",
+    text: "青年会员可参与职业沙龙、校园合作、创业交流和导师资源匹配。",
+  },
+  {
+    title: "团体展示",
+    text: "团体会员与合作伙伴可在授权后获得官网目录展示和联合活动露出。",
+  },
+  {
+    title: "社区资源连接",
+    text: "通过同乡会网络连接专业服务、公益组织、文化机构与社团资源。",
+  },
+];
+
+export const publicationItems = [
+  {
+    title: "组织章程与公开资料",
+    type: "Governance",
+    summary: "用于归档章程、公开简介、理事会确认后的组织资料和对外说明。",
+  },
+  {
+    title: "季度会讯",
+    type: "Publication",
+    summary: "归档重要活动、组织动态、会员故事和合作鸣谢。",
+  },
+  {
+    title: "活动特刊",
+    type: "Event Report",
+    summary: "用于重大节庆、公益活动、青年论坛后的对外传播。",
+  },
+  {
+    title: "年度报告",
+    type: "Annual Report",
+    summary: "沉淀组织治理、财务透明、活动成果和下一年计划。",
+  },
+];
+
+export const publicationsArchive = [
+  {
+    title: "澳大利亚潮汕青年会章程",
+    type: "章程资料",
+    date: "2025",
+    summary: "已从本地素材提取，适合整理为公开组织说明和治理依据。",
+  },
+  {
+    title: "澳大利亚潮汕同乡会章程",
+    type: "章程资料",
+    date: "待核对",
+    summary: "已纳入素材清单，正式发布前需确认版本和公开范围。",
+  },
+  {
+    title: "成立大会与活动照片归档",
+    type: "活动资料",
+    date: "素材待确认",
+    summary: "可作为官网图库、新闻回顾和会讯配图的基础素材池。",
+  },
+  {
+    title: "医学研修项目资料包",
+    type: "项目资料",
+    date: "2026",
+    summary: "适合后续单独做项目专题页；合同、申请表、费用和免责材料不直接公开。",
+  },
+];
+
+export const galleryAlbums = [
+  {
+    title: "成立大会与会务礼仪",
+    count: "42 个文件",
+    date: "素材池",
+    image: "/assets/ceremony-group.jpg",
+    summary: "用于展示组织成立、会务合影、致辞和重要仪式。",
+  },
+  {
+    title: "青年会与对外交流",
+    count: "候选素材",
+    date: "素材池",
+    image: "/assets/ceremony-speech.jpg",
+    summary: "用于展示青年会项目、外联合作、职业成长和活动执行。",
+  },
+  {
+    title: "会员活动与新春游轮",
+    count: "22 个文件",
+    date: "素材池",
+    image: "/assets/cruise-boat.jpg",
+    summary: "用于展示会员联谊、节庆活动和社区参与。",
+  },
+  {
+    title: "市政与社区合作",
+    count: "4 个文件",
+    date: "需授权",
+    image: "/assets/logan-meeting.jpg",
+    summary: "用于展示外联拜访和社区合作，发布前需确认人物与场景授权。",
+  },
+];
+
+export const galleryMoments = [
+  { label: "Governance", title: "会务与礼仪", text: "就职典礼、理事会合影、合作拜访和重要仪式。" },
+  { label: "Youth", title: "青年活动", text: "职业沙龙、校园合作、创业分享和志愿者现场。" },
+  { label: "Culture", title: "文化节庆", text: "节庆、工夫茶、潮汕美食和家庭参与活动。" },
+  { label: "Community", title: "公益社区", text: "公益探访、社区协作、会员故事和跨机构项目。" },
+];
+
+export const faqs = [
+  {
+    question: "非潮汕籍朋友可以参加活动吗？",
+    answer: "公开文化活动、论坛和合作项目通常欢迎各界朋友参与；会员权益以当期章程和活动规则为准。",
+  },
+  {
+    question: "青年会主要服务哪些人？",
+    answer: "青年会面向学生、留学生、新移民、职场初期专业人士和创业青年，重点做职业发展、社群连接和实践项目。",
+  },
+  {
+    question: "入会申请需要准备什么？",
+    answer: "第一阶段先提交入会意向，后续由秘书处确认资格、会员类别、费用说明、资料授权和审核流程。",
+  },
+  {
+    question: "企业或社团如何合作？",
+    answer: "可通过合作咨询入口提交活动共创、赞助、媒体、高校或公益项目需求，由外联合作负责人跟进。",
+  },
+];
+
+export const contentModels = [
+  { label: "Article", purpose: "新闻、公告、媒体报道、潮汕文化文章" },
+  { label: "Event", purpose: "活动预告、报名、活动回顾" },
+  { label: "Leader", purpose: "会长、理事、委员会成员" },
+  { label: "MemberOrg", purpose: "团体会员、合作社团、合作伙伴" },
+  { label: "FormSubmission", purpose: "入会、活动报名、合作咨询、志愿者申请" },
+];

@@ -4,10 +4,20 @@ import {
   activities,
   associationBoard,
   contactTopics,
+  contentModels,
+  eventCalendar,
+  faqs,
+  galleryAlbums,
+  galleryMoments,
   governanceUnits,
   heroStats,
+  memberBenefits,
+  membershipTiers,
   navItems,
+  newsArticles,
   principles,
+  publicationItems,
+  publicationsArchive,
   site,
   youthBoard,
 } from "./data/siteData";
@@ -17,6 +27,10 @@ const pageTitles = {
   "/": "首页",
   "/about": "关于我们",
   "/organization": "组织架构",
+  "/news": "新闻活动",
+  "/membership": "会员权益",
+  "/publications": "文化会讯",
+  "/gallery": "图库 FAQ",
   "/contact": "联系我们",
 };
 
@@ -64,6 +78,10 @@ function App() {
         {path === "/" && <HomePage navigate={navigate} />}
         {path === "/about" && <AboutPage />}
         {path === "/organization" && <OrganizationPage />}
+        {path === "/news" && <NewsPage navigate={navigate} />}
+        {path === "/membership" && <MembershipPage navigate={navigate} />}
+        {path === "/publications" && <PublicationsPage />}
+        {path === "/gallery" && <GalleryPage />}
         {path === "/contact" && <ContactPage />}
       </main>
       <Footer navigate={navigate} />
@@ -278,6 +296,185 @@ function ContactPage() {
           <button className="button primary" type="submit">发送咨询</button>
         </form>
       </div>
+    </PageShell>
+  );
+}
+
+function NewsPage({ navigate }) {
+  return (
+    <PageShell eyebrow="News & Events" title="新闻活动" image="/assets/ceremony-group.jpg">
+      <SectionTitle
+        eyebrow="Archive-ready"
+        title="把活动证明沉淀成长期内容"
+        text="新闻、公告、活动预告、活动回顾都按后续 CMS 内容模型排好；当前只放可公开候选内容和授权提醒。"
+      />
+      <div className="article-grid">
+        {newsArticles.map((item) => (
+          <article className="article-card" key={item.title}>
+            <img src={item.image} alt={item.title} />
+            <div>
+              <span>{item.category} · {item.date}</span>
+              <h3>{item.title}</h3>
+              <p>{item.summary}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+      <section className="subsection">
+        <SectionTitle eyebrow="Calendar" title="活动与项目规划" />
+        <div className="timeline-list">
+          {eventCalendar.map((event) => (
+            <article key={event.title}>
+              <strong>{event.date}</strong>
+              <div>
+                <h3>{event.title}</h3>
+                <p>{event.summary}</p>
+                <small>{event.location} · {event.audience}</small>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+      <div className="action-band">
+        <p>活动合作、新闻素材和媒体报道可统一进入联系入口，确认授权后再公开发布。</p>
+        <button className="button primary" type="button" onClick={() => navigate("/contact")}>提交活动合作</button>
+      </div>
+    </PageShell>
+  );
+}
+
+function MembershipPage({ navigate }) {
+  return (
+    <PageShell eyebrow="Membership" title="会员权益" image="/assets/cruise-boat.jpg">
+      <SectionTitle
+        eyebrow="Member services"
+        title="先公开申请路径，登录系统后置"
+        text="第一版不做会员登录，先解释会员类别、适合人群、权益和申请方式，避免把技术范围拖重。"
+      />
+      <div className="tier-grid">
+        {membershipTiers.map((tier) => (
+          <article className="tier-card" key={tier.name}>
+            <div className="tier-top">
+              <h3>{tier.name}</h3>
+              <span>{tier.price}</span>
+            </div>
+            <p>{tier.bestFor}</p>
+            <ul>
+              {tier.benefits.map((benefit) => <li key={benefit}>{benefit}</li>)}
+            </ul>
+          </article>
+        ))}
+      </div>
+      <section className="subsection">
+        <SectionTitle eyebrow="Benefits" title="会员能获得什么" />
+        <div className="principle-grid">
+          {memberBenefits.map((benefit) => (
+            <article className="info-card" key={benefit.title}>
+              <h3>{benefit.title}</h3>
+              <p>{benefit.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+      <div className="action-band">
+        <p>具体会费、资格和资料授权以秘书处确认后的正式规则为准。</p>
+        <button className="button primary" type="button" onClick={() => navigate("/contact")}>开始申请</button>
+      </div>
+    </PageShell>
+  );
+}
+
+function PublicationsPage() {
+  return (
+    <PageShell eyebrow="Publications" title="文化会讯" image="/assets/ceremony-speech.jpg">
+      <SectionTitle
+        eyebrow="Documents"
+        title="把章程、会讯和项目资料变成可搜索资产"
+        text="素材地图已经识别出章程、活动资料、项目资料和默认不公开文件；这里先放公开规划，不直接发布敏感附件。"
+      />
+      <div className="publication-layout">
+        <div className="publication-list">
+          {publicationsArchive.map((item) => (
+            <article key={item.title}>
+              <span>{item.type} · {item.date}</span>
+              <h3>{item.title}</h3>
+              <p>{item.summary}</p>
+            </article>
+          ))}
+        </div>
+        <aside className="model-panel">
+          <p className="eyebrow">Content models</p>
+          <h3>后续 CMS 数据模型</h3>
+          {contentModels.map((model) => (
+            <div key={model.label}>
+              <strong>{model.label}</strong>
+              <p>{model.purpose}</p>
+            </div>
+          ))}
+        </aside>
+      </div>
+      <section className="subsection">
+        <SectionTitle eyebrow="Formats" title="出版物类型" />
+        <div className="principle-grid">
+          {publicationItems.map((item) => (
+            <article className="simple-card" key={item.title}>
+              <span>{item.type}</span>
+              <h3>{item.title}</h3>
+              <p>{item.summary}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+    </PageShell>
+  );
+}
+
+function GalleryPage() {
+  return (
+    <PageShell eyebrow="Gallery & FAQ" title="图库 FAQ" image="/assets/logan-meeting.jpg">
+      <SectionTitle
+        eyebrow="Material map"
+        title="按授权风险组织图库"
+        text="素材已按成立大会、新春游轮、外联会面、照片素材等分组；人物、证件、申请表和账单类素材默认不公开。"
+      />
+      <div className="album-grid">
+        {galleryAlbums.map((album) => (
+          <article className="album-card" key={album.title}>
+            <img src={album.image} alt={album.title} />
+            <div>
+              <span>{album.count} · {album.date}</span>
+              <h3>{album.title}</h3>
+              <p>{album.summary}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+      <section className="subsection gallery-layout">
+        <div>
+          <SectionTitle eyebrow="Scene labels" title="图库分类" />
+          <div className="topic-grid">
+            {galleryMoments.map((moment) => (
+              <article className="simple-card" key={moment.title}>
+                <span>{moment.label}</span>
+                <h3>{moment.title}</h3>
+                <p>{moment.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+        <aside className="model-panel">
+          <p className="eyebrow">FAQ</p>
+          <h3>常见问题</h3>
+          <div className="faq-list">
+            {faqs.map((faq) => (
+              <details key={faq.question} open={faq === faqs[0]}>
+                <summary>{faq.question}</summary>
+                <p>{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </aside>
+      </section>
     </PageShell>
   );
 }
