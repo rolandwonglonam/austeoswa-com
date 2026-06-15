@@ -16,8 +16,6 @@ import {
   medicalProgramModules,
   medicalProgramPillars,
   medicalProgramStops,
-  memberBenefits,
-  membershipTiers,
   navItems,
   newsArticles,
   principles,
@@ -33,7 +31,6 @@ const pageTitles = {
   "/about": "关于我们",
   "/organization": "组织架构",
   "/news": "新闻活动",
-  "/membership": "会员权益",
   "/publications": "文化会讯",
   "/gallery": "图库问答",
   "/programs/medical-summer-school": "医学研修",
@@ -85,7 +82,6 @@ function App() {
         {path === "/about" && <AboutPage />}
         {path === "/organization" && <OrganizationPage />}
         {path === "/news" && <NewsPage navigate={navigate} />}
-        {path === "/membership" && <MembershipPage navigate={navigate} />}
         {path === "/publications" && <PublicationsPage />}
         {path === "/gallery" && <GalleryPage />}
         {path === "/programs/medical-summer-school" && <MedicalProgramPage navigate={navigate} />}
@@ -345,47 +341,6 @@ function NewsPage({ navigate }) {
       <div className="action-band">
         <p>活动合作、新闻素材和媒体报道可统一进入联系入口，确认授权后再公开发布。</p>
         <button className="button primary" type="button" onClick={() => navigate("/contact")}>提交活动合作</button>
-      </div>
-    </PageShell>
-  );
-}
-
-function MembershipPage({ navigate }) {
-  return (
-    <PageShell eyebrow="Membership" title="会员权益" image="/assets/cruise-boat.jpg">
-      <SectionTitle
-        eyebrow="Member services"
-        title="先公开申请路径，登录系统后置"
-        text="第一版不做会员登录，先解释会员类别、适合人群、权益和申请方式，避免把技术范围拖重。"
-      />
-      <div className="tier-grid">
-        {membershipTiers.map((tier) => (
-          <article className="tier-card" key={tier.name}>
-            <div className="tier-top">
-              <h3>{tier.name}</h3>
-              <span>{tier.price}</span>
-            </div>
-            <p>{tier.bestFor}</p>
-            <ul>
-              {tier.benefits.map((benefit) => <li key={benefit}>{benefit}</li>)}
-            </ul>
-          </article>
-        ))}
-      </div>
-      <section className="subsection">
-        <SectionTitle eyebrow="Benefits" title="会员能获得什么" />
-        <div className="principle-grid">
-          {memberBenefits.map((benefit) => (
-            <article className="info-card" key={benefit.title}>
-              <h3>{benefit.title}</h3>
-              <p>{benefit.text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-      <div className="action-band">
-        <p>具体会费、资格和资料授权以秘书处确认后的正式规则为准。</p>
-        <button className="button primary" type="button" onClick={() => navigate("/contact")}>开始申请</button>
       </div>
     </PageShell>
   );

@@ -350,7 +350,6 @@ p {
 .board-grid,
 .topic-grid,
 .article-grid,
-.tier-grid,
 .album-grid {
   display: grid;
   gap: 1rem;
@@ -364,7 +363,6 @@ p {
 .content-panel,
 .simple-tile,
 .board-card,
-.tier-card,
 .simple-card {
   padding: 1.15rem;
 }
@@ -372,8 +370,7 @@ p {
 .info-card h3,
 .content-panel h2,
 .board-card strong,
-.simple-card h3,
-.tier-card h3 {
+.simple-card h3 {
   color: var(--brand-dark);
 }
 
@@ -441,43 +438,10 @@ p {
 .album-card span,
 .publication-list span,
 .simple-card span,
-.timeline-list small,
-.tier-top span {
+.timeline-list small {
   color: var(--brand);
   font-size: 0.82rem;
   font-weight: 900;
-}
-
-.tier-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.tier-card {
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.82);
-  box-shadow: 0 16px 46px rgba(13, 57, 90, 0.08);
-}
-
-.tier-top {
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.tier-card ul {
-  display: grid;
-  gap: 0.55rem;
-  margin: 1rem 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.tier-card li {
-  padding-left: 1rem;
-  border-left: 3px solid var(--gold);
-  color: var(--muted);
 }
 
 .timeline-list {
@@ -787,7 +751,6 @@ p {
   .unit-grid,
   .board-grid,
   .article-grid,
-  .tier-grid,
   .album-grid,
   .publication-layout,
   .gallery-layout,
@@ -840,7 +803,6 @@ p {
   .board-grid,
   .topic-grid,
   .article-grid,
-  .tier-grid,
   .album-grid,
   .publication-layout,
   .gallery-layout,

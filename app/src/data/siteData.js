@@ -17,7 +17,6 @@ export const navItems = [
   { label: "关于我们", href: "/about" },
   { label: "组织架构", href: "/organization" },
   { label: "新闻活动", href: "/news" },
-  { label: "会员权益", href: "/membership" },
   { label: "文化会讯", href: "/publications" },
   { label: "图库问答", href: "/gallery" },
   { label: "医学研修", href: "/programs/medical-summer-school" },
@@ -168,46 +167,6 @@ export const eventCalendar = [
   },
 ];
 
-export const membershipTiers = [
-  {
-    name: "普通会员",
-    price: "待定",
-    bestFor: "潮汕乡亲、新移民、社区朋友",
-    benefits: ["活动优先通知", "会员会讯", "公开活动报名", "社群资源连接"],
-  },
-  {
-    name: "青年会员",
-    price: "待定",
-    bestFor: "学生、职场初期、创业青年",
-    benefits: ["青年会项目", "职业沙龙", "志愿者机会", "校园合作资源"],
-  },
-  {
-    name: "团体 / 合作伙伴",
-    price: "定制",
-    bestFor: "企业、社团、高校、媒体与公益机构",
-    benefits: ["联合活动", "品牌展示", "合作资源对接", "项目共创"],
-  },
-];
-
-export const memberBenefits = [
-  {
-    title: "活动优先权",
-    text: "会员可优先获知活动预告、报名名额、志愿者机会和会讯发布。",
-  },
-  {
-    title: "青年项目入口",
-    text: "青年会员可参与职业沙龙、校园合作、创业交流和导师资源匹配。",
-  },
-  {
-    title: "团体展示",
-    text: "团体会员与合作伙伴可在授权后获得官网目录展示和联合活动露出。",
-  },
-  {
-    title: "社区资源连接",
-    text: "通过同乡会网络连接专业服务、公益组织、文化机构与社团资源。",
-  },
-];
-
 export const publicationItems = [
   {
     title: "组织章程与公开资料",
@@ -299,7 +258,7 @@ export const galleryMoments = [
 export const faqs = [
   {
     question: "非潮汕籍朋友可以参加活动吗？",
-    answer: "公开文化活动、论坛和合作项目通常欢迎各界朋友参与；会员权益以当期章程和活动规则为准。",
+    answer: "公开文化活动、论坛和合作项目通常欢迎各界朋友参与；入会资格与后续流程以秘书处确认的正式规则为准。",
   },
   {
     question: "青年会主要服务哪些人？",
@@ -307,7 +266,7 @@ export const faqs = [
   },
   {
     question: "入会申请需要准备什么？",
-    answer: "第一阶段先提交入会意向，后续由秘书处确认资格、会员类别、费用说明、资料授权和审核流程。",
+    answer: "第一阶段先提交入会意向，后续由秘书处确认资格、资料授权和审核流程。",
   },
   {
     question: "企业或社团如何合作？",
