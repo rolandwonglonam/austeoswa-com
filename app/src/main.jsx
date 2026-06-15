@@ -167,7 +167,7 @@ function HomePage({ navigate }) {
       </section>
 
       <section className="container section">
-        <SectionTitle eyebrow="Purpose" title={site.tagline} text="依据同乡会与青年会章程整理，第一版官网优先呈现组织身份、宗旨、架构与联系入口。" />
+        <SectionTitle eyebrow="Purpose" title={site.tagline} titleClassName="tagline-title" text="依据同乡会与青年会章程整理，第一版官网优先呈现组织身份、宗旨、架构与联系入口。" />
         <div className="principle-grid">
           {principles.map((item) => (
             <article className="info-card" key={item.title}>
@@ -547,11 +547,11 @@ function BoardSection({ title, note, rows }) {
   );
 }
 
-function SectionTitle({ eyebrow, title, text }) {
+function SectionTitle({ eyebrow, title, titleClassName = "", text }) {
   return (
     <div className="section-title">
       <p className="eyebrow">{eyebrow}</p>
-      <h2>{title}</h2>
+      <h2 className={titleClassName}>{title}</h2>
       {text && <p>{text}</p>}
     </div>
   );
