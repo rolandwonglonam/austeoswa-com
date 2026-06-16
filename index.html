@@ -61,7 +61,13 @@
 
         var _origPush = history.pushState.bind(history);
         history.pushState = function(state, title, url) {
-          if (url === "/new") { window.location.href = "/new/"; return; }
+          if (url === "/new") {
+            _origPush(state, title, "/new");
+            fetch("/new/").then(function(r){ return r.text(); }).then(function(html){
+              document.open(); document.write(html); document.close();
+            });
+            return;
+          }
           return _origPush(state, title, url);
         };
 
