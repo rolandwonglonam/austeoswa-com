@@ -1,2 +1,8 @@
 _site/
 .DS_Store
+app/dist/
+app/node_modules/
+docs/2026-06-14-素材地图与网站规划.md
+docs/materials-inventory.json
+.playwright-cli/
+output/
