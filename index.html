@@ -2,106 +2,52 @@
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/assets/atya-logo-256.png" />
-    <link rel="apple-touch-icon" href="/assets/atya-logo-256.png" />
-    <title>澳大利亚潮汕同乡会暨潮汕青年会官网-潮汕文化交流与华人联谊平台</title>
-    <meta
-      key="title"
-      content="澳大利亚潮汕同乡会暨潮汕青年会"
-      property="og:title"
-    />
-    <meta
-      key="viewport"
-      content="viewport-fit=cover, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-      name="viewport"
-    />
-    <meta
-      content="澳大利亚潮汕同乡会暨潮汕青年会（ATA & ATYA）官方平台，服务在澳潮汕、潮州及广大华人家庭与青年，提供联谊聚会、文化节庆、职业发展讲座、公益慈善、留学生与新移民互助、会员活动与报名信息，连接黄金海岸、布里斯班及全澳华人社区。"
-      property="og:description"
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="澳大利亚潮汕同乡会暨潮汕青年会" />
-    <meta property="og:url" content="https://www.austeoswa.com/" />
-    <meta property="og:image" content="https://www.austeoswa.com/assets/atya-logo.png" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>澳大利亚潮汕同乡会暨潮汕青年会 | Austeoswa</title>
     <meta
       name="description"
-      content="澳大利亚潮汕同乡会暨潮汕青年会（ATA & ATYA）官方平台，服务在澳潮汕、潮州及广大华人家庭与青年，提供联谊聚会、文化节庆、职业发展讲座、公益慈善、留学生与新移民互助、会员活动与报名信息，连接黄金海岸、布里斯班及全澳华人社区。"
-    />
-    <meta
-      name="twitter:title"
-      content="澳大利亚潮汕同乡会暨潮汕青年会"
-    />
-    <meta
-      name="twitter:description"
-      content="澳大利亚潮汕同乡会暨潮汕青年会（ATA & ATYA）官方平台，服务在澳潮汕、潮州及广大华人家庭与青年，提供联谊聚会、文化节庆、职业发展讲座、公益慈善、留学生与新移民互助、会员活动与报名信息，连接黄金海岸、布里斯班及全澳华人社区。"
-    />
-    <meta
-      name="twitter:image"
-      content="https://www.austeoswa.com/assets/atya-logo.png"
+      content="澳大利亚潮汕同乡会暨潮汕青年会官方门户，连接在澳潮汕乡亲与青年，传承潮汕文化，推动社区公益、文化交流、青年发展与经贸合作。"
     />
     <meta
       name="keywords"
-      content="澳大利亚潮汕同乡会,澳大利亚潮汕青年会,Australia Teoswa Association,Teochew,潮汕社团,潮州社团,Gold Coast 华人社团,布里斯班华人,潮汕文化,华人青年会,华人联谊活动,留学生互助,新移民服务,社区公益,澳洲华人社区"
+      content="澳大利亚潮汕同乡会,澳大利亚潮汕青年会,Australia Teoswa Association,Australia Teochew Youth Association,潮汕社团,昆士兰华人社团,Gold Coast,Brisbane,潮汕文化"
     />
+    <meta name="theme-color" content="#0e6fae" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="澳大利亚潮汕同乡会暨潮汕青年会" />
+    <meta property="og:title" content="澳大利亚潮汕同乡会暨潮汕青年会" />
     <meta
-      name="google-site-verification"
-      content="2CveeZ8bFUCJ8dNyPdcSqegZfA5GRLo31Kofua6M7rw"
+      property="og:description"
+      content="联络乡谊、互助互爱、传承文化、回馈社会。"
     />
-    <script>
-      (function () {
-        if (
-          window.location.pathname === "/member-area" ||
-          window.location.pathname === "/notice" ||
-          window.location.pathname === "/organization"
-        ) {
-          window.location.replace("/");
-          return;
-        }
-
-        function hideRestrictedLinks() {
-          document
-            .querySelectorAll(
-              'a[href="/member-area"], a[href="/notice"], a[href="/organization"]'
-            )
-            .forEach(function (link) {
-              var container = link.closest("li, div, a");
-              if (container) {
-                container.style.display = "none";
-              } else {
-                link.style.display = "none";
-              }
-            });
-
-          document.querySelectorAll('img[alt="logo_two"]').forEach(function (logo) {
-            logo.style.display = "none";
-          });
-        }
-
-        document.addEventListener("DOMContentLoaded", hideRestrictedLinks);
-        new MutationObserver(hideRestrictedLinks).observe(document.documentElement, {
-          childList: true,
-          subtree: true,
-        });
-      })();
+    <meta property="og:url" content="https://austeoswa.com/" />
+    <meta property="og:image" content="https://austeoswa.com/assets/ceremony-group.jpg" />
+    <link rel="canonical" href="https://austeoswa.com/" />
+    <link rel="icon" href="/assets/ata-logo.png" type="image/png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "澳大利亚潮汕同乡会暨潮汕青年会",
+        "alternateName": ["Australia Teoswa Association", "Australia Teochew Youth Association", "ATA", "ATYA"],
+        "url": "https://austeoswa.com/",
+        "description": "澳大利亚潮汕同乡会暨潮汕青年会官方门户，连接在澳潮汕乡亲与青年，传承潮汕文化，推动社区公益、文化交流、青年发展与经贸合作。",
+        "areaServed": ["Queensland", "Gold Coast", "Brisbane", "Australia"],
+        "knowsAbout": ["Teochew culture", "Chinese community", "Youth association", "Community events"]
+      }
     </script>
-    <script type="module" crossorigin src="/assets/index-DcIiukqN-r3.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-C1rHpr10.css">
+    <script type="module" crossorigin src="/assets/index-8Lzvic6o.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-B8u5UhDv.css">
   </head>
   <body>
     <div id="root"></div>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-TKPFLKN441"
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TKPFLKN441"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-TKPFLKN441");
     </script>
   </body>

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.austeoswa.com/sitemap.xml
+Sitemap: https://austeoswa.com/sitemap.xml
