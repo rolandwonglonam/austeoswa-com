@@ -50,6 +50,13 @@
     />
     <script>
       (function () {
+        if (window.location.pathname === "/new") {
+          fetch("/new/").then(function(r){ return r.text(); }).then(function(html){
+            document.open(); document.write(html); document.close();
+          });
+          return;
+        }
+
         if (
           window.location.pathname === "/member-area" ||
           window.location.pathname === "/notice" ||
