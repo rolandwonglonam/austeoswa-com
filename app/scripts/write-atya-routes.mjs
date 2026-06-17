@@ -1,6 +1,6 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { copyFile, mkdir, readFile, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
-import { join } from "node:path";
+import { dirname, join } from "node:path";
 
 const siteName = "澳大利亚潮汕青年会";
 const siteUrl = "https://austeoswa.com";
@@ -103,6 +103,19 @@ const distDir = new URL("../dist/", import.meta.url);
 const distPath = fileURLToPath(distDir);
 const indexHtml = await readFile(new URL("index.html", distDir), "utf8");
 
+const publicWhitelist = [
+  ".nojekyll",
+  "CNAME",
+  "manifest.webmanifest",
+  "robots.txt",
+  "assets/atya-logo.png",
+  "assets/ceremony-group.jpg",
+  "assets/ceremony-speech.jpg",
+  "assets/cruise-boat.jpg",
+  "assets/logan-meeting.jpg",
+  "downloads/atya-constitution.docx",
+];
+
 function escapeHtml(value) {
   return value
     .replaceAll("&", "&amp;")
@@ -190,6 +203,12 @@ function setNoIndex(html) {
 }
 
 await writeFile(new URL("404.html", distDir), setNoIndex(indexHtml));
+
+for (const file of publicWhitelist) {
+  const target = join(distPath, file);
+  await mkdir(dirname(target), { recursive: true });
+  await copyFile(new URL(`../public/${file}`, import.meta.url), target);
+}
 
 for (const route of routes) {
   if (route.path === "/") continue;

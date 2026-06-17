@@ -40,6 +40,14 @@ const forbiddenPublicRoutes = [
   "/publications",
 ];
 
+const forbiddenPublishedFiles = [
+  "dist/assets/ata-logo.png",
+  "dist/assets/letter-to-grandma-poster.jpg",
+  "dist/assets/medical-program-background.jpg",
+  "dist/assets/medical-program-journey.jpg",
+  "dist/assets/medical-sydney-banner.jpg",
+];
+
 function routeIndexPath(route) {
   if (route === "/") return "dist/index.html";
   return `dist${route}/index.html`;
@@ -47,6 +55,16 @@ function routeIndexPath(route) {
 
 async function assertReadable(path) {
   await access(path, constants.R_OK);
+}
+
+async function assertNotReadable(path) {
+  try {
+    await access(path, constants.R_OK);
+    throw new Error(`${path} should not be published`);
+  } catch (error) {
+    if (error?.code === "ENOENT" || error?.code === "ENOTDIR") return;
+    throw error;
+  }
 }
 
 function assertIncludes(text, expected, label) {
@@ -107,6 +125,10 @@ for (const route of forbiddenPublicRoutes) {
 
 for (const file of requiredFiles) {
   await assertReadable(file);
+}
+
+for (const file of forbiddenPublishedFiles) {
+  await assertNotReadable(file);
 }
 
 const textExtensions = new Set([".js", ".css", ".html", ".xml", ".txt", ".json", ".webmanifest"]);
