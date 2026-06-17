@@ -59,6 +59,21 @@
           return;
         }
 
+        document.addEventListener('click', function(e) {
+          var a = e.target.closest('a[href="/new"]');
+          if (!a) return;
+          e.preventDefault();
+          e.stopImmediatePropagation();
+          window.history.pushState({}, '', '/new');
+          fetch('/new/').then(function(r){ return r.text(); }).then(function(html){
+            var parser = new DOMParser();
+            var newDoc = parser.parseFromString(html, 'text/html');
+            document.title = newDoc.title;
+            document.body.className = newDoc.body.className;
+            document.body.innerHTML = newDoc.body.innerHTML;
+          });
+        }, true);
+
         function hideRestrictedLinks() {
           document
             .querySelectorAll(

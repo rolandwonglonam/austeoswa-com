@@ -50,6 +50,11 @@
     />
     <script>
       (function () {
+        if (window.location.pathname === "/new") {
+          window.location.replace("/new/");
+          return;
+        }
+
         if (
           window.location.pathname === "/member-area" ||
           window.location.pathname === "/notice" ||
