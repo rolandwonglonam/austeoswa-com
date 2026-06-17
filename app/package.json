@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "build": "vite build && node scripts/write-atya-routes.mjs",
-    "verify": "npm run build && node scripts/verify-atya-build.mjs",
+    "build": "vite build && node scripts/write-static-routes.mjs",
     "preview": "vite preview --host 0.0.0.0"
   },
   "dependencies": {
