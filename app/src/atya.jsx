@@ -16,11 +16,13 @@ const site = {
 };
 
 const navItems = [
-  { label: "主页", href: "/" },
-  { label: "关于我们", href: "/about", legacyUrl: "https://austeoswa.com/about" },
-  { label: "总会新闻", href: "/new", legacyUrl: "https://austeoswa.com/new" },
-  { label: "成员简介", href: "/member", legacyUrl: "https://austeoswa.com/member" },
-  { label: "联络我们", href: "/contact", legacyUrl: "https://austeoswa.com/contact" },
+  { label: "首页", href: "/" },
+  { label: "关于青年会", href: "/about" },
+  { label: "新闻活动", href: "/news" },
+  { label: "潮汕文化", href: "/culture" },
+  { label: "商务与资源", href: "/business" },
+  { label: "资源中心", href: "/resources" },
+  { label: "联系我们", href: "/contact" },
 ];
 
 const routeTitles = {
@@ -33,8 +35,6 @@ const routeTitles = {
   "/new": "新闻活动",
   "/new/1": "活动文章",
   "/new/2": "活动文章",
-  "/new/letter-to-grandma-premiere": "活动文章",
-  "/news/3": "活动文章",
   "/culture": "潮汕文化",
   "/business": "商务与资源",
   "/resources": "资源中心",
@@ -123,7 +123,6 @@ const pendingProfile = [
 const articleImages = {
   article1: "https://tca-prod-public.oss-cn-shanghai.aliyuncs.com/new/new1-03.webp",
   article2: "https://tca-prod-public.oss-cn-shanghai.aliyuncs.com/new/new1-15.webp",
-  article3: "/assets/letter-to-grandma-poster.jpg",
 };
 
 const articles = [
@@ -186,77 +185,19 @@ const articles = [
       },
     ],
   },
-  {
-    id: "3",
-    slug: "letter-to-grandma-premiere",
-    category: "活动预告",
-    date: "2026年6月16日",
-    image: articleImages.article3,
-    title: "《给阿嬷的情书》昆士兰州首映礼将于6月24日在布里斯班举行",
-    summary:
-      "澳大利亚潮汕青年会联合 CMC 华人影业，定于 2026 年 6 月 24 日在布里斯班举办潮汕方言电影《给阿嬷的情书》昆士兰州首映礼。",
-    source: "原网站新闻文章",
-    sections: [
-      {
-        title: "以侨批串联的潮汕记忆",
-        body:
-          "《给阿嬷的情书》以潮汕地区特有的侨批为线索，串联起阿嬷的青春、远行与归途，也照见了无数潮汕家庭过番下南洋的真实缩影。影片全程使用潮汕方言原声呈现，以朴素语言还原潮汕家庭跨越山海的情感记忆。",
-      },
-      {
-        title: "在澳潮汕家庭的隔空重逢",
-        body:
-          "澳大利亚潮汕青年会表示，在布里斯班举办昆士兰州首映礼，是希望在澳潮汕家庭能够以电影为媒，与故土文化、与上一代人的情感完成一次隔空重逢。",
-      },
-      {
-        title: "发行与主办方信息",
-        body:
-          "《给阿嬷的情书》由 CMC 华人影业负责北美澳新地区统筹发行，覆盖美国、加拿大、澳大利亚、新西兰四大华人聚集地。此次首映礼由澳大利亚潮汕青年会联合 CMC 华人影业举办。",
-      },
-    ],
-  },
 ];
 
 const newsItems = [
-  articles[2],
-  articles[0],
-  articles[1],
-];
-
-const homeSlides = [
+  ...articles,
   {
-    id: "intro",
-    type: "intro",
-    eyebrow: "Australian Teochew Community",
-    titleLines: ["澳大利亚潮汕同乡会", "澳大利亚潮汕青年会"],
-    text: "以现代非营利组织模式运营连接传统文化，用国际化视野服务在澳潮汕乡亲。我们在联络乡情、青年成长与公益协作中，持续构建更有温度的社区生态。",
-    image: "/assets/gold-coast-background.png",
-  },
-  {
-    id: "grandma",
-    type: "article",
-    eyebrow: "最新活动",
-    titleLines: ["《给阿嬷的情书》", "昆士兰州首映礼"],
-    text: articles[2].summary,
-    image: articles[2].image,
-    href: "/new/letter-to-grandma-premiere",
-  },
-];
-
-const homePillars = [
-  {
-    label: "Community First",
-    title: "社区联结",
-    text: "把分散在澳洲各地的潮汕乡亲连接起来，建立长期、稳定且互助的社群关系。",
-  },
-  {
-    label: "Next Generation",
-    title: "青年成长",
-    text: "为青年提供职业成长、社交拓展与实践机会，让传承与创新并行发生。",
-  },
-  {
-    label: "Cultural Legacy",
-    title: "文化传承",
-    text: "通过节庆、讲座与公益活动，让潮汕文化在海外日常中可感知、可参与、可延续。",
+    id: "pending-1",
+    category: "待补充",
+    date: "【待确认：发布时间】",
+    image: "/assets/ceremony-speech.jpg",
+    title: "青年会近期活动资料整理中",
+    summary: "【待确认：近期活动名称、时间、地点、主办/协办单位、可公开照片与参与人员授权】",
+    source: "待 Roland 补充",
+    sections: [],
   },
 ];
 
@@ -349,7 +290,6 @@ function cleanPath(pathname) {
 function titleFor(path) {
   if (path === "/news/1" || path === "/new/1") return articles[0].title;
   if (path === "/news/2" || path === "/new/2") return articles[1].title;
-  if (path === "/news/3" || path === "/new/letter-to-grandma-premiere") return articles[2].title;
   return routeTitles[path] || routeTitles[routeAliases[path]] || "首页";
 }
 
@@ -398,7 +338,6 @@ function App() {
         {(path === "/news" || path === "/new") && <NewsPage navigate={navigate} />}
         {(path === "/news/1" || path === "/new/1") && <ArticlePage article={articles[0]} navigate={navigate} />}
         {(path === "/news/2" || path === "/new/2") && <ArticlePage article={articles[1]} navigate={navigate} />}
-        {(path === "/news/3" || path === "/new/letter-to-grandma-premiere") && <ArticlePage article={articles[2]} navigate={navigate} />}
         {path === "/culture" && <CulturePage />}
         {path === "/business" && <BusinessPage navigate={navigate} />}
         {path === "/resources" && <ResourcesPage navigate={navigate} />}
@@ -410,21 +349,15 @@ function App() {
 }
 
 function Header({ activePath, menuOpen, navigate, setMenuOpen }) {
-  function openNavItem(item) {
-    if (item.legacyUrl) {
-      window.location.href = item.legacyUrl;
-      return;
-    }
-    navigate(item.href);
-  }
-
   return (
     <header className="site-header">
-      <div className="logo-strip">
-        <button className="wordmark-button" type="button" onClick={() => navigate("/")} aria-label="返回首页">
-          <img src="/assets/atya-wordmark.png" alt="澳大利亚潮汕青年会 Australia Teoswa Youth Association" />
-        </button>
-      </div>
+      <button className="brand" type="button" onClick={() => navigate("/")} aria-label="返回首页">
+        <img src="/assets/atya-logo.png" alt="澳大利亚潮汕青年会 Logo" />
+        <span>
+          <strong>{site.shortName}</strong>
+          <small>{site.name}</small>
+        </span>
+      </button>
       <nav className="desktop-nav" aria-label="主导航">
         {navItems.map((item) => (
           <button
@@ -432,7 +365,7 @@ function Header({ activePath, menuOpen, navigate, setMenuOpen }) {
             className={activePath === item.href ? "active" : ""}
             type="button"
             aria-current={activePath === item.href ? "page" : undefined}
-            onClick={() => openNavItem(item)}
+            onClick={() => navigate(item.href)}
           >
             {item.label}
           </button>
@@ -454,7 +387,7 @@ function Header({ activePath, menuOpen, navigate, setMenuOpen }) {
               key={item.href}
               className={activePath === item.href ? "active" : ""}
               type="button"
-              onClick={() => openNavItem(item)}
+              onClick={() => navigate(item.href)}
             >
               {item.label}
             </button>
@@ -466,109 +399,42 @@ function Header({ activePath, menuOpen, navigate, setMenuOpen }) {
 }
 
 function HomePage({ navigate }) {
-  const [activeSlide, setActiveSlide] = useState(0);
-  const active = homeSlides[activeSlide];
-
   return (
     <>
-      <section className="home-carousel-section">
-        <div className="container">
-          <div className="home-carousel" aria-label="首页轮播">
-            <article
-              className={`home-slide ${active.type === "article" ? "is-clickable" : ""}`}
-              style={{ backgroundImage: `linear-gradient(90deg, rgba(3, 22, 43, 0.78), rgba(6, 67, 111, 0.46)), url(${active.image})` }}
-              onClick={() => active.href && navigate(active.href)}
-            >
-              <div className="home-slide-panel">
-                <p className="home-slide-eyebrow">{active.eyebrow}</p>
-                <h1>
-                  {active.titleLines.map((line) => (
-                    <span key={line}>{line}</span>
-                  ))}
-                </h1>
-                <p>{active.text}</p>
-                {active.href && (
-                  <button
-                    className="button light"
-                    type="button"
-                    onClick={(event) => {
-                      event.stopPropagation();
-                      navigate(active.href);
-                    }}
-                  >
-                    查看活动详情
-                  </button>
-                )}
-              </div>
-            </article>
-            <div className="carousel-controls" aria-label="切换轮播">
-              {homeSlides.map((slide, index) => (
-                <button
-                  key={slide.id}
-                  className={activeSlide === index ? "active" : ""}
-                  type="button"
-                  aria-label={`查看第 ${index + 1} 张`}
-                  onClick={() => setActiveSlide(index)}
-                >
-                  {index + 1}
-                </button>
+      <section className="hero-section">
+        <div className="container hero-grid">
+          <div className="hero-copy">
+            <p className="eyebrow">Australia Teoswa Youth Association</p>
+            <h1>澳大利亚潮汕青年会</h1>
+            <p className="hero-lede">{site.description}</p>
+            <div className="hero-actions">
+              <button className="button primary" type="button" onClick={() => navigate("/news")}>查看活动</button>
+              <button className="button secondary" type="button" onClick={() => navigate("/contact")}>联系青年会</button>
+            </div>
+            <div className="stat-grid">
+              {heroStats.map((stat) => (
+                <article key={stat.label}>
+                  <strong>{stat.value}</strong>
+                  <span>{stat.label}</span>
+                </article>
               ))}
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="container home-news-section">
-        <div className="home-news-card">
-          <div className="home-section-head">
-            <h2>总会新闻</h2>
-            <button type="button" onClick={() => navigate("/new")}>更多</button>
-          </div>
-          <div className="featured-news" role="button" tabIndex="0" onClick={() => navigate("/new/letter-to-grandma-premiere")}>
-            <img src={articles[2].image} alt={articles[2].title} />
-            <div>
-              <strong>{articles[2].title}</strong>
-              <span>{articles[2].date}</span>
+          <aside className="hero-card" aria-label="青年会活动影像">
+            <img src="/assets/ceremony-group.jpg" alt="澳大利亚潮汕青年会活动合影" />
+            <div className="hero-logo-row">
+              <img src="/assets/atya-logo.png" alt="澳大利亚潮汕青年会 Logo" />
+              <p>官网主站以青年会为核心；同乡会信息仅作为背景与二级说明出现。</p>
             </div>
-          </div>
-          <div className="news-list">
-            {newsItems.map((item) => (
-              <button
-                key={item.id}
-                type="button"
-                onClick={() => navigate(item.id === "3" ? "/new/letter-to-grandma-premiere" : `/news/${item.id}`)}
-              >
-                <span>{item.title}</span>
-                <time>{item.date.replace("年", "-").replace("月", "-").replace("日", "")}</time>
-              </button>
-            ))}
-          </div>
+          </aside>
         </div>
-        <aside className="leader-card">
-          <h2>青年会负责人</h2>
-          <div className="leader-grid">
-            <article>
-              <div aria-hidden="true">王</div>
-              <strong>王泽平</strong>
-              <span>会长</span>
-            </article>
-            <article>
-              <div aria-hidden="true">王</div>
-              <strong>王罗湳</strong>
-              <span>副会长</span>
-            </article>
-          </div>
-        </aside>
       </section>
 
-      <section className="container home-do-section">
-        <p className="home-kicker">What We Do</p>
-        <h2>以现代思维运营社团</h2>
-        <p className="home-subtitle">以更当代的方式组织传统社团活动，让每一次线下相聚都有内容、有温度、有长期价值。</p>
-        <div className="home-pillar-grid">
-          {homePillars.map((item) => (
-            <article key={item.title}>
-              <span>{item.label}</span>
+      <section className="container section">
+        <SectionTitle eyebrow="Purpose" title={site.mission} text="这一版先把边界收紧：不扩展短期无法落地的会员系统，不展示未确认名单，不放未经确认的公开素材。" />
+        <div className="principle-grid">
+          {principles.map((item) => (
+            <article className="info-card" key={item.title}>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </article>
@@ -576,25 +442,22 @@ function HomePage({ navigate }) {
         </div>
       </section>
 
-      <section className="container home-contact-section">
-        <div className="home-cta">
-          <h2>欢迎联系澳洲潮汕社群网络</h2>
-          <p>欢迎新移民、创业者、专业人士与青年学生参与，携手构建更紧密、更国际化的潮汕社区连接。</p>
-          <div>
-            <button className="button light" type="button" onClick={() => { window.location.href = "https://austeoswa.com/contact"; }}>联络我们</button>
-            <button className="button ghost-light" type="button" onClick={() => navigate("/new")}>查看活动回顾</button>
-          </div>
+      <section className="container section">
+        <SectionTitle eyebrow="Focus" title="第一版只做青年会相关内容" text="能确认的内容直接上线；缺口用待确认标注，便于 Roland 明早逐条补齐。" />
+        <div className="focus-grid">
+          {focusAreas.map((item) => (
+            <article className="focus-card" key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+              <small>{item.pending}</small>
+            </article>
+          ))}
         </div>
-        <div className="home-contact-grid">
-          <article>
-            <h3>联系方式</h3>
-            <p>邮箱：<a href={`mailto:${site.email}`}>{site.email}</a></p>
-          </article>
-          <article>
-            <h3>合作与媒体</h3>
-            <p>欢迎企业、社团与高校组织与我们合作，共同策划跨文化活动、青年项目与社区公益计划。</p>
-          </article>
-        </div>
+      </section>
+
+      <section className="container section">
+        <SectionTitle eyebrow="Latest" title="原站活动文章已恢复" text="先保留原网站公开过的两篇活动文章，后续新增活动按同一结构补充。" />
+        <ArticleGrid items={articles} navigate={navigate} />
       </section>
     </>
   );
@@ -691,8 +554,7 @@ function ArticleGrid({ items, navigate }) {
   return (
     <div className="article-grid">
       {items.map((item) => {
-        const articleHref = item.id === "3" ? "/new/letter-to-grandma-premiere" : `/news/${item.id}`;
-        const isArticle = item.sections?.length > 0;
+        const isRestored = item.id === "1" || item.id === "2";
         return (
           <article className="article-card" key={item.id}>
             <img src={item.image} alt={item.title} />
@@ -700,8 +562,8 @@ function ArticleGrid({ items, navigate }) {
               <span>{item.category} · {item.date}</span>
               <h3>{item.title}</h3>
               <p>{item.summary}</p>
-              {isArticle ? (
-                <button className="text-button" type="button" onClick={() => navigate(articleHref)}>阅读全文</button>
+              {isRestored ? (
+                <button className="text-button" type="button" onClick={() => navigate(`/news/${item.id}`)}>阅读全文</button>
               ) : (
                 <small>{item.source}</small>
               )}
@@ -905,14 +767,6 @@ function SectionTitle({ eyebrow, title, text }) {
 }
 
 function Footer({ navigate }) {
-  function openFooterItem(item) {
-    if (item.legacyUrl) {
-      window.location.href = item.legacyUrl;
-      return;
-    }
-    navigate(item.href);
-  }
-
   return (
     <footer className="site-footer">
       <button className="brand footer-brand" type="button" onClick={() => navigate("/")}>
@@ -924,7 +778,7 @@ function Footer({ navigate }) {
       </button>
       <div className="footer-links">
         {navItems.map((item) => (
-          <button key={item.href} type="button" onClick={() => openFooterItem(item)}>{item.label}</button>
+          <button key={item.href} type="button" onClick={() => navigate(item.href)}>{item.label}</button>
         ))}
       </div>
       <p>© {new Date().getFullYear()} {site.name}. 未确认资料以页面标注为准。</p>

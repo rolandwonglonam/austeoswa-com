@@ -8,11 +8,9 @@ const routes = [
   "/news",
   "/news/1",
   "/news/2",
-  "/news/3",
   "/new",
   "/new/1",
   "/new/2",
-  "/new/letter-to-grandma-premiere",
   "/culture",
   "/business",
   "/resources",
@@ -23,9 +21,6 @@ const requiredFiles = [
   "dist/manifest.webmanifest",
   "dist/robots.txt",
   "dist/sitemap.xml",
-  "dist/assets/atya-wordmark.png",
-  "dist/assets/gold-coast-background.png",
-  "dist/assets/letter-to-grandma-poster.jpg",
   "dist/downloads/atya-constitution.docx",
 ];
 
@@ -34,8 +29,6 @@ const forbiddenVisibleText = [
   "图库问答",
   "会员服务",
   "会员权益",
-  "加入同乡会",
-  "最新动态",
   "/assets/ata-logo.png",
 ];
 
@@ -49,6 +42,7 @@ const forbiddenPublicRoutes = [
 
 const forbiddenPublishedFiles = [
   "dist/assets/ata-logo.png",
+  "dist/assets/letter-to-grandma-poster.jpg",
   "dist/assets/medical-program-background.jpg",
   "dist/assets/medical-program-journey.jpg",
   "dist/assets/medical-sydney-banner.jpg",
@@ -165,7 +159,6 @@ for (const expected of [
   "资源中心",
   "乡音相连，共筑未来",
   "澳洲潮汕同乡会青年会率代表团参观澳洲潮州同乡会馆",
-  "《给阿嬷的情书》昆士兰州首映礼",
   "【待确认：",
 ]) {
   assertIncludes(builtText, expected, "dist build");
