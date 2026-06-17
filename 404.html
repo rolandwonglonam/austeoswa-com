@@ -51,9 +51,7 @@
     <script>
       (function () {
         if (window.location.pathname === "/new") {
-          fetch("/new/").then(function(r){ return r.text(); }).then(function(html){
-            document.open(); document.write(html); document.close();
-          });
+          window.location.replace("/new/");
           return;
         }
 
