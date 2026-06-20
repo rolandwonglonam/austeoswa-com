@@ -146,10 +146,10 @@ const organizationBoards = [
 const articleImages = {
   article1: "https://tca-prod-public.oss-cn-shanghai.aliyuncs.com/new/new1-03.webp",
   article2: "https://tca-prod-public.oss-cn-shanghai.aliyuncs.com/new/new1-15.webp",
-  article3: "/assets/letter-to-grandma-poster.jpg",
+  article3: "/assets/letter-to-grandma-poster.webp",
 };
 
-const homeGrandmaImage = "/assets/letter-to-grandma-premiere.png";
+const homeGrandmaImage = "/assets/letter-to-grandma-premiere.webp";
 
 const articles = [
   {
@@ -338,7 +338,7 @@ const homeSlides = [
     eyebrow: "Australian Teochew Community",
     titleLines: ["澳大利亚潮汕同乡会", "澳大利亚潮汕青年会"],
     text: "以现代非营利组织模式运营连接传统文化，用国际化视野服务在澳潮汕乡亲。我们在联络乡情、青年成长与公益协作中，持续构建更有温度的社区生态。",
-    image: "/assets/gold-coast-background.png",
+    image: "/assets/gold-coast-background.webp",
   },
   {
     id: "grandma",
@@ -533,7 +533,7 @@ function Header({ activePath, menuOpen, navigate, setMenuOpen }) {
     <header className="site-header">
       <div className="logo-strip">
         <button className="wordmark-button" type="button" onClick={() => navigate("/")} aria-label="返回首页">
-          <img src="/assets/atya-wordmark.png" alt="澳大利亚潮汕青年会 Australia Teoswa Youth Association" />
+          <img src="/assets/atya-wordmark.webp" alt="澳大利亚潮汕青年会 Australia Teoswa Youth Association" />
         </button>
       </div>
       <nav className="desktop-nav" aria-label="主导航">
@@ -639,7 +639,7 @@ function HomePage({ navigate }) {
             <button type="button" onClick={() => navigate("/new")}>更多</button>
           </div>
           <div className="featured-news" role="button" tabIndex="0" onClick={() => navigate("/new/letter-to-grandma-premiere")}>
-            <img src={homeGrandmaImage} alt={articles[2].title} />
+            <img src={homeGrandmaImage} alt={articles[2].title} loading="lazy" decoding="async" />
             <div>
               <strong>{articles[2].title}</strong>
               <span>{articles[2].date}</span>
@@ -665,13 +665,13 @@ function HomePage({ navigate }) {
           </h2>
           <div className="leader-grid">
             <article>
-              <img className="leader-photo" src="/assets/wang-zeping-2026.jpg" alt="王泽平肖像" />
+              <img className="leader-photo" src="/assets/wang-zeping-2026.webp" alt="王泽平肖像" loading="lazy" decoding="async" />
               <strong>王泽平</strong>
               <span>会长</span>
               <p>青年会公开名录负责人</p>
             </article>
             <article>
-              <img className="leader-photo" src="/assets/roland-2026.png" alt="王罗湳肖像" />
+              <img className="leader-photo" src="/assets/roland-2026.webp" alt="王罗湳肖像" loading="lazy" decoding="async" />
               <strong>王罗湳</strong>
               <span>副会长</span>
               <ul>
@@ -808,7 +808,7 @@ function AboutPage({ navigate }) {
             <p>「同乡会」面向全年龄段乡亲，承担联谊、公益与对外联络等核心职能；「青年会」则聚焦新生代成长与文化创新表达，二者分工协作、资源共享，共同构成在澳潮汕人的「一体两翼」。</p>
             <p>我们相信：好的社团不仅是办活动，更是长期信任、规则与价值的积累。以下从使命愿景、工作重点、组织分工、活动类型到参与方式，帮助您全面了解本会。</p>
           </div>
-          <img className="about-original-hero-image" src="/assets/about-founding-photo.jpg" alt="澳大利亚潮汕同乡会活动合影" />
+          <img className="about-original-hero-image" src="/assets/about-founding-photo.webp" alt="澳大利亚潮汕同乡会活动合影" loading="lazy" decoding="async" />
         </div>
       </section>
 
@@ -922,7 +922,7 @@ function AboutPage({ navigate }) {
 
 function AtaPage({ navigate }) {
   return (
-    <PageShell eyebrow="Secondary" title="同乡会说明" image="/assets/ceremony-group.jpg">
+    <PageShell eyebrow="Secondary" title="同乡会说明" image="/assets/ceremony-group.webp">
       <section className="content-panel">
         <h2>{site.secondaryName}</h2>
         <p>
@@ -943,8 +943,8 @@ function AtaPage({ navigate }) {
 
 function OrganizationPage({ navigate }) {
   const featuredRoles = [
-    { label: "青年会会长", name: "王泽平", photo: "/assets/wang-zeping-2026.jpg" },
-    { label: "青年会执行会长", name: "王罗湳", photo: "/assets/roland-2026.png" },
+    { label: "青年会会长", name: "王泽平", photo: "/assets/wang-zeping-2026.webp" },
+    { label: "青年会执行会长", name: "王罗湳", photo: "/assets/roland-2026.webp" },
   ];
 
   return (
@@ -965,7 +965,7 @@ function OrganizationPage({ navigate }) {
         {featuredRoles.map((item) => (
           <article key={item.label}>
             {item.photo ? (
-              <img src={item.photo} alt={`${item.name}肖像`} />
+              <img src={item.photo} alt={`${item.name}肖像`} loading="lazy" decoding="async" />
             ) : (
               <div aria-hidden="true">照片待添加</div>
             )}
@@ -1179,7 +1179,7 @@ function NewsPage({ navigate }) {
             <article className="newsroom-card" key={item.id}>
               <button type="button" onClick={() => navigate(articleHref)} aria-label={`阅读${item.title}`}>
                 <div className="newsroom-card-image">
-                  <img src={item.image} alt={item.title} />
+                  <img src={item.image} alt={item.title} loading="lazy" decoding="async" />
                 </div>
                 <div className="newsroom-card-body">
                   <time>{cardDate}</time>
@@ -1204,7 +1204,7 @@ function ArticleGrid({ items, navigate }) {
         const isArticle = item.sections?.length > 0;
         return (
           <article className="article-card" key={item.id}>
-            <img src={item.image} alt={item.title} />
+            <img src={item.image} alt={item.title} loading="lazy" decoding="async" />
             <div>
               <span>{item.category} · {item.date}</span>
               <h3>{item.title}</h3>
@@ -1274,7 +1274,7 @@ function OriginalArticlePage({ article, navigate }) {
 
 function CulturePage() {
   return (
-    <PageShell eyebrow="Culture" title="潮汕文化" image="/assets/cruise-boat.jpg">
+    <PageShell eyebrow="Culture" title="潮汕文化" image="/assets/cruise-boat.webp">
       <SectionTitle eyebrow="Teochew heritage" title="先做可持续的文化内容入口" text="这一页只放青年会能长期维护的文化方向，不编具体课程和活动场次。" />
       <div className="principle-grid compact">
         {cultureItems.map((item) => (
@@ -1298,7 +1298,7 @@ function CulturePage() {
 
 function BusinessPage({ navigate }) {
   return (
-    <PageShell eyebrow="Business & Resources" title="商务与资源" image="/assets/logan-meeting.jpg">
+    <PageShell eyebrow="Business & Resources" title="商务与资源" image="/assets/logan-meeting.webp">
       <SectionTitle eyebrow="Partnership" title="先建入口，不虚构名单" text="这一页保留 Roland 提到的合作机构、友好社团和对接名录方向，但没有确认前全部标注待确认。" />
       <div className="focus-grid">
         {businessItems.map((item) => (
@@ -1325,7 +1325,7 @@ function ResourcesPage({ navigate }) {
   });
 
   return (
-    <PageShell eyebrow="Resources" title="资源中心" image="/assets/ceremony-speech.jpg">
+    <PageShell eyebrow="Resources" title="资源中心" image="/assets/ceremony-speech.webp">
       <SectionTitle eyebrow="Documents" title="公开资料与待补清单" text="资源中心只放能确认的资料；不能确认的资料保留待确认句式，方便明早逐条补齐。" />
       <label className="resource-search">
         搜索资源

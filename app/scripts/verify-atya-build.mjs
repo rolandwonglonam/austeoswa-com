@@ -24,10 +24,11 @@ const requiredFiles = [
   "dist/manifest.webmanifest",
   "dist/robots.txt",
   "dist/sitemap.xml",
-  "dist/assets/atya-wordmark.png",
-  "dist/assets/gold-coast-background.png",
-  "dist/assets/letter-to-grandma-poster.jpg",
-  "dist/assets/letter-to-grandma-premiere.png",
+  "dist/_headers",
+  "dist/assets/atya-wordmark.webp",
+  "dist/assets/gold-coast-background.webp",
+  "dist/assets/letter-to-grandma-poster.webp",
+  "dist/assets/letter-to-grandma-premiere.webp",
   "dist/downloads/atya-constitution.docx",
 ];
 
