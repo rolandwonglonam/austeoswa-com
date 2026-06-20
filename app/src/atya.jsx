@@ -1517,6 +1517,18 @@ function SectionTitle({ eyebrow, title, text }) {
 }
 
 function Footer({ navigate }) {
+  const quickLinks = [
+    { label: "关于我们", href: "/about" },
+    { label: "组织架构", href: "/organization" },
+    { label: "总会新闻", href: "/new" },
+    { label: "联络我们", href: "/contact" },
+  ];
+  const friendLinks = [
+    { label: "澳洲潮州同乡会", href: "http://www.actca.org.au/" },
+    { label: "国际潮团总会", href: "https://teochew1981.com/" },
+    { label: "国际潮青联合会", href: "http://www.teoyouth.com" },
+  ];
+
   return (
     <footer className="site-footer">
       <div className="site-footer-grid">
@@ -1524,6 +1536,18 @@ function Footer({ navigate }) {
           <button className="site-footer-title" type="button" onClick={() => navigate("/")}>澳大利亚潮汕同乡会 · 青年会</button>
           <p>联结在澳潮汕乡亲，传承文化、服务社区、赋能青年<br />澳大利亚潮汕同乡会与澳大利亚潮汕青年会官方网站。</p>
         </div>
+        <nav className="site-footer-links" aria-label="常用链接">
+          <span>常用链接</span>
+          {quickLinks.map((item) => (
+            <button key={item.href} type="button" onClick={() => navigate(item.href)}>{item.label}</button>
+          ))}
+        </nav>
+        <nav className="site-footer-links" aria-label="友情链接">
+          <span>友情链接</span>
+          {friendLinks.map((item) => (
+            <a key={item.href} href={item.href} target="_blank" rel="noreferrer">{item.label}</a>
+          ))}
+        </nav>
         <div className="site-footer-contact">
           <span>联络</span>
           <dl>

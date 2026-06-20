@@ -780,8 +780,8 @@ h3 {
 
 .site-footer-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.95fr);
-  gap: 3rem;
+  grid-template-columns: minmax(280px, 1.5fr) minmax(130px, 0.7fr) minmax(160px, 0.85fr) minmax(240px, 1fr);
+  gap: 2.1rem;
   width: min(1280px, calc(100% - 2rem));
   margin: 0 auto;
   padding: 3.6rem 0 3.2rem;
@@ -806,11 +806,40 @@ h3 {
   line-height: 1.8;
 }
 
+.site-footer-links > span,
 .site-footer-contact > span {
   display: block;
-  margin-bottom: 1.55rem;
+  margin-bottom: 1rem;
   color: #8da1ba;
   font-weight: 900;
+}
+
+.site-footer-links {
+  display: grid;
+  align-content: start;
+  gap: 0.58rem;
+}
+
+.site-footer-links a,
+.site-footer-links button {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #334963;
+  font-weight: 800;
+  line-height: 1.45;
+  text-align: left;
+  cursor: pointer;
+}
+
+.site-footer-links a:hover,
+.site-footer-links button:hover {
+  color: #00779c;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 119, 156, 0.35);
+  text-underline-offset: 0.18em;
 }
 
 .site-footer-contact dl,
