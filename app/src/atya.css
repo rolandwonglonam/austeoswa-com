@@ -2343,7 +2343,7 @@ h3 {
 
 .news-list {
   display: grid;
-  margin-top: auto;
+  margin-top: 1.1rem;
 }
 
 .news-list button {
