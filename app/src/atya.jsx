@@ -579,6 +579,8 @@ function Header({ activePath, menuOpen, navigate, setMenuOpen }) {
 function HomePage({ navigate }) {
   const [activeSlide, setActiveSlide] = useState(0);
   const active = homeSlides[activeSlide];
+  const showPreviousSlide = () => setActiveSlide((index) => (index - 1 + homeSlides.length) % homeSlides.length);
+  const showNextSlide = () => setActiveSlide((index) => (index + 1) % homeSlides.length);
 
   return (
     <>
@@ -615,6 +617,22 @@ function HomePage({ navigate }) {
                 )}
               </div>
             </article>
+            <button
+              className="carousel-arrow carousel-arrow-left"
+              type="button"
+              aria-label="上一张"
+              onClick={showPreviousSlide}
+            >
+              ‹
+            </button>
+            <button
+              className="carousel-arrow carousel-arrow-right"
+              type="button"
+              aria-label="下一张"
+              onClick={showNextSlide}
+            >
+              ›
+            </button>
             <div className="carousel-controls" aria-label="切换轮播">
               {homeSlides.map((slide, index) => (
                 <button
