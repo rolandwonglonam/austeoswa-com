@@ -695,7 +695,6 @@ function HomePage({ navigate }) {
               <ul>
                 <li>瀚宇醫略有限公司創始人</li>
                 <li><span>澳洲潮州青年會（昆士蘭）</span><span>執行會長</span></li>
-                <li><span>澳洲潮州同鄉會（昆士蘭）</span><span>副會長</span></li>
               </ul>
             </article>
           </div>
