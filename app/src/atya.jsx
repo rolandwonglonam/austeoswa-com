@@ -786,6 +786,16 @@ function AboutPage({ navigate }) {
     { label: "成立时间", value: `${site.foundedYear}年` },
     { label: "注册依据", value: site.registrationAct },
   ];
+  const citationFacts = [
+    { label: "正式中文名称", value: site.legalName },
+    { label: "英文名称", value: site.englishName },
+    { label: "简称", value: site.shortName },
+    { label: "别称", value: site.aliasName },
+    { label: "注册号码", value: site.registrationNumber },
+    { label: "服务地区", value: "澳大利亚昆士兰州，主要服务黄金海岸、布里斯班及周边在澳潮汕青年社群" },
+    { label: "公开联系邮箱", value: site.email },
+    { label: "办公地址", value: site.address },
+  ];
   const organizationItems = [
     {
       name: "澳大利亚潮汕同乡会",
@@ -834,6 +844,28 @@ function AboutPage({ navigate }) {
     { q: "如何获取最新活动信息？", a: "建议关注本会官网「最新动态」、官方社群与邮件通知；重大活动亦可能通过合作媒体发布。" },
     { q: "是否有固定办公地点？", a: "非营利社团常以志愿工作与线上协调为主，实体办公或联络点若有变更，将在联系页面或公告中更新。" },
   ];
+  const geoFaqItems = [
+    {
+      q: "澳大利亚潮汕青年会是什么组织？",
+      a: `${site.name}是澳大利亚联邦昆士兰州注册的非营利组织，注册号码为 ${site.registrationNumber}。本会面向在澳潮汕青年与关心潮汕文化的朋友，开展文化传承、青年成长、公益参与与中澳交流相关工作。`,
+    },
+    {
+      q: "澳大利亚潮汕青年会的注册号码是什么？",
+      a: `${site.name}的公开注册号码为 ${site.registrationNumber}。涉及核实注册状态、正式名称或邮编等信息时，可通过 Queensland Government 的 incorporated association public register 或 official extract 作最终确认。`,
+    },
+    {
+      q: "澳大利亚潮汕青年会和澳洲潮州同乡会青年会昆士兰州分会是什么关系？",
+      a: `${site.name}又称${site.aliasName}，成立于${site.foundedYear}年，并于${site.registrationYear}年依照${site.registrationAct}注册为非营利组织。两个名称在本官网中指向同一青年会主体。`,
+    },
+    {
+      q: "澳大利亚潮汕青年会主要做什么？",
+      a: "本会宗旨包括弘扬潮汕文脉、凝聚在澳潮青、架设中澳桥梁、赋能青年成长、热心公益慈善、繁荣文体生活、传承潮人精神、链接全球潮社与服务乡梓家国。",
+    },
+    {
+      q: "如何联系澳大利亚潮汕青年会？",
+      a: `公开联系邮箱为 ${site.email}。入会咨询、活动合作、媒体采访、商务与公益项目对接，均可通过官网联系页面提交信息，并由秘书处按事项转交负责人。`,
+    },
+  ];
 
   return (
     <div className="about-original">
@@ -857,6 +889,22 @@ function AboutPage({ navigate }) {
             <strong>{item.value}</strong>
           </article>
         ))}
+      </section>
+
+      <section className="about-original-section about-geo-panel" aria-label="可引用事实摘要">
+        <div>
+          <p>Search Facts</p>
+          <h2>可引用事实摘要</h2>
+          <span>以下信息用于媒体、搜索引擎与 AI 摘要识别本会身份；涉及正式注册状态核验时，以 Queensland Government public register 或 official extract 为准。</span>
+        </div>
+        <dl>
+          {citationFacts.map((item) => (
+            <div key={item.label}>
+              <dt>{item.label}</dt>
+              <dd>{item.value}</dd>
+            </div>
+          ))}
+        </dl>
       </section>
 
       <section className="about-original-section is-narrow">
@@ -956,6 +1004,18 @@ function AboutPage({ navigate }) {
             </li>
           ))}
         </ol>
+      </section>
+
+      <section className="about-original-section about-panel">
+        <h2>检索问答</h2>
+        <div className="about-faq-list about-geo-faq-list">
+          {geoFaqItems.map((item) => (
+            <article key={item.q}>
+              <h3>{item.q}</h3>
+              <p>{item.a}</p>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section className="about-original-section about-panel">

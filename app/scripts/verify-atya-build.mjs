@@ -22,6 +22,7 @@ const routes = [
 
 const requiredFiles = [
   "dist/manifest.webmanifest",
+  "dist/llms.txt",
   "dist/robots.txt",
   "dist/sitemap.xml",
   "dist/_headers",

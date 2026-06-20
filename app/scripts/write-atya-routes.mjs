@@ -6,6 +6,8 @@ const siteName = "澳大利亚潮汕青年会";
 const siteUrl = "https://austeoswa.com";
 const registrationNumber = "IA4881891";
 const legalDescription = `${siteName}是在澳大利亚联邦昆士兰州注册的非营利组织，注册号码 ${registrationNumber}，致力于弘扬潮汕文化、凝聚在澳潮汕青年、促进公益参与与中澳交流。`;
+const publicEmail = "info@austeoswa.com";
+const publicAddress = "Unit 10/23 Margaret St, Southport QLD 4215, Australia";
 
 const routes = [
   {
@@ -130,6 +132,7 @@ const publicWhitelist = [
   ".nojekyll",
   "CNAME",
   "_headers",
+  "llms.txt",
   "manifest.webmanifest",
   "robots.txt",
   "assets/atya-logo.png",
@@ -194,8 +197,8 @@ const organizationEntity = {
     propertyID: "Queensland incorporated association registration number",
     value: registrationNumber,
   },
-  email: "info@austeoswa.com",
-  address: "Unit 10/23 Margaret St, Southport QLD 4215, Australia",
+  email: publicEmail,
+  address: publicAddress,
   areaServed: ["Queensland", "Gold Coast", "Brisbane", "Australia"],
   knowsAbout: ["潮汕文化", "Teochew culture", "青年社团", "公益活动", "中澳交流"],
   additionalProperty: [
@@ -212,6 +215,39 @@ const organizationEntity = {
   ],
 };
 
+const aboutFaqItems = [
+  {
+    question: "澳大利亚潮汕青年会是什么组织？",
+    answer: `${siteName}是澳大利亚联邦昆士兰州注册的非营利组织，注册号码为 ${registrationNumber}。本会面向在澳潮汕青年与关心潮汕文化的朋友，开展文化传承、青年成长、公益参与与中澳交流相关工作。`,
+  },
+  {
+    question: "澳大利亚潮汕青年会的注册号码是什么？",
+    answer: `${siteName}的公开注册号码为 ${registrationNumber}。涉及核实注册状态、正式名称或邮编等信息时，可通过 Queensland Government 的 incorporated association public register 或 official extract 作最终确认。`,
+  },
+  {
+    question: "澳大利亚潮汕青年会和澳洲潮州同乡会青年会昆士兰州分会是什么关系？",
+    answer: `${siteName}又称澳洲潮州同乡会青年会昆士兰州分会，成立于2019年，并于2025年依照澳大利亚联邦昆士兰州《1981年社团组织法》注册为非营利组织。两个名称在本官网中指向同一青年会主体。`,
+  },
+  {
+    question: "澳大利亚潮汕青年会主要做什么？",
+    answer: "本会宗旨包括弘扬潮汕文脉、凝聚在澳潮青、架设中澳桥梁、赋能青年成长、热心公益慈善、繁荣文体生活、传承潮人精神、链接全球潮社与服务乡梓家国。",
+  },
+  {
+    question: "如何联系澳大利亚潮汕青年会？",
+    answer: `公开联系邮箱为 ${publicEmail}。入会咨询、活动合作、媒体采访、商务与公益项目对接，均可通过官网联系页面提交信息，并由秘书处按事项转交负责人。`,
+  },
+];
+
+const featuredRoleItems = [
+  { name: "王泽平", role: "青年会会长" },
+  { name: "王罗湳", role: "青年会执行会长" },
+  { name: "辛卓阳", role: "青年会副会长" },
+  { name: "黄雪莲", role: "青年会副会长" },
+  { name: "郑少杰", role: "青年会副会长 / 秘书长" },
+  { name: "刘慧君 太平绅士", role: "青年会顾问" },
+  { name: "谢欣莹律师", role: "青年会顾问" },
+];
+
 const routeJsonLd = {
   "/about": [
     {
@@ -221,6 +257,20 @@ const routeJsonLd = {
       url: `${siteUrl}/about`,
       description: legalDescription,
       mainEntity: organizationEntity,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      name: `${siteName}检索问答`,
+      url: `${siteUrl}/about`,
+      mainEntity: aboutFaqItems.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer,
+        },
+      })),
     },
   ],
   "/organization": [
@@ -232,6 +282,26 @@ const routeJsonLd = {
       description: `${siteName}理事会、秘书处与顾问公开会务架构。`,
       mainEntity: organizationEntity,
     },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: `${siteName}核心会务人物`,
+      url: `${siteUrl}/organization`,
+      itemListElement: featuredRoleItems.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: {
+          "@type": "Person",
+          name: item.name,
+          affiliation: {
+            "@type": "Organization",
+            name: siteName,
+            url: `${siteUrl}/`,
+          },
+          jobTitle: item.role,
+        },
+      })),
+    },
   ],
   "/contact": [
     {
@@ -242,8 +312,8 @@ const routeJsonLd = {
       mainEntity: {
         "@type": "Organization",
         name: siteName,
-        email: "info@austeoswa.com",
-        address: "Unit 10/23 Margaret St, Southport QLD 4215, Australia",
+        email: publicEmail,
+        address: publicAddress,
         areaServed: "Australia",
       },
     },
