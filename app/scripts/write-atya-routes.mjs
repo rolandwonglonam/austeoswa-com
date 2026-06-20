@@ -28,6 +28,13 @@ const routes = [
     changefreq: "yearly",
   },
   {
+    path: "/organization",
+    title: "组织架构",
+    description: "澳大利亚潮汕同乡会与澳洲潮汕青年会公开理事会名录及核心会务架构。",
+    priority: "0.9",
+    changefreq: "monthly",
+  },
+  {
     path: "/news",
     title: "新闻活动",
     description: "浏览澳大利亚潮汕青年会新闻活动、原站活动文章和待补充活动资料。",
@@ -122,14 +129,18 @@ const publicWhitelist = [
   "CNAME",
   "manifest.webmanifest",
   "robots.txt",
+  "assets/about-founding-photo.jpg",
   "assets/atya-logo.png",
   "assets/atya-wordmark.png",
   "assets/ceremony-group.jpg",
   "assets/ceremony-speech.jpg",
   "assets/cruise-boat.jpg",
   "assets/gold-coast-background.png",
+  "assets/letter-to-grandma-premiere.png",
   "assets/letter-to-grandma-poster.jpg",
   "assets/logan-meeting.jpg",
+  "assets/roland-2026.png",
+  "assets/wang-zeping-2026.jpg",
   "downloads/atya-constitution.docx",
 ];
 
@@ -168,6 +179,22 @@ function breadcrumb(route) {
 }
 
 const routeJsonLd = {
+  "/organization": [
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      name: "组织架构",
+      url: `${siteUrl}/organization`,
+      mainEntity: {
+        "@type": "Organization",
+        name: siteName,
+        memberOf: {
+          "@type": "Organization",
+          name: "澳大利亚潮汕同乡会",
+        },
+      },
+    },
+  ],
   "/contact": [
     {
       "@context": "https://schema.org",

@@ -5,6 +5,7 @@ const routes = [
   "/",
   "/about",
   "/about/ata",
+  "/organization",
   "/news",
   "/news/1",
   "/news/2",
@@ -26,6 +27,7 @@ const requiredFiles = [
   "dist/assets/atya-wordmark.png",
   "dist/assets/gold-coast-background.png",
   "dist/assets/letter-to-grandma-poster.jpg",
+  "dist/assets/letter-to-grandma-premiere.png",
   "dist/downloads/atya-constitution.docx",
 ];
 
@@ -34,8 +36,6 @@ const forbiddenVisibleText = [
   "图库问答",
   "会员服务",
   "会员权益",
-  "加入同乡会",
-  "最新动态",
   "/assets/ata-logo.png",
 ];
 
@@ -43,7 +43,6 @@ const forbiddenPublicRoutes = [
   "/programs/medical-summer-school",
   "/gallery",
   "/membership",
-  "/organization",
   "/publications",
 ];
 
@@ -123,7 +122,6 @@ for (const route of routes) {
   const loc = `https://austeoswa.com${route === "/" ? "/" : route}`;
   assertIncludes(sitemap, `<loc>${loc}</loc>`, "dist/sitemap.xml");
 }
-assertExcludes(sitemap, "/organization", "dist/sitemap.xml");
 assertExcludes(sitemap, "/publications", "dist/sitemap.xml");
 for (const route of forbiddenPublicRoutes) {
   assertExcludes(sitemap, route, "dist/sitemap.xml");
@@ -161,6 +159,7 @@ const builtText = (await Promise.all(
 
 for (const expected of [
   "澳大利亚潮汕青年会",
+  "组织架构",
   "商务与资源",
   "资源中心",
   "乡音相连，共筑未来",
