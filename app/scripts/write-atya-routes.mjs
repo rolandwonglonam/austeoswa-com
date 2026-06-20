@@ -145,7 +145,9 @@ const publicWhitelist = [
   "assets/letter-to-grandma-premiere.webp",
   "assets/letter-to-grandma-poster.webp",
   "assets/logan-meeting.webp",
+  "assets/roland-2026-transparent.png",
   "assets/roland-2026.webp",
+  "assets/wang-zeping-2026-transparent.png",
   "assets/wang-zeping-2026.webp",
   "downloads/atya-constitution.docx",
 ];

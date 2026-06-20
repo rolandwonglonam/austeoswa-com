@@ -1304,7 +1304,7 @@ h3 {
 }
 
 .organization-summary img {
-  background: #f8fafc;
+  background: transparent;
   object-fit: contain;
   object-position: center;
 }
@@ -2559,7 +2559,7 @@ h3 {
   grid-row: 1 / span 3;
   object-fit: contain;
   object-position: center;
-  background: #f8fafc;
+  background: transparent;
 }
 
 .leader-grid strong {

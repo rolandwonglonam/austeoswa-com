@@ -30,6 +30,8 @@ const requiredFiles = [
   "dist/assets/gold-coast-background.webp",
   "dist/assets/letter-to-grandma-poster.webp",
   "dist/assets/letter-to-grandma-premiere.webp",
+  "dist/assets/roland-2026-transparent.png",
+  "dist/assets/wang-zeping-2026-transparent.png",
   "dist/downloads/atya-constitution.docx",
 ];
 

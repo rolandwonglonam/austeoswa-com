@@ -690,13 +690,13 @@ function HomePage({ navigate }) {
           </h2>
           <div className="leader-grid">
             <article>
-              <img className="leader-photo" src="/assets/wang-zeping-2026.webp" alt="王泽平肖像" loading="lazy" decoding="async" />
+              <img className="leader-photo" src="/assets/wang-zeping-2026-transparent.png" alt="王泽平肖像" loading="lazy" decoding="async" />
               <strong>王泽平</strong>
               <span>会长</span>
               <p>澳洲潮州青年會（昆士蘭）會長</p>
             </article>
             <article>
-              <img className="leader-photo" src="/assets/roland-2026.webp" alt="王罗湳肖像" loading="lazy" decoding="async" />
+              <img className="leader-photo" src="/assets/roland-2026-transparent.png" alt="王罗湳肖像" loading="lazy" decoding="async" />
               <strong>王罗湳</strong>
               <span>副会长</span>
               <ul>
@@ -1064,9 +1064,21 @@ function AtaPage({ navigate }) {
 }
 
 function OrganizationPage({ navigate }) {
+  const renderPersonName = (name) => {
+    if (!name.includes(" 太平绅士")) return name;
+    const [personName, title] = name.split(" ");
+    return (
+      <>
+        {personName}
+        <br />
+        {title}
+      </>
+    );
+  };
+
   const featuredRoles = [
-    { label: "青年会会长", name: "王泽平", photo: "/assets/wang-zeping-2026.webp" },
-    { label: "青年会执行会长", name: "王罗湳", photo: "/assets/roland-2026.webp" },
+    { label: "青年会会长", name: "王泽平", photo: "/assets/wang-zeping-2026-transparent.png" },
+    { label: "青年会执行会长", name: "王罗湳", photo: "/assets/roland-2026-transparent.png" },
     { label: "青年会副会长", name: "辛卓阳" },
     { label: "青年会副会长", name: "黄雪莲" },
     { label: "青年会副会长 / 秘书长", name: "郑少杰" },
@@ -1097,7 +1109,7 @@ function OrganizationPage({ navigate }) {
               <div aria-hidden="true">照片待添加</div>
             )}
             <span>{item.label}</span>
-            <strong>{item.name}</strong>
+            <strong>{renderPersonName(item.name)}</strong>
           </article>
         ))}
       </section>
