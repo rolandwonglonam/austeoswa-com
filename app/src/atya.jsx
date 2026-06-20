@@ -686,7 +686,7 @@ function HomePage({ navigate }) {
               <img className="leader-photo" src="/assets/wang-zeping-2026.webp" alt="王泽平肖像" loading="lazy" decoding="async" />
               <strong>王泽平</strong>
               <span>会长</span>
-              <p>青年会公开名录负责人</p>
+              <p>澳洲潮州青年會（昆士蘭）會長</p>
             </article>
             <article>
               <img className="leader-photo" src="/assets/roland-2026.webp" alt="王罗湳肖像" loading="lazy" decoding="async" />
