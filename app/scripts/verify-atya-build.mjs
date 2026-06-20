@@ -160,6 +160,8 @@ const builtText = (await Promise.all(
 
 for (const expected of [
   "澳大利亚潮汕青年会",
+  "IA4881891",
+  "昆士兰州注册的非营利组织",
   "组织架构",
   "商务与资源",
   "资源中心",

@@ -1280,7 +1280,7 @@ h3 {
 
 .organization-summary {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr));
   gap: 1.15rem;
   margin-top: 2rem;
 }
@@ -1815,6 +1815,41 @@ h3 {
   margin-top: 3rem;
 }
 
+.about-fact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  border: 1px solid #dfe5eb;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
+}
+
+.about-fact-grid article {
+  display: grid;
+  gap: 0.45rem;
+  min-height: 7.2rem;
+  padding: 1.25rem;
+  align-content: center;
+  border-right: 1px solid #e5e7eb;
+}
+
+.about-fact-grid article:last-child {
+  border-right: 0;
+}
+
+.about-fact-grid span {
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.about-fact-grid strong {
+  color: #0f172a;
+  font-size: clamp(1rem, 1.4vw, 1.22rem);
+  line-height: 1.5;
+}
+
 .about-original-section.is-narrow {
   max-width: 74rem;
   margin-right: auto;
@@ -1862,7 +1897,8 @@ h3 {
 
 .about-card-grid,
 .about-soft-grid,
-.about-org-grid {
+.about-org-grid,
+.about-mission-grid {
   display: grid;
   gap: 1.25rem;
 }
@@ -1871,10 +1907,15 @@ h3 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.about-mission-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .about-card-grid article,
 .about-panel,
 .about-soft-grid article,
-.about-org-grid article {
+.about-org-grid article,
+.about-mission-grid article {
   border: 1px solid #dfe5eb;
   border-radius: 18px;
   background: #fff;
@@ -1883,13 +1924,15 @@ h3 {
 
 .about-card-grid article,
 .about-soft-grid article,
-.about-org-grid article {
+.about-org-grid article,
+.about-mission-grid article {
   padding: 1.5rem;
 }
 
 .about-card-grid h3,
 .about-soft-grid h3,
 .about-org-grid h3,
+.about-mission-grid h3,
 .about-faq-list h3,
 .about-timeline h3 {
   color: #0f172a;
@@ -1901,6 +1944,7 @@ h3 {
 .about-soft-grid li,
 .about-org-grid p,
 .about-org-grid li,
+.about-mission-grid p,
 .about-faq-list p,
 .about-timeline p {
   color: #475569;
@@ -2825,10 +2869,22 @@ h3 {
 
   .site-footer-grid,
   .newsroom-grid,
+  .about-fact-grid,
   .about-card-grid,
   .about-soft-grid,
-  .about-org-grid {
+  .about-org-grid,
+  .about-mission-grid {
     grid-template-columns: 1fr;
+  }
+
+  .about-fact-grid article,
+  .about-fact-grid article:last-child {
+    border-right: 0;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .about-fact-grid article:last-child {
+    border-bottom: 0;
   }
 
   .site-footer-grid {

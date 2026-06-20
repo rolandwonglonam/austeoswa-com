@@ -4,19 +4,21 @@ import { dirname, join } from "node:path";
 
 const siteName = "澳大利亚潮汕青年会";
 const siteUrl = "https://austeoswa.com";
+const registrationNumber = "IA4881891";
+const legalDescription = `${siteName}是在澳大利亚联邦昆士兰州注册的非营利组织，注册号码 ${registrationNumber}，致力于弘扬潮汕文化、凝聚在澳潮汕青年、促进公益参与与中澳交流。`;
 
 const routes = [
   {
     path: "/",
     title: "首页",
-    description: "澳大利亚潮汕青年会官方门户，面向在澳潮汕青年与关心潮汕文化的朋友。",
+    description: legalDescription,
     priority: "1.0",
     changefreq: "weekly",
   },
   {
     path: "/about",
     title: "关于青年会",
-    description: "了解澳大利亚潮汕青年会的定位、轻量组织说明、公开联系信息和待确认资料清单。",
+    description: `了解${siteName}作为昆士兰州注册非营利组织的注册资料、宗旨使命、活动类型与参与方式，注册号码 ${registrationNumber}。`,
     priority: "0.9",
     changefreq: "monthly",
   },
@@ -30,7 +32,7 @@ const routes = [
   {
     path: "/organization",
     title: "组织架构",
-    description: "澳大利亚潮汕同乡会与澳洲潮汕青年会公开理事会名录及核心会务架构。",
+    description: `${siteName}组织架构、理事会、秘书处与顾问公开名录；本会为昆士兰州注册非营利组织，注册号码 ${registrationNumber}。`,
     priority: "0.9",
     changefreq: "monthly",
   },
@@ -179,21 +181,56 @@ function breadcrumb(route) {
   };
 }
 
+const organizationEntity = {
+  "@type": ["Organization", "NGO"],
+  name: siteName,
+  legalName: siteName,
+  alternateName: ["Australia Teoswa Youth Association", "ATYA", "澳洲潮州同乡会青年会昆士兰州分会"],
+  url: `${siteUrl}/`,
+  description: legalDescription,
+  foundingDate: "2019",
+  identifier: {
+    "@type": "PropertyValue",
+    propertyID: "Queensland incorporated association registration number",
+    value: registrationNumber,
+  },
+  email: "info@austeoswa.com",
+  address: "Unit 10/23 Margaret St, Southport QLD 4215, Australia",
+  areaServed: ["Queensland", "Gold Coast", "Brisbane", "Australia"],
+  knowsAbout: ["潮汕文化", "Teochew culture", "青年社团", "公益活动", "中澳交流"],
+  additionalProperty: [
+    {
+      "@type": "PropertyValue",
+      name: "Organization type",
+      value: "Queensland registered nonprofit organization",
+    },
+    {
+      "@type": "PropertyValue",
+      name: "Registration act",
+      value: "Queensland Associations Incorporation Act 1981",
+    },
+  ],
+};
+
 const routeJsonLd = {
+  "/about": [
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      name: "关于青年会",
+      url: `${siteUrl}/about`,
+      description: legalDescription,
+      mainEntity: organizationEntity,
+    },
+  ],
   "/organization": [
     {
       "@context": "https://schema.org",
       "@type": "AboutPage",
       name: "组织架构",
       url: `${siteUrl}/organization`,
-      mainEntity: {
-        "@type": "Organization",
-        name: siteName,
-        memberOf: {
-          "@type": "Organization",
-          name: "澳大利亚潮汕同乡会",
-        },
-      },
+      description: `${siteName}理事会、秘书处与顾问公开会务架构。`,
+      mainEntity: organizationEntity,
     },
   ],
   "/contact": [

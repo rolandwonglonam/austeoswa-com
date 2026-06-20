@@ -4,15 +4,22 @@ import "./atya.css";
 
 const site = {
   name: "澳大利亚潮汕青年会",
+  legalName: "澳大利亚潮汕青年会",
   englishName: "Australia Teoswa Youth Association",
   shortName: "ATYA",
+  aliasName: "澳洲潮州同乡会青年会昆士兰州分会",
   secondaryName: "澳大利亚潮汕同乡会",
   domain: "https://austeoswa.com",
   email: "info@austeoswa.com",
   address: "Unit 10/23 Margaret St, Southport QLD 4215, Australia",
-  mission: "联络乡谊、互助互爱、传承文化、回馈社会",
+  registrationNumber: "IA4881891",
+  registrationAct: "澳大利亚联邦昆士兰州《1981年社团组织法》",
+  registrationYear: "2025",
+  foundedYear: "2019",
+  organizationType: "澳大利亚联邦昆士兰州注册非营利组织",
+  mission: "弘扬潮汕文脉、凝聚在澳潮青、架设中澳桥梁、赋能青年成长、热心公益慈善",
   description:
-    "澳大利亚潮汕青年会官方门户，面向在澳潮汕青年与关心潮汕文化的朋友，承接青年交流、文化传承、公益参与、商务与资源对接。",
+    "澳大利亚潮汕青年会是在澳大利亚联邦昆士兰州注册的非营利组织，注册号码 IA4881891，面向在澳潮汕青年与关心潮汕文化的朋友，承接青年交流、文化传承、公益参与、商务与资源对接。",
 };
 
 const navItems = [
@@ -132,9 +139,9 @@ const organizationBoards = [
       { role: "荣誉会长", names: ["杜艇", "吴子强", "张桂芳", "郑茂强"] },
       { role: "会长", names: ["王泽平"] },
       { role: "执行会长", names: ["王罗湳"] },
-      { role: "副会长", names: ["陈泽宁", "辛卓阳", "杨孟钊", "杨婉钰", "杨子辉", "张俊"] },
+      { role: "副会长", names: ["陈泽宁", "辛卓阳", "郑少杰", "黄雪莲", "杨孟钊", "杨婉钰", "杨子辉", "张俊"] },
       { role: "秘书长", names: ["郑少杰"] },
-      { role: "副秘书长", names: ["黄璐璐", "黄雪莲"] },
+      { role: "副秘书长", names: ["黄璐璐"] },
       { role: "理事长", names: ["林泽辉"] },
       { role: "监事长", names: ["卢霄霓"] },
       { role: "财务长", names: ["郑少杰"] },
@@ -765,6 +772,20 @@ function AboutPage({ navigate }) {
     { title: "青年与职业", items: ["行业圆桌、简历与面试工作坊", "创业路演、导师配对与校友网络", "公共演讲、新媒体与活动执行能力训练"] },
     { title: "对外与交流", items: ["接待来访潮团与商务考察团", "组织回乡交流、文化考察与商务对接（视行程与资源而定）", "与高校、文化机构合办展览、讲座与联合研究"] },
   ];
+  const missionItems = [
+    { title: "弘扬潮汕文脉", desc: "传承英歌舞、潮剧、工夫茶、潮汕美食与岁时习俗，让千年潮风在南半球落地生根，焕发新生。" },
+    { title: "凝聚在澳潮青", desc: "搭建温暖的交流平台，连接在澳求学、就业、创业、安家的潮汕儿女，构建互信互助的海外潮人之家。" },
+    { title: "架设中澳桥梁", desc: "做中澳之间文化互鉴与经贸往来的纽带，助力会员在两地之间把握机遇、拓展空间。" },
+    { title: "赋能青年成长", desc: "汇聚学业、职场、创业等多维资源，以分享会、导师制、实战交流等形式助会员增长才干。" },
+    { title: "热心公益慈善", desc: "组织慈善捐助、社区服务与志愿行动，回馈澳洲社会，彰显潮人敢拼会赢、乐善好施的精神底色。" },
+    { title: "链接全球潮社", desc: "对接世界各地潮团乡会与潮汕本土组织，融入全球潮人网络，让在澳潮青成为联通世界的一环。" },
+  ];
+  const factItems = [
+    { label: "注册性质", value: site.organizationType },
+    { label: "注册号码", value: site.registrationNumber },
+    { label: "成立时间", value: `${site.foundedYear}年` },
+    { label: "注册依据", value: site.registrationAct },
+  ];
   const organizationItems = [
     {
       name: "澳大利亚潮汕同乡会",
@@ -821,12 +842,21 @@ function AboutPage({ navigate }) {
         <h1>关于我们</h1>
         <div className="about-original-hero-grid">
           <div className="about-original-hero-copy">
-            <p>澳大利亚潮汕同乡会与澳大利亚潮汕青年会，是在澳潮汕乡亲自愿发起、依法登记或按当地惯例运作的非营利社群组织。我们扎根于澳大利亚多元文化社会，既珍视潮汕人勤劳重教、团结互助的传统，也以开放心态拥抱本地规则与国际视野。</p>
-            <p>「同乡会」面向全年龄段乡亲，承担联谊、公益与对外联络等核心职能；「青年会」则聚焦新生代成长与文化创新表达，二者分工协作、资源共享，共同构成在澳潮汕人的「一体两翼」。</p>
-            <p>我们相信：好的社团不仅是办活动，更是长期信任、规则与价值的积累。以下从使命愿景、工作重点、组织分工、活动类型到参与方式，帮助您全面了解本会。</p>
+            <p>{site.name}，又称{site.aliasName}。本会成立于{site.foundedYear}年，由昆士兰州潮汕青年自愿发起，并于{site.registrationYear}年依照{site.registrationAct}注册为非营利组织，注册号码为 {site.registrationNumber}。</p>
+            <p>我们扎根于澳大利亚多元文化社会，既珍视潮汕人勤劳重教、团结互助的传统，也以开放心态拥抱本地规则与国际视野。</p>
+            <p>截至2026年6月，青年会已有200余名会员，包括20多位理事。成员多为高学历青年和企业家，活跃于学术界、人工智能、科技、法律、医疗、金融、传媒、地产、贸易、艺术等领域。</p>
           </div>
           <img className="about-original-hero-image" src="/assets/about-founding-photo.webp" alt="澳大利亚潮汕同乡会活动合影" loading="lazy" decoding="async" />
         </div>
+      </section>
+
+      <section className="about-original-section about-fact-grid" aria-label="注册资料">
+        {factItems.map((item) => (
+          <article key={item.label}>
+            <span>{item.label}</span>
+            <strong>{item.value}</strong>
+          </article>
+        ))}
       </section>
 
       <section className="about-original-section is-narrow">
@@ -835,6 +865,21 @@ function AboutPage({ navigate }) {
           <p><strong>使命：</strong>团结在澳大利亚的潮汕乡亲与青年力量，维护共同情感与文化遗产，促进互助合作与社会参与，使潮汕精神——勤劳、重教、团结、开放——在异国土地上持续发光；同时以合法合规、尊重多元为前提，推动潮汕族群与本地社区、其他族裔之间的理解与协作。</p>
           <p><strong>愿景：</strong>成为澳洲华人社群中值得信赖的潮汕文化推广者与青年成长伙伴，构建连接故乡与旅居地、传统与当代、社区与世界的可持续网络；让下一代既能自信使用英语与本地规则参与社会，也能自然亲近潮汕语言与文化记忆。</p>
           <p><strong>定位：</strong>我们既是「文化共同体」，也是「互助网络」与「青年发展平台」——不替代政府与专业机构，但在信息、情感与初步资源对接上，为乡亲提供多一层温暖与抓手。</p>
+        </div>
+      </section>
+
+      <section className="about-original-section about-mission-section">
+        <div className="about-centered-head">
+          <h2>我们的使命</h2>
+          <p>本会以文化传承、青年成长、公益参与与跨社群协作为核心方向，推动在澳潮汕青年形成长期、稳定、可信赖的组织连接。</p>
+        </div>
+        <div className="about-mission-grid">
+          {missionItems.map((item) => (
+            <article key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.desc}</p>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -962,6 +1007,11 @@ function OrganizationPage({ navigate }) {
   const featuredRoles = [
     { label: "青年会会长", name: "王泽平", photo: "/assets/wang-zeping-2026.webp" },
     { label: "青年会执行会长", name: "王罗湳", photo: "/assets/roland-2026.webp" },
+    { label: "青年会副会长", name: "辛卓阳" },
+    { label: "青年会副会长", name: "黄雪莲" },
+    { label: "青年会副会长 / 秘书长", name: "郑少杰" },
+    { label: "青年会顾问", name: "刘慧君 太平绅士" },
+    { label: "青年会顾问", name: "谢欣莹律师" },
   ];
 
   return (
@@ -970,7 +1020,7 @@ function OrganizationPage({ navigate }) {
         <p>Governance</p>
         <h1>组织架构</h1>
         <span>
-          以下为澳洲潮汕青年会公开理事会名录，页面先按公开名单展示职务与姓名，后续如有正式公告更新，将以官网最新版本为准。
+          {site.name}是在澳大利亚联邦昆士兰州注册的非营利组织，注册号码为 {site.registrationNumber}；本页列示青年会理事会、秘书处与顾问等公开会务架构。
         </span>
         <div className="profile-hero-actions">
           <button type="button" onClick={() => navigate("/contact")}>联系秘书处</button>
@@ -980,7 +1030,7 @@ function OrganizationPage({ navigate }) {
 
       <section className="organization-summary">
         {featuredRoles.map((item) => (
-          <article key={item.label}>
+          <article key={`${item.label}-${item.name}`}>
             {item.photo ? (
               <img src={item.photo} alt={`${item.name}肖像`} loading="lazy" decoding="async" />
             ) : (
@@ -990,11 +1040,6 @@ function OrganizationPage({ navigate }) {
             <strong>{item.name}</strong>
           </article>
         ))}
-      </section>
-
-      <section className="organization-note">
-        <strong>公开资料说明：</strong>
-        本页依据已获准公开的「澳洲潮汕青年会第一届理事会芳名」整理；人物履历与任期细节不在本版扩写。
       </section>
 
       <div className="organization-board-list">
