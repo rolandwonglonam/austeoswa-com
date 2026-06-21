@@ -245,7 +245,7 @@ const featuredRoleItems = [
   { name: "王罗湳", role: "青年会执行会长" },
   { name: "辛卓阳", role: "青年会副会长" },
   { name: "黄雪莲", role: "青年会副会长" },
-  { name: "郑少杰", role: "青年会副会长 / 秘书长" },
+  { name: "郑少杰", role: "青年会秘书长" },
   { name: "刘慧君 太平绅士", role: "青年会顾问" },
   { name: "谢欣莹律师", role: "青年会顾问" },
 ];

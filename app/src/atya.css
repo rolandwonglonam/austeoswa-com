@@ -1072,6 +1072,16 @@ h3 {
   line-height: 1.8;
 }
 
+.profile-page-hero .organization-hero-copy-line {
+  margin-top: 0.08rem;
+}
+
+@media (min-width: 760px) {
+  .profile-page-hero .organization-hero-copy-line {
+    white-space: nowrap;
+  }
+}
+
 .profile-page-section {
   margin-top: 3rem;
 }

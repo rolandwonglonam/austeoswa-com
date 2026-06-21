@@ -139,7 +139,7 @@ const organizationBoards = [
       { role: "荣誉会长", names: ["杜艇", "吴子强", "张桂芳", "郑茂强"] },
       { role: "会长", names: ["王泽平"] },
       { role: "执行会长", names: ["王罗湳"] },
-      { role: "副会长", names: ["陈泽宁", "辛卓阳", "郑少杰", "黄雪莲", "杨孟钊", "杨婉钰", "杨子辉", "张俊"] },
+      { role: "副会长", names: ["陈泽宁", "辛卓阳", "黄雪莲", "杨孟钊", "杨婉钰", "杨子辉", "张俊"] },
       { role: "秘书长", names: ["郑少杰"] },
       { role: "副秘书长", names: ["黄璐璐"] },
       { role: "理事长", names: ["林泽辉"] },
@@ -1081,7 +1081,7 @@ function OrganizationPage({ navigate }) {
     { label: "青年会执行会长", name: "王罗湳", photo: "/assets/roland-2026-transparent.png" },
     { label: "青年会副会长", name: "辛卓阳" },
     { label: "青年会副会长", name: "黄雪莲" },
-    { label: "青年会副会长 / 秘书长", name: "郑少杰" },
+    { label: "青年会秘书长", name: "郑少杰" },
     { label: "青年会顾问", name: "刘慧君 太平绅士" },
     { label: "青年会顾问", name: "谢欣莹律师" },
   ];
@@ -1091,8 +1091,9 @@ function OrganizationPage({ navigate }) {
       <div className="profile-page-hero organization-hero">
         <p>Governance</p>
         <h1>组织架构</h1>
-        <span>
-          {site.name}是在澳大利亚联邦昆士兰州注册的非营利组织，注册号码为 {site.registrationNumber}；本页列示青年会理事会、秘书处与顾问等公开会务架构。
+        <span className="organization-hero-copy">
+          <span>{site.name}是在澳大利亚联邦昆士兰州注册的非营利组织，注册号码为 {site.registrationNumber}；</span>
+          <span className="organization-hero-copy-line">本页列示青年会理事会、秘书处与顾问等公开会务架构。</span>
         </span>
         <div className="profile-hero-actions">
           <button type="button" onClick={() => navigate("/contact")}>联系秘书处</button>
