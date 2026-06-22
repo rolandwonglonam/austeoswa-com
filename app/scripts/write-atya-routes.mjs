@@ -241,11 +241,37 @@ const aboutFaqItems = [
 ];
 
 const featuredRoleItems = [
-  { name: "王泽平", role: "青年会会长" },
-  { name: "王罗湳", role: "青年会执行会长" },
-  { name: "辛卓阳", role: "青年会副会长" },
-  { name: "黄雪莲", role: "青年会副会长" },
-  { name: "郑少杰", role: "青年会秘书长" },
+  {
+    name: "王泽平",
+    role: "青年会会长",
+    description: "SOYO TOUR SERVICE PTY LTD；GEMINI PLUS PTY LTD；TEOSWA PTY LTD；THE NEW HOTPOT 醉牛火锅；揭阳市澳合投资有限公司；揭阳市侨联第五届委员会顾问；澳大利亚潮汕青年会会长（代理）；澳大利亚潮汕商会副会长；澳洲潮州同乡会青年会昆州分会会长；澳大利亚潮汕总会第一届副会长",
+  },
+  {
+    name: "王罗湳",
+    role: "青年会执行会长",
+    description: "昆士兰大学医学学部全奖博士候选人；澳大利亚潮汕青年会执行会长；澳大利亚潮汕商会理事",
+  },
+  {
+    name: "辛卓阳",
+    role: "青年会副会长",
+    description: "博士；昆士兰大学土木工程学院博士后研究员；澳大利亚潮汕青年会副会长；澳大利亚昆士兰潮汕总会副秘书长",
+  },
+  {
+    name: "黄雪莲",
+    role: "青年会副会长",
+    description: "F&J QUEENLAND TRADING PTY LTD；国际佛光会观音分会会长；澳大利亚潮汕青年会副会长",
+  },
+  {
+    name: "盧霄霓",
+    role: "青年会监事长",
+    description: "Citipointe Childcare Forest School and Outdoor Learning Program Teacher；澳大利亞潮汕青年會監事長",
+  },
+  {
+    name: "林泽辉",
+    role: "青年会副会长",
+    description: "TOMEDU PTY LTD；澳大利亚潮汕青年会副会长；澳大利亚青年企业家协会副会长",
+  },
+  { name: "郑少杰", role: "青年会秘书长", description: "秘书长" },
   { name: "谢欣莹律师", role: "青年会顾问" },
 ];
 
@@ -300,6 +326,7 @@ const routeJsonLd = {
             url: `${siteUrl}/`,
           },
           jobTitle: item.role,
+          ...(item.description ? { description: item.description } : {}),
         },
       })),
     },

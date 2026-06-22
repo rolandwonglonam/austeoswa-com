@@ -50,7 +50,7 @@ export const principles = [
 
 export const associationBoard = [
   { role: "创会会长", names: ["龙啸"] },
-  { role: "荣誉会长", names: ["方灿", "赖文峰", "李刚勇", "卢霄霓", "吴友和", "吴子强", "杨友斌", "张培孚"] },
+  { role: "荣誉会长", names: ["方灿", "赖文峰", "李刚勇", "盧霄霓", "吴友和", "吴子强", "杨友斌", "张培孚"] },
   { role: "会长", names: ["黄璐璐"] },
   { role: "执行会长", names: ["黄雪莲"] },
   { role: "副会长", names: ["陈泽宁", "黄挺", "李希", "林泽辉", "王罗湳", "辛卓阳", "杨璇钰", "张翼"] },
@@ -70,9 +70,9 @@ export const youthBoard = [
   { role: "秘书长", names: ["郑少杰"] },
   { role: "副秘书长", names: ["黄璐璐", "黄雪莲"] },
   { role: "理事长", names: ["林泽辉"] },
-  { role: "监事长", names: ["卢霄霓"] },
+  { role: "监事长", names: ["盧霄霓"] },
   { role: "财务长", names: ["郑少杰"] },
-  { role: "顾问", names: ["林安雯", "卢霄霓", "谢欣莹律师"] },
+  { role: "顾问", names: ["林安雯", "谢欣莹律师"] },
 ];
 
 export const governanceUnits = [

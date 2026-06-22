@@ -143,9 +143,9 @@ const organizationBoards = [
       { role: "秘书长", names: ["郑少杰"] },
       { role: "副秘书长", names: ["黄璐璐"] },
       { role: "理事长", names: ["林泽辉"] },
-      { role: "监事长", names: ["卢霄霓"] },
+      { role: "监事长", names: ["盧霄霓"] },
       { role: "财务长", names: ["郑少杰"] },
-      { role: "顾问", names: ["林安雯", "卢霄霓", "谢欣莹律师"] },
+      { role: "顾问", names: ["林安雯", "谢欣莹律师"] },
     ],
   },
 ];
@@ -686,22 +686,22 @@ function HomePage({ navigate }) {
         <aside className="leader-card">
           <h2>
             <span>青年会负责人</span>
-            <small>会长 / 副会长</small>
+            <small>会长 / 执行会长</small>
           </h2>
           <div className="leader-grid">
             <article>
               <img className="leader-photo" src="/assets/wang-zeping-2026-transparent.png" alt="王泽平肖像" loading="lazy" decoding="async" />
               <strong>王泽平</strong>
               <span>会长</span>
-              <p>澳洲潮州青年會（昆士蘭）會長</p>
+              <p>澳大利亚潮汕青年会会长（代理）</p>
             </article>
             <article>
               <img className="leader-photo" src="/assets/roland-2026-transparent.png" alt="王罗湳肖像" loading="lazy" decoding="async" />
               <strong>王罗湳</strong>
-              <span>副会长</span>
+              <span>执行会长</span>
               <ul>
-                <li>瀚宇醫略有限公司創始人</li>
-                <li><span>澳洲潮州青年會（昆士蘭）</span><span>執行會長</span></li>
+                <li>昆士兰大学医学学部全奖博士候选人</li>
+                <li>澳大利亚潮汕青年会执行会长</li>
               </ul>
             </article>
           </div>
@@ -1077,11 +1077,50 @@ function OrganizationPage({ navigate }) {
   };
 
   const featuredRoles = [
-    { label: "青年会会长", name: "王泽平", photo: "/assets/wang-zeping-2026-transparent.png" },
-    { label: "青年会执行会长", name: "王罗湳", photo: "/assets/roland-2026-transparent.png" },
-    { label: "青年会副会长", name: "辛卓阳" },
-    { label: "青年会副会长", name: "黄雪莲" },
-    { label: "青年会秘书长", name: "郑少杰" },
+    {
+      label: "青年会会长",
+      name: "王泽平",
+      photo: "/assets/wang-zeping-2026-transparent.png",
+      details: [
+        "SOYO TOUR SERVICE PTY LTD",
+        "GEMINI PLUS PTY LTD",
+        "TEOSWA PTY LTD",
+        "THE NEW HOTPOT 醉牛火锅",
+        "揭阳市澳合投资有限公司",
+        "揭阳市侨联第五届委员会顾问",
+        "澳大利亚潮汕青年会会长（代理）",
+        "澳大利亚潮汕商会副会长",
+        "澳洲潮州同乡会青年会昆州分会会长",
+        "澳大利亚潮汕总会第一届副会长",
+      ],
+    },
+    {
+      label: "青年会执行会长",
+      name: "王罗湳",
+      photo: "/assets/roland-2026-transparent.png",
+      details: ["昆士兰大学医学学部全奖博士候选人", "澳大利亚潮汕青年会执行会长", "澳大利亚潮汕商会理事"],
+    },
+    {
+      label: "青年会副会长",
+      name: "辛卓阳",
+      details: ["博士", "昆士兰大学土木工程学院博士后研究员", "澳大利亚潮汕青年会副会长", "澳大利亚昆士兰潮汕总会副秘书长"],
+    },
+    {
+      label: "青年会副会长",
+      name: "黄雪莲",
+      details: ["F&J QUEENLAND TRADING PTY LTD", "国际佛光会观音分会会长", "澳大利亚潮汕青年会副会长"],
+    },
+    {
+      label: "青年会监事长",
+      name: "盧霄霓",
+      details: ["Citipointe Childcare Forest School and Outdoor Learning Program Teacher", "澳大利亞潮汕青年會監事長"],
+    },
+    {
+      label: "青年会副会长",
+      name: "林泽辉",
+      details: ["TOMEDU PTY LTD", "澳大利亚潮汕青年会副会长", "澳大利亚青年企业家协会副会长"],
+    },
+    { label: "青年会秘书长", name: "郑少杰", details: ["秘书长"] },
     { label: "青年会顾问", name: "谢欣莹律师" },
   ];
 
@@ -1110,6 +1149,13 @@ function OrganizationPage({ navigate }) {
             )}
             <span>{item.label}</span>
             <strong>{renderPersonName(item.name)}</strong>
+            {item.details?.length ? (
+              <ul>
+                {item.details.map((detail) => (
+                  <li key={detail}>{detail}</li>
+                ))}
+              </ul>
+            ) : null}
           </article>
         ))}
       </section>
