@@ -266,7 +266,6 @@ const featuredRoleItems = [
     role: "青年会监事长",
     image: "assets/lu-xiaoni-uniform-2026.webp",
   },
-  { name: "金志展", role: "青年会会务成员" },
 ];
 
 const routeJsonLd = {

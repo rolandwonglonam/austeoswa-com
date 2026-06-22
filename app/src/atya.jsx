@@ -992,7 +992,6 @@ function OrganizationPage({ navigate }) {
     { label: "青年会秘书长", name: "郑少杰", photo: "/assets/zheng-shaojie-uniform-2026.webp" },
     { label: "青年会理事长", name: "林泽辉", photo: "/assets/lin-zehui-uniform-2026.webp" },
     { label: "青年会监事长", name: "盧霄霓", photo: "/assets/lu-xiaoni-uniform-2026.webp" },
-    { label: "青年会会务成员", name: "金志展" },
   ];
 
   const showOrganizationBoardList = false;
