@@ -7,8 +7,6 @@ const site = {
   legalName: "澳大利亚潮汕青年会",
   englishName: "Australia Teoswa Youth Association",
   shortName: "ATYA",
-  aliasName: "澳洲潮州同乡会青年会昆士兰州分会",
-  secondaryName: "澳大利亚潮汕同乡会",
   domain: "https://austeoswa.com",
   email: "info@austeoswa.com",
   address: "Unit 10/23 Margaret St, Southport QLD 4215, Australia",
@@ -33,7 +31,6 @@ const navItems = [
 const routeTitles = {
   "/": "首页",
   "/about": "关于青年会",
-  "/about/ata": "同乡会说明",
   "/organization": "组织架构",
   "/news": "新闻活动",
   "/news/1": "活动文章",
@@ -53,6 +50,7 @@ const legacyPath = (...segments) => `/${segments.join("/")}`;
 
 const routeAliases = Object.fromEntries([
   [legacyPath("member"), "/organization"],
+  [legacyPath("about", "ata"), "/about"],
   [legacyPath("membership"), "/contact"],
   [legacyPath("publications"), "/resources"],
   [legacyPath("gallery"), "/resources"],
@@ -110,7 +108,7 @@ const focusAreas = [
 const youthStructure = [
   {
     title: "青年会理事会",
-    text: "负责青年会年度方向、重点活动、对外合作和与同乡会相关事务的协同。",
+    text: "负责青年会年度方向、重点活动、对外合作和公开会务事项的协同。",
   },
   {
     title: "秘书与执行协作",
@@ -342,9 +340,9 @@ const homeSlides = [
   {
     id: "intro",
     type: "intro",
-    eyebrow: "Australian Teochew Community",
-    titleLines: ["澳大利亚潮汕同乡会", "澳大利亚潮汕青年会"],
-    text: "以现代非营利组织模式运营连接传统文化，用国际化视野服务在澳潮汕乡亲。我们在联络乡情、青年成长与公益协作中，持续构建更有温度的社区生态。",
+    eyebrow: "Australia Teoswa Youth Association",
+    titleLines: ["澳大利亚潮汕青年会"],
+    text: "以现代非营利组织模式连接传统文化，用国际化视野服务在澳潮汕青年。我们在文化传承、青年成长与公益协作中，持续构建更有温度的青年社群生态。",
     image: "/assets/gold-coast-background.webp",
   },
   {
@@ -362,7 +360,7 @@ const homePillars = [
   {
     label: "Community First",
     title: "社区联结",
-    text: "把分散在澳洲各地的潮汕乡亲连接起来，建立长期、稳定且互助的社群关系。",
+    text: "把分散在澳洲各地的潮汕青年和家庭连接起来，建立长期、稳定且互助的社群关系。",
   },
   {
     label: "Next Generation",
@@ -510,7 +508,6 @@ function App() {
       <main id="main-content" tabIndex="-1">
         {path === "/" && <HomePage navigate={navigate} />}
         {path === "/about" && <AboutPage navigate={navigate} />}
-        {path === "/about/ata" && <AtaPage navigate={navigate} />}
         {path === "/organization" && <OrganizationPage navigate={navigate} />}
         {(path === "/news" || path === "/new") && <NewsPage navigate={navigate} />}
         {(path === "/news/1" || path === "/new/1") && <OriginalArticlePage article={originalArticlePages["1"]} navigate={navigate} />}
@@ -690,12 +687,12 @@ function HomePage({ navigate }) {
           </h2>
           <div className="leader-grid">
             <article>
-              <img className="leader-photo" src="/assets/wang-zeping-2026-transparent.png" alt="王泽平肖像" loading="lazy" decoding="async" />
+              <img className="leader-photo" src="/assets/wang-zeping-uniform-2026.webp" alt="王泽平肖像" loading="lazy" decoding="async" />
               <strong>王泽平</strong>
               <span>会长</span>
             </article>
             <article>
-              <img className="leader-photo" src="/assets/roland-2026-transparent.png" alt="王罗湳肖像" loading="lazy" decoding="async" />
+              <img className="leader-photo" src="/assets/roland-uniform-2026.webp" alt="王罗湳肖像" loading="lazy" decoding="async" />
               <strong>王罗湳</strong>
               <span>执行会长</span>
             </article>
@@ -720,10 +717,10 @@ function HomePage({ navigate }) {
 
       <section className="container home-contact-section">
         <div className="home-cta">
-          <h2>欢迎联系澳洲潮汕社群网络</h2>
-          <p>欢迎新移民、创业者、专业人士与青年学生参与，携手构建更紧密、更国际化的潮汕社区连接。</p>
+          <h2>欢迎联系澳大利亚潮汕青年会</h2>
+          <p>欢迎新移民、创业者、专业人士与青年学生参与，携手构建更紧密、更国际化的潮汕青年社群连接。</p>
           <div>
-            <button className="button light" type="button" onClick={() => navigate("/contact")}>加入同乡会</button>
+            <button className="button light" type="button" onClick={() => navigate("/contact")}>加入青年会</button>
             <button className="button ghost-light" type="button" onClick={() => navigate("/new")}>查看活动回顾</button>
           </div>
         </div>
@@ -758,7 +755,7 @@ function AboutPage({ navigate }) {
     },
     {
       title: "青年发展",
-      body: "澳大利亚潮汕青年会面向新生代，聚焦职业发展、创业交流、导师计划与社会参与。我们与同乡会协同，让青年在会务策划、品牌传播与对外联络中锻炼能力，形成「传帮带」的健康代际结构。",
+      body: "澳大利亚潮汕青年会面向新生代，聚焦职业发展、创业交流、导师计划与社会参与。我们让青年在会务策划、品牌传播与对外联络中锻炼能力，形成「传帮带」的健康代际结构。",
     },
   ];
   const programItems = [
@@ -773,7 +770,7 @@ function AboutPage({ navigate }) {
     { title: "架设中澳桥梁", desc: "做中澳之间文化互鉴与经贸往来的纽带，助力会员在两地之间把握机遇、拓展空间。" },
     { title: "赋能青年成长", desc: "汇聚学业、职场、创业等多维资源，以分享会、导师制、实战交流等形式助会员增长才干。" },
     { title: "热心公益慈善", desc: "组织慈善捐助、社区服务与志愿行动，回馈澳洲社会，彰显潮人敢拼会赢、乐善好施的精神底色。" },
-    { title: "链接全球潮社", desc: "对接世界各地潮团乡会与潮汕本土组织，融入全球潮人网络，让在澳潮青成为联通世界的一环。" },
+    { title: "链接全球潮社", desc: "对接世界各地潮团与潮汕本土组织，融入全球潮人网络，让在澳潮青成为联通世界的一环。" },
   ];
   const factItems = [
     { label: "注册性质", value: site.organizationType },
@@ -785,35 +782,10 @@ function AboutPage({ navigate }) {
     { label: "正式中文名称", value: site.legalName },
     { label: "英文名称", value: site.englishName },
     { label: "简称", value: site.shortName },
-    { label: "别称", value: site.aliasName },
     { label: "注册号码", value: site.registrationNumber },
     { label: "服务地区", value: "澳大利亚昆士兰州，主要服务黄金海岸、布里斯班及周边在澳潮汕青年社群" },
     { label: "公开联系邮箱", value: site.email },
     { label: "办公地址", value: site.address },
-  ];
-  const organizationItems = [
-    {
-      name: "澳大利亚潮汕同乡会",
-      role: "Teochew Community Association",
-      intro: "同乡会是全体在澳潮汕乡亲的共同家园，承担联谊、公益、对外联络与会务统筹等职能，是社群长期稳定发展的中枢。",
-      points: [
-        "面向全体在澳潮汕籍贯人士及认同本会宗旨、关心潮汕文化发展的各界人士开放联络与参与渠道。",
-        "组织跨城市联谊、传统节庆、慈善晚宴与主题论坛，维护会员与乡亲合法权益，传递会务信息与政策解读。",
-        "推动与海内外潮团、商会、文化机构及地方政府相关部门的友好交流，为乡亲经贸、教育与旅行提供信息桥梁。",
-        "以章程与会员制度为基础，坚持民主协商、财务透明与活动安全，营造可信赖的社群治理环境。",
-      ],
-    },
-    {
-      name: "澳大利亚潮汕青年会",
-      role: "Teochew Youth Association",
-      intro: "青年会以新生代为主体，强调创新表达与实践参与，在同乡会的价值框架下探索更符合当代节奏的活动形态。",
-      points: [
-        "策划职业发展沙龙、行业分享、创业路演与校企参访，帮助青年建立跨领域人脉与职业能见度。",
-        "承担文化传承的「翻译者」角色：用双语、多媒体与跨界合作，让潮汕故事被更多非潮籍朋友理解与尊重。",
-        "组织体育、户外、艺术与志愿者项目，增强青年凝聚力，并鼓励骨干进入同乡会各专业委员会轮岗锻炼。",
-        "促进与澳洲本地高校社团、青年商会及亚裔青年网络的对话，拓展潮汕青年在多元社会中的话语权与协作机会。",
-      ],
-    },
   ];
   const participationItems = [
     { title: "成为会员", desc: "按本会章程履行申请与审核程序，享受活动优先报名、会务资讯与部分资源共享等权益；具体细则以当期会员条款为准。" },
@@ -826,12 +798,6 @@ function AboutPage({ navigate }) {
     "包容与反歧视：尊重性别、年龄、职业与政治观点差异，在公共议题上保持理性与建设性表达。",
     "透明与合规：重大事项依章程与会员规则决策，财务与活动信息在合理范围内向会员与乡亲公开。",
     "安全与责任：户外活动、大型集会遵守当地法律法规，重视参与者人身与数据安全。",
-  ];
-  const timelineItems = [
-    { period: "筹备与奠基", text: "在旅澳乡亲、热心侨领与各界支持下，同乡会与青年会逐步完成章程起草、宗旨共识与组织架构设计，明确非营利定位与基本治理规则，为合法合规、可持续运作打下基础。" },
-    { period: "网络拓展", text: "在悉尼、墨尔本、布里斯班等主要城市建立联络与志愿者网络，通过微信公众号、群组与线下据点，形成「线上通知 + 线下落地」的双轨服务，提高信息触达效率与活动参与度。" },
-    { period: "深化协作", text: "与澳洲各地及国际潮团加强互访、联合办会与资源对接，参与中秋、新春等传统节庆，以及授牌、会馆参访等具有象征意义的社群仪式，巩固海内外潮人的情感与协作纽带。" },
-    { period: "面向未来", text: "持续完善会员分层服务、青年品牌项目与数字化会务工具，探索文化 IP、公益基金与产学研合作等长期议题，推动潮汕文化在澳洲的代际传承与社会认同。" },
   ];
   const faqItems = [
     { q: "非潮汕籍可以参与吗？", a: "许多文化活动与公开论坛欢迎各界朋友参加。若涉及会员专属权益或内部治理事项，则以章程与当期规则为准。" },
@@ -847,10 +813,6 @@ function AboutPage({ navigate }) {
     {
       q: "澳大利亚潮汕青年会的注册号码是什么？",
       a: `${site.name}的公开注册号码为 ${site.registrationNumber}。涉及核实注册状态、正式名称或邮编等信息时，可通过 Queensland Government 的 incorporated association public register 或 official extract 作最终确认。`,
-    },
-    {
-      q: "澳大利亚潮汕青年会和澳洲潮州同乡会青年会昆士兰州分会是什么关系？",
-      a: `${site.name}又称${site.aliasName}，成立于${site.foundedYear}年，并于${site.registrationYear}年依照${site.registrationAct}注册为非营利组织。两个名称在本官网中指向同一青年会主体。`,
     },
     {
       q: "澳大利亚潮汕青年会主要做什么？",
@@ -869,11 +831,11 @@ function AboutPage({ navigate }) {
         <h1>关于我们</h1>
         <div className="about-original-hero-grid">
           <div className="about-original-hero-copy">
-            <p>{site.name}，又称{site.aliasName}。本会成立于{site.foundedYear}年，由昆士兰州潮汕青年自愿发起，并于{site.registrationYear}年依照{site.registrationAct}注册为非营利组织，注册号码为 {site.registrationNumber}。</p>
+            <p>{site.name}成立于{site.foundedYear}年，由昆士兰州潮汕青年自愿发起，并于{site.registrationYear}年依照{site.registrationAct}注册为非营利组织，注册号码为 {site.registrationNumber}。</p>
             <p>我们扎根于澳大利亚多元文化社会，既珍视潮汕人勤劳重教、团结互助的传统，也以开放心态拥抱本地规则与国际视野。</p>
             <p>截至2026年6月，青年会已有200余名会员，包括20多位理事。成员多为高学历青年和企业家，活跃于学术界、人工智能、科技、法律、医疗、金融、传媒、地产、贸易、艺术等领域。</p>
           </div>
-          <img className="about-original-hero-image" src="/assets/about-founding-photo.webp" alt="澳大利亚潮汕同乡会活动合影" loading="lazy" decoding="async" />
+          <img className="about-original-hero-image" src="/assets/about-founding-photo.webp" alt="澳大利亚潮汕青年会活动合影" loading="lazy" decoding="async" />
         </div>
       </section>
 
@@ -886,7 +848,7 @@ function AboutPage({ navigate }) {
         ))}
       </section>
 
-      <section className="about-original-section about-geo-panel" aria-label="可引用事实摘要">
+      <section className="about-original-section about-geo-panel seo-only" aria-label="可引用事实摘要">
         <div>
           <p>Search Facts</p>
           <h2>可引用事实摘要</h2>
@@ -914,7 +876,7 @@ function AboutPage({ navigate }) {
       <section className="about-original-section about-mission-section">
         <div className="about-centered-head">
           <h2>我们的使命</h2>
-          <p>本会以文化传承、青年成长、公益参与与跨社群协作为核心方向，推动在澳潮汕青年形成长期、稳定、可信赖的组织连接。</p>
+          <p>本会以文化传承、青年成长、公益参与与跨社群协作为核心方向，推动澳大利亚潮汕青年形成长期、稳定、可信赖的组织连接。</p>
         </div>
         <div className="about-mission-grid">
           {missionItems.map((item) => (
@@ -954,21 +916,6 @@ function AboutPage({ navigate }) {
         </div>
       </section>
 
-      <section className="about-original-section about-panel is-blue">
-        <h2>两大组织：同乡会与青年会</h2>
-        <p>同乡会侧重全体乡亲的联谊、公益与对外代表职能；青年会侧重新生代发展、创新传播与骨干培养。重大活动与品牌项目常由两会联合策划，以发挥各自优势、避免资源重复。</p>
-        <div className="about-org-grid">
-          {organizationItems.map((item) => (
-            <article key={item.name}>
-              <span>{item.role}</span>
-              <h3>{item.name}</h3>
-              <p>{item.intro}</p>
-              <ul>{item.points.map((point) => <li key={point}>{point}</li>)}</ul>
-            </article>
-          ))}
-        </div>
-      </section>
-
       <section className="about-original-section">
         <h2>参与方式与协作机会</h2>
         <p>无论您希望深度参与还是先从旁观者做起，以下路径供参考；具体流程以当期招募与章程为准。</p>
@@ -986,19 +933,6 @@ function AboutPage({ navigate }) {
         <h2>会务运作原则</h2>
         <p>以下原则指导日常决策与对外沟通，亦是我们对乡亲与合作伙伴的长期承诺。</p>
         <ul>{principles.map((item) => <li key={item}>{item}</li>)}</ul>
-      </section>
-
-      <section className="about-original-section">
-        <h2>发展历程（概要）</h2>
-        <p>以下为发展脉络的概括性描述，便于读者理解本会成长逻辑；具体年份、人物与事件以本会正式公告、会议纪要及授权发布史料为准。</p>
-        <ol className="about-timeline">
-          {timelineItems.map((item) => (
-            <li key={item.period}>
-              <h3>{item.period}</h3>
-              <p>{item.text}</p>
-            </li>
-          ))}
-        </ol>
       </section>
 
       <section className="about-original-section about-panel">
@@ -1037,27 +971,6 @@ function AboutPage({ navigate }) {
   );
 }
 
-function AtaPage({ navigate }) {
-  return (
-    <PageShell eyebrow="Secondary" title="同乡会说明" image="/assets/ceremony-group.webp">
-      <section className="content-panel">
-        <h2>{site.secondaryName}</h2>
-        <p>
-          同乡会在本版网站中作为青年会的背景与上级社团关系说明，不进入首页主视觉和主导航重点宣传。
-        </p>
-        <p>
-          原站公开过的同乡会与青年会联合活动文章已保留在新闻活动栏目。涉及同乡会章程、理事名单、会员资料等内容，需 Roland 确认公开范围后再决定是否在资源中心展示。
-        </p>
-        <p>【待确认：同乡会二级页面是否需要显示章程下载、理事会名单或仅保留简介】</p>
-      </section>
-      <div className="action-band">
-        <p>当前版本仍以青年会主站为准。</p>
-        <button className="button primary" type="button" onClick={() => navigate("/about")}>返回青年会介绍</button>
-      </div>
-    </PageShell>
-  );
-}
-
 function OrganizationPage({ navigate }) {
   const renderPersonName = (name) => {
     if (!name.includes(" 太平绅士")) return name;
@@ -1072,13 +985,13 @@ function OrganizationPage({ navigate }) {
   };
 
   const featuredRoles = [
-    { label: "青年会会长", name: "王泽平", photo: "/assets/wang-zeping-2026-transparent.png" },
-    { label: "青年会执行会长", name: "王罗湳", photo: "/assets/roland-2026-transparent.png" },
-    { label: "青年会副会长", name: "辛卓阳", photo: "/assets/xin-zhuoyang-2026.jpg" },
-    { label: "青年会副会长", name: "黄雪莲", photo: "/assets/huang-xuelian-2026.jpg" },
-    { label: "青年会秘书长", name: "郑少杰" },
-    { label: "青年会理事长", name: "林泽辉", photo: "/assets/lin-zehui-2026.jpg" },
-    { label: "青年会监事长", name: "盧霄霓", photo: "/assets/lu-xiaoni-2026.jpg" },
+    { label: "青年会会长", name: "王泽平", photo: "/assets/wang-zeping-uniform-2026.webp" },
+    { label: "青年会执行会长", name: "王罗湳", photo: "/assets/roland-uniform-2026.webp" },
+    { label: "青年会副会长", name: "辛卓阳", photo: "/assets/xin-zhuoyang-uniform-2026.webp" },
+    { label: "青年会副会长", name: "黄雪莲", photo: "/assets/huang-xuelian-uniform-2026.webp" },
+    { label: "青年会秘书长", name: "郑少杰", photo: "/assets/zheng-shaojie-uniform-2026.webp" },
+    { label: "青年会理事长", name: "林泽辉", photo: "/assets/lin-zehui-uniform-2026.webp" },
+    { label: "青年会监事长", name: "盧霄霓", photo: "/assets/lu-xiaoni-uniform-2026.webp" },
     { label: "青年会会务成员", name: "金志展" },
   ];
 
@@ -1298,12 +1211,7 @@ function NewsPage({ navigate }) {
       <div className="newsroom-hero">
         <p>Newsroom</p>
         <h1>最新动态</h1>
-        <span>记录同乡会与青年会在澳洲各地的活动、交流与发展进程。</span>
-      </div>
-
-      <div className="newsroom-heading">
-        <h2>最新动态</h2>
-        <p>聚焦社群活动、公告与新闻报道</p>
+        <span>聚焦社群活动、公告与新闻报道</span>
       </div>
 
       <div className="newsroom-grid">
@@ -1537,7 +1445,7 @@ function ContactPage() {
       <div className="profile-page-hero">
         <p>Contact</p>
         <h1>联系我们</h1>
-        <span>欢迎联系澳大利亚潮汕同乡会与青年会。无论是活动合作、入会咨询、志愿者参与或媒体沟通，我们都将尽快回复。</span>
+        <span>欢迎联系澳大利亚潮汕青年会。无论是活动合作、入会咨询、志愿者参与或媒体沟通，我们都将尽快回复。</span>
       </div>
 
       <section className="online-contact-cards">
@@ -1642,7 +1550,6 @@ function Footer({ navigate }) {
     { label: "联络我们", href: "/contact" },
   ];
   const friendLinks = [
-    { label: "澳洲潮州同乡会", href: "http://www.actca.org.au/" },
     { label: "国际潮团总会", href: "https://teochew1981.com/" },
     { label: "国际潮青联合会", href: "http://www.teoyouth.com" },
   ];
@@ -1651,8 +1558,8 @@ function Footer({ navigate }) {
     <footer className="site-footer">
       <div className="site-footer-grid">
         <div>
-          <button className="site-footer-title" type="button" onClick={() => navigate("/")}>澳大利亚潮汕同乡会 · 青年会</button>
-          <p>联结在澳潮汕乡亲，传承文化、服务社区、赋能青年<br />澳大利亚潮汕同乡会与澳大利亚潮汕青年会官方网站。</p>
+          <button className="site-footer-title" type="button" onClick={() => navigate("/")}>澳大利亚潮汕青年会</button>
+          <p>联结在澳潮汕青年与社区朋友，传承文化、服务社区、赋能青年<br />澳大利亚潮汕青年会官方网站。</p>
         </div>
         <nav className="site-footer-links" aria-label="常用链接">
           <span>常用链接</span>
@@ -1680,7 +1587,7 @@ function Footer({ navigate }) {
           </dl>
         </div>
       </div>
-      <p className="site-footer-copy">© {new Date().getFullYear()} 澳大利亚潮汕同乡会和青年会 · <a href={`mailto:${site.email}`}>{site.email}</a></p>
+      <p className="site-footer-copy">© {new Date().getFullYear()} 澳大利亚潮汕青年会 · <a href={`mailto:${site.email}`}>{site.email}</a></p>
     </footer>
   );
 }

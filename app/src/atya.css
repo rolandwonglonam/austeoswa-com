@@ -937,6 +937,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
+  margin-top: 3rem;
 }
 
 .newsroom-card {
@@ -1966,6 +1967,19 @@ h3 {
   margin-top: 1.5rem;
 }
 
+.seo-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  border: 0 !important;
+  white-space: normal !important;
+}
+
 .about-original-section.is-narrow {
   max-width: 74rem;
   margin-right: auto;
@@ -2126,6 +2140,10 @@ h3 {
 .about-dark-panel p,
 .about-dark-panel li {
   color: #cbd5e1;
+}
+
+.about-join-panel p {
+  color: #fff;
 }
 
 .about-dark-panel li {

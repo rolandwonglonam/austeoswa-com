@@ -4,7 +4,6 @@ Official website: https://austeoswa.com/
 Preferred language: zh-CN, with English organization name preserved as "Australia Teoswa Youth Association".
 Short name: ATYA
 Legal Chinese name: 澳大利亚潮汕青年会
-Alternate Chinese name: 澳洲潮州同乡会青年会昆士兰州分会
 
 ## Organization identity
 

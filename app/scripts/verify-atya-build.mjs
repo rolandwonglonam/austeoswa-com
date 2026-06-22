@@ -4,7 +4,6 @@ import { constants } from "node:fs";
 const routes = [
   "/",
   "/about",
-  "/about/ata",
   "/organization",
   "/news",
   "/news/1",
@@ -30,8 +29,13 @@ const requiredFiles = [
   "dist/assets/gold-coast-background.webp",
   "dist/assets/letter-to-grandma-poster.webp",
   "dist/assets/letter-to-grandma-premiere.webp",
-  "dist/assets/roland-2026-transparent.png",
-  "dist/assets/wang-zeping-2026-transparent.png",
+  "dist/assets/roland-uniform-2026.webp",
+  "dist/assets/wang-zeping-uniform-2026.webp",
+  "dist/assets/xin-zhuoyang-uniform-2026.webp",
+  "dist/assets/huang-xuelian-uniform-2026.webp",
+  "dist/assets/zheng-shaojie-uniform-2026.webp",
+  "dist/assets/lin-zehui-uniform-2026.webp",
+  "dist/assets/lu-xiaoni-uniform-2026.webp",
   "dist/downloads/atya-constitution.docx",
 ];
 
