@@ -683,18 +683,18 @@ function HomePage({ navigate }) {
         <aside className="leader-card">
           <h2>
             <span>青年会负责人</span>
-            <small>会长 / 执行会长</small>
+            <small>青年会会长 / 青年会执行会长</small>
           </h2>
           <div className="leader-grid">
             <article>
               <img className="leader-photo" src="/assets/wang-zeping-uniform-2026.webp" alt="王泽平肖像" loading="lazy" decoding="async" />
               <strong>王泽平</strong>
-              <span>会长</span>
+              <span>青年会会长</span>
             </article>
             <article>
               <img className="leader-photo" src="/assets/roland-uniform-2026.webp" alt="王罗湳肖像" loading="lazy" decoding="async" />
               <strong>王罗湳</strong>
-              <span>执行会长</span>
+              <span>青年会执行会长</span>
             </article>
           </div>
         </aside>
@@ -876,7 +876,7 @@ function AboutPage({ navigate }) {
       <section className="about-original-section about-mission-section">
         <div className="about-centered-head">
           <h2>我们的使命</h2>
-          <p>本会以文化传承、青年成长、公益参与与跨社群协作为核心方向，推动澳大利亚潮汕青年形成长期、稳定、可信赖的组织连接。</p>
+          <p className="about-mission-single-line">本会以文化传承、青年成长、公益参与与跨社群协作为核心方向，建设长期稳定、可信赖的组织连接。</p>
         </div>
         <div className="about-mission-grid">
           {missionItems.map((item) => (
@@ -1003,7 +1003,7 @@ function OrganizationPage({ navigate }) {
         <p>Governance</p>
         <h1>组织架构</h1>
         <p className="organization-hero-copy">
-          <span>{site.name}是在澳大利亚联邦昆士兰州注册的非营利组织，注册号码为 {site.registrationNumber}；</span>
+          <span>{site.name}是在澳大利亚联邦昆士兰州注册的非营利组织。</span>
           <span className="organization-hero-copy-line">本页列示青年会理事会、秘书处与顾问等公开会务架构。</span>
         </p>
         <div className="profile-hero-actions">
