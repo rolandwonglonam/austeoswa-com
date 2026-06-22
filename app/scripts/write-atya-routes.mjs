@@ -27,7 +27,7 @@ const routes = [
   {
     path: "/organization",
     title: "组织架构",
-    description: `${siteName}组织架构、理事会、秘书处与顾问公开名录；本会为昆士兰州注册非营利组织，注册号码 ${registrationNumber}。`,
+    description: `${siteName}组织架构、理事会、秘书处与顾问公开名录。`,
     priority: "0.9",
     changefreq: "monthly",
   },
