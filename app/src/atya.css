@@ -2453,7 +2453,7 @@ h3 {
 
 .home-news-section {
   display: grid;
-  grid-template-columns: minmax(0, 2.18fr) minmax(300px, 0.68fr);
+  grid-template-columns: minmax(0, 1.82fr) minmax(420px, 0.72fr);
   gap: 1.35rem;
   padding: 2.1rem 0 2.5rem;
   align-items: stretch;
@@ -2507,6 +2507,8 @@ h3 {
 
 .leader-card h2 span {
   display: block;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 .leader-card h2 small {
@@ -2516,6 +2518,8 @@ h3 {
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 .home-section-head button {
@@ -2646,12 +2650,17 @@ h3 {
 .leader-grid strong {
   margin-top: 0;
   font-size: 1.03rem;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 .leader-grid span {
   color: #64748b;
   font-size: 0.84rem;
   font-weight: 900;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  white-space: nowrap;
 }
 
 .leader-grid p,
@@ -2922,7 +2931,7 @@ h3 {
   }
 }
 
-@media (max-width: 1060px) {
+@media (max-width: 1180px) {
   .site-header .desktop-nav {
     max-width: none;
     border-radius: 0;
