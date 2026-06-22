@@ -72,7 +72,7 @@ export const youthBoard = [
   { role: "理事长", names: ["林泽辉"] },
   { role: "监事长", names: ["卢霄霓"] },
   { role: "财务长", names: ["郑少杰"] },
-  { role: "顾问", names: ["林安雯", "刘慧君 太平绅士", "卢霄霓", "谢欣莹律师"] },
+  { role: "顾问", names: ["林安雯", "卢霄霓", "谢欣莹律师"] },
 ];
 
 export const governanceUnits = [

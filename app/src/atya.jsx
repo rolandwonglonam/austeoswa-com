@@ -145,7 +145,7 @@ const organizationBoards = [
       { role: "理事长", names: ["林泽辉"] },
       { role: "监事长", names: ["卢霄霓"] },
       { role: "财务长", names: ["郑少杰"] },
-      { role: "顾问", names: ["林安雯", "刘慧君 太平绅士", "卢霄霓", "谢欣莹律师"] },
+      { role: "顾问", names: ["林安雯", "卢霄霓", "谢欣莹律师"] },
     ],
   },
 ];
@@ -1082,7 +1082,6 @@ function OrganizationPage({ navigate }) {
     { label: "青年会副会长", name: "辛卓阳" },
     { label: "青年会副会长", name: "黄雪莲" },
     { label: "青年会秘书长", name: "郑少杰" },
-    { label: "青年会顾问", name: "刘慧君 太平绅士" },
     { label: "青年会顾问", name: "谢欣莹律师" },
   ];
 
@@ -1091,10 +1090,10 @@ function OrganizationPage({ navigate }) {
       <div className="profile-page-hero organization-hero">
         <p>Governance</p>
         <h1>组织架构</h1>
-        <span className="organization-hero-copy">
+        <p className="organization-hero-copy">
           <span>{site.name}是在澳大利亚联邦昆士兰州注册的非营利组织，注册号码为 {site.registrationNumber}；</span>
           <span className="organization-hero-copy-line">本页列示青年会理事会、秘书处与顾问等公开会务架构。</span>
-        </span>
+        </p>
         <div className="profile-hero-actions">
           <button type="button" onClick={() => navigate("/contact")}>联系秘书处</button>
           <button type="button" onClick={() => navigate("/new")}>查看会务动态</button>

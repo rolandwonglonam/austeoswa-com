@@ -1072,6 +1072,19 @@ h3 {
   line-height: 1.8;
 }
 
+.profile-page-hero .organization-hero-copy {
+  max-width: 58rem;
+  margin: 0;
+  color: #d5deea;
+  font-size: 1.04rem;
+  line-height: 1.8;
+}
+
+.profile-page-hero .organization-hero-copy span {
+  display: block;
+  max-width: none;
+}
+
 .profile-page-hero .organization-hero-copy-line {
   margin-top: 0.08rem;
 }
