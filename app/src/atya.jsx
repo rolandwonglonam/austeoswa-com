@@ -693,15 +693,19 @@ function HomePage({ navigate }) {
               <img className="leader-photo" src="/assets/wang-zeping-2026-transparent.png" alt="王泽平肖像" loading="lazy" decoding="async" />
               <strong>王泽平</strong>
               <span>会长</span>
-              <p>澳大利亚潮汕青年会会长（代理）</p>
+              <p>澳大利亚潮汕青年会会长</p>
             </article>
             <article>
               <img className="leader-photo" src="/assets/roland-2026-transparent.png" alt="王罗湳肖像" loading="lazy" decoding="async" />
               <strong>王罗湳</strong>
               <span>执行会长</span>
               <ul>
+                <li>Stanley Team</li>
+                <li>WAYNE INSIGHTSPRING CONSULTING CO., LTD</li>
+                <li>MedFlowEdu</li>
                 <li>昆士兰大学医学学部全奖博士候选人</li>
                 <li>澳大利亚潮汕青年会执行会长</li>
+                <li>澳大利亚潮汕商会副会长</li>
               </ul>
             </article>
           </div>
@@ -1088,7 +1092,7 @@ function OrganizationPage({ navigate }) {
         "THE NEW HOTPOT 醉牛火锅",
         "揭阳市澳合投资有限公司",
         "揭阳市侨联第五届委员会顾问",
-        "澳大利亚潮汕青年会会长（代理）",
+        "澳大利亚潮汕青年会会长",
         "澳大利亚潮汕商会副会长",
         "澳洲潮州同乡会青年会昆州分会会长",
         "澳大利亚潮汕总会第一届副会长",
@@ -1098,26 +1102,37 @@ function OrganizationPage({ navigate }) {
       label: "青年会执行会长",
       name: "王罗湳",
       photo: "/assets/roland-2026-transparent.png",
-      details: ["昆士兰大学医学学部全奖博士候选人", "澳大利亚潮汕青年会执行会长", "澳大利亚潮汕商会理事"],
+      details: [
+        "Stanley Team",
+        "WAYNE INSIGHTSPRING CONSULTING CO., LTD",
+        "MedFlowEdu",
+        "昆士兰大学医学学部全奖博士候选人",
+        "澳大利亚潮汕青年会执行会长",
+        "澳大利亚潮汕商会副会长",
+      ],
     },
     {
       label: "青年会副会长",
       name: "辛卓阳",
+      photo: "/assets/xin-zhuoyang-2026.jpg",
       details: ["博士", "昆士兰大学土木工程学院博士后研究员", "澳大利亚潮汕青年会副会长", "澳大利亚昆士兰潮汕总会副秘书长"],
     },
     {
       label: "青年会副会长",
       name: "黄雪莲",
+      photo: "/assets/huang-xuelian-2026.jpg",
       details: ["F&J QUEENLAND TRADING PTY LTD", "国际佛光会观音分会会长", "澳大利亚潮汕青年会副会长"],
     },
     {
       label: "青年会监事长",
       name: "盧霄霓",
+      photo: "/assets/lu-xiaoni-2026.jpg",
       details: ["Citipointe Childcare Forest School and Outdoor Learning Program Teacher", "澳大利亞潮汕青年會監事長"],
     },
     {
       label: "青年会副会长",
       name: "林泽辉",
+      photo: "/assets/lin-zehui-2026.jpg",
       details: ["TOMEDU PTY LTD", "澳大利亚潮汕青年会副会长", "澳大利亚青年企业家协会副会长"],
     },
     { label: "青年会秘书长", name: "郑少杰", details: ["秘书长"] },
@@ -1152,7 +1167,7 @@ function OrganizationPage({ navigate }) {
             {item.details?.length ? (
               <ul>
                 {item.details.map((detail) => (
-                  <li key={detail}>{detail}</li>
+                  <li key={detail} title={detail}>{detail}</li>
                 ))}
               </ul>
             ) : null}

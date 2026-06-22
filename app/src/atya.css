@@ -1303,7 +1303,7 @@ h3 {
 
 .organization-summary {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.15rem;
   margin-top: 2rem;
 }
@@ -1363,13 +1363,25 @@ h3 {
   padding: 0;
   list-style: none;
   color: #64748b;
-  font-size: 0.82rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
 .organization-summary li {
-  overflow-wrap: anywhere;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (min-width: 1180px) {
+  .organization-page {
+    width: min(1480px, calc(100% - 2rem));
+  }
+
+  .organization-summary {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 .organization-note {
