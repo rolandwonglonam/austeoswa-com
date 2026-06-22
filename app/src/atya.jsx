@@ -1123,21 +1123,23 @@ function OrganizationPage({ navigate }) {
       photo: "/assets/huang-xuelian-2026.jpg",
       details: ["F&J QUEENLAND TRADING PTY LTD", "国际佛光会观音分会会长", "澳大利亚潮汕青年会副会长"],
     },
+    { label: "青年会秘书长", name: "郑少杰", details: ["秘书长"] },
+    {
+      label: "青年会理事长",
+      name: "林泽辉",
+      photo: "/assets/lin-zehui-2026.jpg",
+      details: ["TOMEDU PTY LTD", "澳大利亚潮汕青年会理事长", "澳大利亚青年企业家协会副会长"],
+    },
     {
       label: "青年会监事长",
       name: "盧霄霓",
       photo: "/assets/lu-xiaoni-2026.jpg",
       details: ["Citipointe Childcare Forest School and Outdoor Learning Program Teacher", "澳大利亞潮汕青年會監事長"],
     },
-    {
-      label: "青年会副会长",
-      name: "林泽辉",
-      photo: "/assets/lin-zehui-2026.jpg",
-      details: ["TOMEDU PTY LTD", "澳大利亚潮汕青年会副会长", "澳大利亚青年企业家协会副会长"],
-    },
-    { label: "青年会秘书长", name: "郑少杰", details: ["秘书长"] },
-    { label: "青年会顾问", name: "谢欣莹律师" },
+    { label: "青年会会务成员", name: "金志展" },
   ];
+
+  const showOrganizationBoardList = false;
 
   return (
     <section className="profile-page organization-page">
@@ -1175,32 +1177,34 @@ function OrganizationPage({ navigate }) {
         ))}
       </section>
 
-      <div className="organization-board-list">
-        {organizationBoards.map((board) => (
-          <section className="organization-board" key={board.title}>
-            <div className="organization-board-head">
-              <div>
-                <p>{board.label}</p>
-                <h2>{board.title}</h2>
-                <span>{board.note}</span>
+      {showOrganizationBoardList ? (
+        <div className="organization-board-list">
+          {organizationBoards.map((board) => (
+            <section className="organization-board" key={board.title}>
+              <div className="organization-board-head">
+                <div>
+                  <p>{board.label}</p>
+                  <h2>{board.title}</h2>
+                  <span>{board.note}</span>
+                </div>
+                <small>{board.source}</small>
               </div>
-              <small>{board.source}</small>
-            </div>
-            <div className="organization-role-list">
-              {board.roles.map((item) => (
-                <article key={`${board.title}-${item.role}`}>
-                  <h3>{item.role}</h3>
-                  <div>
-                    {item.names.map((name) => (
-                      <span key={`${item.role}-${name}`}>{name}</span>
-                    ))}
-                  </div>
-                </article>
-              ))}
-            </div>
-          </section>
-        ))}
-      </div>
+              <div className="organization-role-list">
+                {board.roles.map((item) => (
+                  <article key={`${board.title}-${item.role}`}>
+                    <h3>{item.role}</h3>
+                    <div>
+                      {item.names.map((name) => (
+                        <span key={`${item.role}-${name}`}>{name}</span>
+                      ))}
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
+          ))}
+        </div>
+      ) : null}
 
       <section className="online-cta-band organization-cta">
         <h2>会务联络</h2>

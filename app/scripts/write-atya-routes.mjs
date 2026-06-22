@@ -269,20 +269,20 @@ const featuredRoleItems = [
     image: "assets/huang-xuelian-2026.jpg",
     description: "F&J QUEENLAND TRADING PTY LTD；国际佛光会观音分会会长；澳大利亚潮汕青年会副会长",
   },
+  { name: "郑少杰", role: "青年会秘书长", description: "秘书长" },
+  {
+    name: "林泽辉",
+    role: "青年会理事长",
+    image: "assets/lin-zehui-2026.jpg",
+    description: "TOMEDU PTY LTD；澳大利亚潮汕青年会理事长；澳大利亚青年企业家协会副会长",
+  },
   {
     name: "盧霄霓",
     role: "青年会监事长",
     image: "assets/lu-xiaoni-2026.jpg",
     description: "Citipointe Childcare Forest School and Outdoor Learning Program Teacher；澳大利亞潮汕青年會監事長",
   },
-  {
-    name: "林泽辉",
-    role: "青年会副会长",
-    image: "assets/lin-zehui-2026.jpg",
-    description: "TOMEDU PTY LTD；澳大利亚潮汕青年会副会长；澳大利亚青年企业家协会副会长",
-  },
-  { name: "郑少杰", role: "青年会秘书长", description: "秘书长" },
-  { name: "谢欣莹律师", role: "青年会顾问" },
+  { name: "金志展", role: "青年会会务成员" },
 ];
 
 const routeJsonLd = {
