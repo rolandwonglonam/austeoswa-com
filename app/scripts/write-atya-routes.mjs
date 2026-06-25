@@ -163,6 +163,10 @@ const publicWhitelist = [
   "assets/zheng-shaojie-uniform-2026.webp",
   "assets/consulate-visit-20260623.png",
   "assets/letter-to-grandma-premiere-qld.png",
+  "assets/premiere-cinema-crowd.jpg",
+  "assets/premiere-cassidy-speech.jpg",
+  "assets/premiere-roland-speech.jpg",
+  "assets/premiere-poster-raise.jpg",
   "downloads/atya-constitution.docx",
 ];
 

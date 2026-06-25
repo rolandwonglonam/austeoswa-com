@@ -376,6 +376,8 @@ const originalArticlePages = {
     date: "2026年6月24日",
     intro:
       "2026年6月24日晚，由澳大利亚潮汕青年会、澳洲潮州同乡会青年会联合华人影业（CMC Pictures）联合主办的电影《给阿嬷的情书》布里斯班首映礼，在布里斯班 Westfield Garden City Event Cinemas Mt Gravatt 举行。上百名观众到场观影，共同见证这一时刻。首映礼开场仪式由澳大利亚潮汕青年会监事长卢霄霓主持。Logan 市政府代表 Cassidy Shorland、澳大利亚潮汕青年会执行会长王罗湳相继上台致辞，全场反响热烈。《给阿嬷的情书》由导演蓝鸿春执导，以海外潮汕侨胞跨越山海的侨批为核心，通过真实细腻的情感叙事，唤起无数海外华人对故乡与至亲的深切思念。此次布里斯班首映礼是该片澳大利亚巡映的重要一站，次日（6月25日）影片在澳大利亚和新西兰正式公映。本次活动由澳大利亚潮汕青年会联合华人影业（CMC Pictures）共同呈现，赞助支持均来自昆士兰本地的潮汕人。",
+    introImage: "/assets/premiere-cinema-crowd.jpg",
+    introImageAlt: "首映礼现场观众入场",
     sections: [
       {
         title: "主要活动信息",
@@ -385,7 +387,16 @@ const originalArticlePages = {
       {
         title: "嘉宾致辞",
         body:
-          "开场仪式于晚间6点45分正式启动，两位嘉宾相继登台发言。\n\nCassidy Shorland 代表 Logan 市长出席并发表英文致辞，对澳大利亚潮汕青年会与华人影业共同举办此次首映礼表示肯定。他谈到，潮汕话对很多昆士兰家庭来说是家的声音。可能是祖辈说的语言，是饭桌边的日常，也是跨越时区的电话里那个熟悉的腔调。他指出，Logan 是澳大利亚多元文化社区之一，文化的传承正是通过家庭、社团、节庆与这样的首映礼一代代延续下去。\n\n澳大利亚潮汕青年会执行会长王罗湳受会长王泽平委托代表主办方发言，感谢 CMC 华人影业团队的信任与支持，感谢中国驻布里斯班总领馆的代表、Logan 市政府代表和知名演员海宇翔的出席，并向当晚的赞助伙伴以及所有参与筹备的志愿者和执行团队致谢。值得一提的是，本次首映礼的赞助商均是昆士兰州本地的企业赞助支持。\n\n他谈到，电影中的\"侨批\"对在场许多人来说并不陌生。从家乡出发、到澳洲落脚，先辈们寄回去的不只是生活费，也是平安和牵挂。他说，澳洲的潮汕二代、三代并不算多，正因如此，更要团结，更要讲做人、讲友情、讲互相扶持，也要为澳大利亚这个社区做出实实在在的贡献。他也希望在澳洲长大的年轻一代知道祖辈走过的路和说过的话。致辞以\"让感动在大洋彼岸延续\"作结。",
+          "开场仪式于晚间6点45分正式启动，两位嘉宾相继登台发言。\n\nCassidy Shorland 代表 Logan 市长出席并发表英文致辞，对澳大利亚潮汕青年会与华人影业共同举办此次首映礼表示肯定。他谈到，潮汕话对很多昆士兰家庭来说是家的声音。可能是祖辈说的语言，是饭桌边的日常，也是跨越时区的电话里那个熟悉的腔调。他指出，Logan 是澳大利亚多元文化社区之一，文化的传承正是通过家庭、社团、节庆与这样的首映礼一代代延续下去。",
+        image: "/assets/premiere-cassidy-speech.jpg",
+        imageAlt: "Cassidy Shorland 代表 Logan 市长致辞",
+      },
+      {
+        title: "执行会长致辞",
+        body:
+          "澳大利亚潮汕青年会执行会长王罗湳受会长王泽平委托代表主办方发言，感谢 CMC 华人影业团队的信任与支持，感谢中国驻布里斯班总领馆的代表、Logan 市政府代表和知名演员海宇翔的出席，并向当晚的赞助伙伴以及所有参与筹备的志愿者和执行团队致谢。值得一提的是，本次首映礼的赞助商均是昆士兰州本地的企业赞助支持。\n\n他谈到，电影中的\"侨批\"对在场许多人来说并不陌生。从家乡出发、到澳洲落脚，先辈们寄回去的不只是生活费，也是平安和牵挂。他说，澳洲的潮汕二代、三代并不算多，正因如此，更要团结，更要讲做人、讲友情、讲互相扶持，也要为澳大利亚这个社区做出实实在在的贡献。他也希望在澳洲长大的年轻一代知道祖辈走过的路和说过的话。致辞以\"让感动在大洋彼岸延续\"作结。",
+        image: "/assets/premiere-roland-speech.jpg",
+        imageAlt: "澳大利亚潮汕青年会执行会长王罗湳致辞",
       },
       {
         title: "关于影片：《给阿嬷的情书》",
@@ -396,6 +407,8 @@ const originalArticlePages = {
         title: "齐举海报：有情有义",
         body:
           "致辞环节结束后，主持人引领观众集体举起电影海报共同合影留念。\"阿嬷说，做人要有情有义\"——在这里祝《给阿嬷的情书》，海外票房大卖！",
+        image: "/assets/premiere-poster-raise.jpg",
+        imageAlt: "观众齐举电影海报合影留念",
       },
     ],
   },
@@ -1372,10 +1385,16 @@ function OriginalArticlePage({ article, navigate }) {
         <p className="original-article-date">{article.date}</p>
         <h1>{article.title}</h1>
         <div className="original-article-intro">{article.intro}</div>
+        {article.introImage && (
+          <img className="original-article-inline-img" src={article.introImage} alt={article.introImageAlt || ""} loading="lazy" />
+        )}
         {article.sections.map((section) => (
           <section key={section.title}>
             <h2>{section.title}</h2>
             <div>{section.body}</div>
+            {section.image && (
+              <img className="original-article-inline-img" src={section.image} alt={section.imageAlt || ""} loading="lazy" />
+            )}
           </section>
         ))}
       </div>
