@@ -67,6 +67,13 @@ const routes = [
     changefreq: "yearly",
   },
   {
+    path: "/news/5",
+    title: "《给阿嬷的情书》澳大利亚昆士兰州首映礼圆满举行",
+    description: "2026年6月24日晚，由澳大利亚潮汕青年会、澳洲潮州同乡会青年会联合华人影业（CMC Pictures）主办的《给阿嬷的情书》布里斯班首映礼圆满举行。",
+    priority: "0.7",
+    changefreq: "yearly",
+  },
+  {
     path: "/new",
     title: "新闻活动",
     description: "原站新闻活动入口保留为兼容链接。",
@@ -155,6 +162,7 @@ const publicWhitelist = [
   "assets/xin-zhuoyang-uniform-2026.webp",
   "assets/zheng-shaojie-uniform-2026.webp",
   "assets/consulate-visit-20260623.png",
+  "assets/letter-to-grandma-premiere-qld.png",
   "downloads/atya-constitution.docx",
 ];
 
