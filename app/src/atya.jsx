@@ -40,6 +40,7 @@ const routeTitles = {
   "/new/2": "活动文章",
   "/new/letter-to-grandma-premiere": "活动文章",
   "/news/3": "活动文章",
+  "/news/4": "活动文章",
   "/culture": "潮汕文化",
   "/business": "商务与资源",
   "/resources": "资源中心",
@@ -152,6 +153,7 @@ const articleImages = {
   article1: "https://tca-prod-public.oss-cn-shanghai.aliyuncs.com/new/new1-03.webp",
   article2: "https://tca-prod-public.oss-cn-shanghai.aliyuncs.com/new/new1-15.webp",
   article3: "/assets/letter-to-grandma-poster.webp",
+  article4: "/assets/consulate-visit-20260623.png",
 };
 
 const homeGrandmaImage = "/assets/letter-to-grandma-premiere.webp";
@@ -244,9 +246,20 @@ const articles = [
       },
     ],
   },
+  {
+    id: "4",
+    category: "外联参访",
+    date: "2026年6月23日",
+    image: articleImages.article4,
+    title: "澳大利亚潮汕青年会拜访中国驻布里斯班总领事馆，受领馆领导亲切接见",
+    summary:
+      "2026年6月23日，澳大利亚潮汕青年会一行拜访中国驻布里斯班总领事馆，受到领馆领导同志的亲切接见，双方就华人社区工作、文化交流与青年发展等议题进行深入交流。",
+    source: "青年会外联活动",
+  },
 ];
 
 const newsItems = [
+  articles[3],
   articles[2],
   articles[0],
   articles[1],
@@ -331,6 +344,31 @@ const originalArticlePages = {
         title: "发行与主办方信息",
         body:
           "《给阿嬷的情书》由 CMC 华人影业负责北美澳新地区统筹发行，覆盖美国、加拿大、澳大利亚、新西兰四大华人聚集地。澳大利亚潮汕青年会始终致力于搭建潮汕青年与故土文化之间的桥梁。此次承办昆士兰州首映礼，希望借这部电影，让在澳潮汕家庭在大银幕上重逢属于我们的共同记忆。",
+      },
+    ],
+  },
+  "4": {
+    image: articleImages.article4,
+    imageAlt: "澳大利亚潮汕青年会成员与中国驻布里斯班总领事馆领导在领馆内合影",
+    title: "澳大利亚潮汕青年会拜访中国驻布里斯班总领事馆，受领馆领导亲切接见",
+    date: "2026年6月23日",
+    intro:
+      "2026年6月23日，澳大利亚潮汕青年会一行拜访中国驻布里斯班总领事馆，受到领馆领导同志的亲切接见。双方就加强华人社区联系、推动中澳文化交流及支持青年会工作等议题进行了深入友好的交流。",
+    sections: [
+      {
+        title: "领馆领导亲切接见",
+        body:
+          "座谈中，领馆领导同志充分肯定了澳大利亚潮汕青年会在凝聚在澳潮汕乡亲、传承潮汕文化方面所作的努力，鼓励青年会继续发挥桥梁纽带作用，积极参与当地华人社区建设，为促进中澳两国人民友好往来贡献力量。",
+      },
+      {
+        title: "青年会汇报工作进展",
+        body:
+          "青年会代表就近期开展的活动情况及未来工作计划向领馆领导作了详细汇报，包括联络在澳潮汕乡亲、举办文化活动及推动青年交流等方面的工作。领馆领导对青年会的工作给予积极评价，并表示将继续关注和支持青年会的发展。",
+      },
+      {
+        title: "携手共进，服务社区",
+        body:
+          "此次拜访进一步加深了澳大利亚潮汕青年会与驻布里斯班领事馆的联系与互信。青年会表示，将以此次拜访为契机，更好地团结在澳潮汕青年和乡亲，持续为昆士兰华人社区贡献力量，共同推动中澳友好交流事业向前发展。",
       },
     ],
   },
@@ -464,6 +502,7 @@ function titleFor(path) {
   if (path === "/news/1" || path === "/new/1") return articles[0].title;
   if (path === "/news/2" || path === "/new/2") return articles[1].title;
   if (path === "/news/3" || path === "/new/letter-to-grandma-premiere") return articles[2].title;
+  if (path === "/news/4") return articles[3].title;
   return routeTitles[path] || routeTitles[routeAliases[path]] || "首页";
 }
 
@@ -513,6 +552,7 @@ function App() {
         {(path === "/news/1" || path === "/new/1") && <OriginalArticlePage article={originalArticlePages["1"]} navigate={navigate} />}
         {(path === "/news/2" || path === "/new/2") && <OriginalArticlePage article={originalArticlePages["2"]} navigate={navigate} />}
         {(path === "/news/3" || path === "/new/letter-to-grandma-premiere") && <OriginalArticlePage article={originalArticlePages["3"]} navigate={navigate} />}
+        {path === "/news/4" && <OriginalArticlePage article={originalArticlePages["4"]} navigate={navigate} />}
         {path === "/culture" && <CulturePage />}
         {path === "/business" && <BusinessPage navigate={navigate} />}
         {path === "/resources" && <ResourcesPage navigate={navigate} />}

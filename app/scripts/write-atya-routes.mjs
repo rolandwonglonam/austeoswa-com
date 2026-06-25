@@ -60,6 +60,13 @@ const routes = [
     changefreq: "yearly",
   },
   {
+    path: "/news/4",
+    title: "澳大利亚潮汕青年会拜访中国驻布里斯班总领事馆",
+    description: "2026年6月23日，澳大利亚潮汕青年会拜访中国驻布里斯班总领事馆，受到领馆领导同志亲切接见，双方就华人社区工作、文化交流与青年发展等议题进行深入交流。",
+    priority: "0.7",
+    changefreq: "yearly",
+  },
+  {
     path: "/new",
     title: "新闻活动",
     description: "原站新闻活动入口保留为兼容链接。",
@@ -147,6 +154,7 @@ const publicWhitelist = [
   "assets/wang-zeping-2026.webp",
   "assets/xin-zhuoyang-uniform-2026.webp",
   "assets/zheng-shaojie-uniform-2026.webp",
+  "assets/consulate-visit-20260623.png",
   "downloads/atya-constitution.docx",
 ];
 
