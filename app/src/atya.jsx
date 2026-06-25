@@ -139,7 +139,7 @@ const organizationBoards = [
       { role: "荣誉会长", names: ["杜艇", "吴子强", "张桂芳", "郑茂强"] },
       { role: "会长", names: ["王泽平"] },
       { role: "执行会长", names: ["王罗湳"] },
-      { role: "副会长", names: ["陈泽宁", "辛卓阳", "黄雪莲", "杨孟钊", "杨婉钰", "杨子辉", "张俊"] },
+      { role: "副会长", names: ["陈泽宁", "辛卓阳博士", "黄雪莲", "杨孟钊", "杨婉钰", "杨子辉", "张俊"] },
       { role: "秘书长", names: ["郑少杰"] },
       { role: "副秘书长", names: ["黄璐璐"] },
       { role: "理事长", names: ["林泽辉"] },
@@ -1069,7 +1069,7 @@ function OrganizationPage({ navigate }) {
   const featuredRoles = [
     { label: "青年会会长", name: "王泽平", photo: "/assets/wang-zeping-uniform-2026.webp" },
     { label: "青年会执行会长", name: "王罗湳", photo: "/assets/roland-uniform-2026.webp" },
-    { label: "青年会副会长", name: "辛卓阳", photo: "/assets/xin-zhuoyang-uniform-2026.webp" },
+    { label: "青年会副会长", name: "辛卓阳博士", photo: "/assets/xin-zhuoyang-uniform-2026.webp" },
     { label: "青年会副会长", name: "黄雪莲", photo: "/assets/huang-xuelian-uniform-2026.webp" },
     { label: "青年会秘书长", name: "郑少杰", photo: "/assets/zheng-shaojie-uniform-2026.webp" },
     { label: "青年会理事长", name: "林泽辉", photo: "/assets/lin-zehui-uniform-2026.webp" },
