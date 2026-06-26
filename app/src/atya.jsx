@@ -157,7 +157,7 @@ const articleImages = {
   article3: "/assets/letter-to-grandma-poster.webp",
   article4: "/assets/consulate-visit-20260623.webp",
   article5: "/assets/letter-to-grandma-premiere-qld.webp",
-  article6: "/assets/ai-growth-salon-cover.png",
+  article6: "/assets/ai-growth-salon-cover.webp",
 };
 
 const homeGrandmaImage = "/assets/letter-to-grandma-premiere.webp";
