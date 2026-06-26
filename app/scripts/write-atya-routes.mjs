@@ -156,7 +156,7 @@ const publicWhitelist = [
   "assets/ceremony-speech.webp",
   "assets/cruise-boat.webp",
   "assets/gold-coast-background.webp",
-  "assets/ai-growth-salon-cover.webp",
+  "assets/ai-growth-salon-cover.png",
   "assets/letter-to-grandma-premiere.webp",
   "assets/letter-to-grandma-poster.webp",
   "assets/logan-meeting.webp",

@@ -157,7 +157,7 @@ const articleImages = {
   article3: "/assets/letter-to-grandma-poster.webp",
   article4: "/assets/consulate-visit-20260623.webp",
   article5: "/assets/letter-to-grandma-premiere-qld.webp",
-  article6: "/assets/ai-growth-salon-cover.webp",
+  article6: "/assets/ai-growth-salon-cover.png",
 };
 
 const homeGrandmaImage = "/assets/letter-to-grandma-premiere.webp";
@@ -1461,9 +1461,9 @@ function OriginalArticlePage({ article, navigate }) {
           <img className="original-article-inline-img" src={article.introImage} alt={article.introImageAlt || ""} loading="lazy" />
         )}
         {article.sections.map((section) => (
-          <section key={section.title}>
+          <section key={section.title} className={section.imageClassName === "is-speaker-portrait" ? "is-centered" : ""}>
             <h2>{section.title}</h2>
-            <div>{section.body}</div>
+            <div style={section.imageClassName === "is-speaker-portrait" ? {whiteSpace: "pre-line"} : {}}>{section.body}</div>
             {section.image && (
               <img
                 className={`original-article-inline-img ${section.imageClassName || ""}`.trim()}

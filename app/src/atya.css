@@ -683,7 +683,21 @@ h3 {
   border-radius: 999px;
   margin-right: auto;
   margin-left: auto;
+  object-fit: cover;
   box-shadow: 0 14px 28px rgba(15, 23, 42, 0.16);
+}
+
+.original-article-card section.is-centered {
+  text-align: center;
+}
+
+.original-article-card section.is-centered h2 {
+  justify-content: center;
+}
+
+.original-article-card section.is-centered div {
+  color: var(--muted);
+  line-height: 2;
 }
 
 .page-hero-grid > img {
