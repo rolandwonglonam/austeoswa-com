@@ -30,6 +30,7 @@ const requiredFiles = [
   "dist/_headers",
   "dist/assets/atya-wordmark.webp",
   "dist/assets/gold-coast-background.webp",
+  "dist/assets/ai-growth-salon-cover.webp",
   "dist/assets/letter-to-grandma-poster.webp",
   "dist/assets/letter-to-grandma-premiere.webp",
   "dist/assets/consulate-visit-20260623.webp",

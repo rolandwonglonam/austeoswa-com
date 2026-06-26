@@ -157,7 +157,7 @@ const articleImages = {
   article3: "/assets/letter-to-grandma-poster.webp",
   article4: "/assets/consulate-visit-20260623.webp",
   article5: "/assets/letter-to-grandma-premiere-qld.webp",
-  article6: "/assets/stanley-speaker-huang-xiaomu.jpg",
+  article6: "/assets/ai-growth-salon-cover.webp",
 };
 
 const homeGrandmaImage = "/assets/letter-to-grandma-premiere.webp";
@@ -427,7 +427,7 @@ const originalArticlePages = {
   },
   "6": {
     image: articleImages.article6,
-    imageAlt: "Stanley Team 讲师黄小木",
+    imageAlt: "AI重塑企业增长实战沙龙封面",
     title: "活动预告 | 赋能中心 × Stanley Team「益企AI+」AI重塑企业增长实战沙龙即将开启",
     date: "2026年6月26日",
     intro:
@@ -449,6 +449,7 @@ const originalArticlePages = {
           "原中科院、腾讯资深研发团队负责人\nAnthropic 官方认证 Agent 构建与优化专家\n生财有术社群万人AI航海教练\n文生视频工作流 castvideo 作者",
         image: "/assets/stanley-speaker-huang-xiaomu.jpg",
         imageAlt: "讲师黄小木",
+        imageClassName: "is-speaker-portrait",
       },
       {
         title: "实力嘉宾 | Hoody",
@@ -456,6 +457,7 @@ const originalArticlePages = {
           "前字节跳动资深研发\n剪映中国用户增长服务端负责人\nAnthropic 官方认证 API 集成与模型应用专家",
         image: "/assets/stanley-speaker-hoody.jpg",
         imageAlt: "讲师 Hoody",
+        imageClassName: "is-speaker-portrait",
       },
       {
         title: "实力嘉宾 | 阿川",
@@ -463,6 +465,7 @@ const originalArticlePages = {
           "前美团策略分析师\n谷歌认证 AI 教育家\nAnthropic 官方认证 AI 应用专家\nAI 知识博主 / 千人AI社群主理人",
         image: "/assets/stanley-speaker-achuan.jpg",
         imageAlt: "讲师阿川",
+        imageClassName: "is-speaker-portrait",
       },
       {
         title: "实力嘉宾 | 金尘马",
@@ -470,6 +473,7 @@ const originalArticlePages = {
           "北京交通大学计算机硕士\n前美团、阿里巴巴高级研发工程师\n全网头部AI知识博主",
         image: "/assets/stanley-speaker-jinchen.jpg",
         imageAlt: "讲师金尘马",
+        imageClassName: "is-speaker-portrait",
       },
       {
         title: "关于 Stanley Team",
@@ -1461,7 +1465,12 @@ function OriginalArticlePage({ article, navigate }) {
             <h2>{section.title}</h2>
             <div>{section.body}</div>
             {section.image && (
-              <img className="original-article-inline-img" src={section.image} alt={section.imageAlt || ""} loading="lazy" />
+              <img
+                className={`original-article-inline-img ${section.imageClassName || ""}`.trim()}
+                src={section.image}
+                alt={section.imageAlt || ""}
+                loading="lazy"
+              />
             )}
           </section>
         ))}

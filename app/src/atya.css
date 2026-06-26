@@ -677,6 +677,13 @@ h3 {
   object-fit: cover;
 }
 
+.original-article-inline-img.is-speaker-portrait {
+  width: min(12rem, 52vw);
+  aspect-ratio: 1;
+  border-radius: 999px;
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.16);
+}
+
 .page-hero-grid > img {
   aspect-ratio: 1.55;
   border-radius: 8px;
