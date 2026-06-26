@@ -1,27 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="AI growth salon cover">
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="益企AI+ AI重塑企业增长实战沙龙封面">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#061529"/>
-      <stop offset="0.48" stop-color="#0a3153"/>
-      <stop offset="1" stop-color="#0d6c7c"/>
+      <stop offset="0" stop-color="#061326"/>
+      <stop offset="0.52" stop-color="#0b365e"/>
+      <stop offset="1" stop-color="#0a7f8a"/>
     </linearGradient>
-    <radialGradient id="glowA" cx="58%" cy="32%" r="48%">
-      <stop offset="0" stop-color="#37e6ff" stop-opacity="0.55"/>
-      <stop offset="0.48" stop-color="#37e6ff" stop-opacity="0.13"/>
+    <radialGradient id="glowA" cx="72%" cy="20%" r="45%">
+      <stop offset="0" stop-color="#55f1ff" stop-opacity="0.62"/>
+      <stop offset="0.5" stop-color="#55f1ff" stop-opacity="0.13"/>
       <stop offset="1" stop-color="#37e6ff" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="glowB" cx="23%" cy="71%" r="44%">
-      <stop offset="0" stop-color="#f0b84d" stop-opacity="0.35"/>
-      <stop offset="0.58" stop-color="#f0b84d" stop-opacity="0.07"/>
+    <radialGradient id="glowB" cx="18%" cy="80%" r="52%">
+      <stop offset="0" stop-color="#f0b84d" stop-opacity="0.42"/>
+      <stop offset="0.6" stop-color="#f0b84d" stop-opacity="0.08"/>
       <stop offset="1" stop-color="#f0b84d" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/>
-      <stop offset="1" stop-color="#ffffff" stop-opacity="0.06"/>
-    </linearGradient>
-    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#f8fbff" stop-opacity="0.95"/>
-      <stop offset="1" stop-color="#d9f7ff" stop-opacity="0.82"/>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#e3fbff" stop-opacity="0.86"/>
     </linearGradient>
     <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
       <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#020617" flood-opacity="0.32"/>
@@ -39,88 +35,72 @@
   <rect width="1600" height="900" fill="url(#glowA)"/>
   <rect width="1600" height="900" fill="url(#glowB)"/>
 
-  <g opacity="0.42">
-    <path d="M80 674 C330 552 485 622 706 470 C922 321 1134 298 1510 157" fill="none" stroke="#74e7ff" stroke-width="2"/>
-    <path d="M126 742 C371 638 574 701 785 551 C966 423 1179 386 1484 270" fill="none" stroke="#f4c46c" stroke-width="2" opacity="0.62"/>
-    <path d="M170 238 C422 313 576 238 763 309 C973 389 1172 302 1446 345" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.24"/>
+  <g opacity="0.18">
+    <path d="M0 662 L126 620 L224 648 L340 560 L448 596 L574 506 L674 543 L802 448 L910 488 L1020 394 L1146 431 L1272 322 L1396 365 L1600 244 L1600 900 L0 900 Z" fill="#02213b"/>
+    <path d="M0 736 L160 684 L286 716 L436 622 L548 656 L698 570 L830 606 L980 506 L1108 548 L1274 456 L1408 490 L1600 376 L1600 900 L0 900 Z" fill="#0b6070" opacity="0.52"/>
   </g>
 
-  <g opacity="0.2">
-    <path d="M0 682 L108 622 L185 652 L286 570 L367 602 L458 526 L537 556 L640 475 L715 506 L806 420 L889 455 L983 373 L1062 407 L1146 332 L1231 358 L1324 289 L1414 316 L1600 218 L1600 900 L0 900 Z" fill="#03243d"/>
-    <path d="M0 732 L117 686 L206 710 L319 632 L401 661 L522 579 L612 608 L721 537 L816 571 L921 496 L1018 521 L1128 455 L1236 487 L1345 415 L1452 442 L1600 365 L1600 900 L0 900 Z" fill="#0b5f74" opacity="0.45"/>
+  <g opacity="0.42" fill="none" stroke-linecap="round">
+    <path d="M90 702 C330 548 506 650 736 472 C922 328 1130 320 1512 156" stroke="#7defff" stroke-width="2"/>
+    <path d="M160 772 C396 640 590 710 808 544 C976 416 1182 386 1478 272" stroke="#f5c76e" stroke-width="2" opacity="0.68"/>
   </g>
 
-  <g transform="translate(148 140)">
-    <rect x="0" y="0" width="520" height="168" rx="28" fill="url(#glass)" stroke="#a8f3ff" stroke-opacity="0.28"/>
-    <circle cx="74" cy="84" r="36" fill="#12d5ff" opacity="0.18"/>
-    <path d="M58 87 L73 102 L98 67" fill="none" stroke="#7cf5ff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="138" y="52" width="310" height="15" rx="7.5" fill="#dff9ff" opacity="0.72"/>
-    <rect x="138" y="86" width="246" height="12" rx="6" fill="#8eeaff" opacity="0.44"/>
-    <rect x="138" y="116" width="188" height="12" rx="6" fill="#f0c66e" opacity="0.58"/>
+  <g transform="translate(112 116)">
+    <rect x="0" y="0" width="1376" height="668" rx="42" fill="#071b31" opacity="0.38" stroke="#9defff" stroke-opacity="0.2"/>
   </g>
 
-  <g transform="translate(650 136)" filter="url(#softShadow)">
-    <rect x="0" y="0" width="740" height="504" rx="38" fill="url(#panel)" opacity="0.96"/>
-    <rect x="46" y="48" width="648" height="72" rx="18" fill="#07223b" opacity="0.9"/>
-    <circle cx="94" cy="84" r="12" fill="#38e1ff"/>
-    <circle cx="132" cy="84" r="12" fill="#f2c76e"/>
-    <circle cx="170" cy="84" r="12" fill="#8df5d0"/>
-    <rect x="226" y="72" width="328" height="22" rx="11" fill="#b9f1ff" opacity="0.46"/>
+  <g transform="translate(160 158)">
+    <text x="0" y="0" fill="#8df5ff" font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="4">活动预告 · 深圳福田</text>
+    <text x="0" y="118" fill="#ffffff" font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, Arial, sans-serif" font-size="88" font-weight="900">益企AI+</text>
+    <text x="0" y="214" fill="#ffffff" font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, Arial, sans-serif" font-size="70" font-weight="900">AI重塑企业增长</text>
+    <text x="0" y="292" fill="#dffaff" font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, Arial, sans-serif" font-size="43" font-weight="700">实战沙龙</text>
 
-    <g transform="translate(62 166)">
-      <rect x="0" y="0" width="244" height="238" rx="24" fill="#ffffff" opacity="0.78"/>
-      <rect x="30" y="42" width="184" height="18" rx="9" fill="#0d718a" opacity="0.8"/>
-      <rect x="30" y="82" width="126" height="13" rx="6.5" fill="#0f3153" opacity="0.22"/>
-      <rect x="30" y="113" width="164" height="13" rx="6.5" fill="#0f3153" opacity="0.18"/>
-      <rect x="30" y="144" width="112" height="13" rx="6.5" fill="#0f3153" opacity="0.16"/>
-      <path d="M34 202 C78 174 116 188 151 156 C178 131 202 125 218 108" fill="none" stroke="#13b7dc" stroke-width="8" stroke-linecap="round"/>
-      <circle cx="218" cy="108" r="10" fill="#f0b84d"/>
+    <g transform="translate(0 382)">
+      <rect x="0" y="0" width="314" height="74" rx="37" fill="#ffffff" opacity="0.14" stroke="#9defff" stroke-opacity="0.28"/>
+      <text x="36" y="48" fill="#ffffff" font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, Arial, sans-serif" font-size="30" font-weight="800">2026.07.03</text>
+      <rect x="340" y="0" width="214" height="74" rx="37" fill="#f0bd53" opacity="0.96"/>
+      <text x="382" y="48" fill="#08223c" font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, Arial, sans-serif" font-size="30" font-weight="900">14:00–17:30</text>
+      <rect x="580" y="0" width="262" height="74" rx="37" fill="#ffffff" opacity="0.14" stroke="#9defff" stroke-opacity="0.28"/>
+      <text x="622" y="48" fill="#ffffff" font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, Arial, sans-serif" font-size="30" font-weight="800">华强科创广场</text>
     </g>
 
-    <g transform="translate(366 160)">
-      <circle cx="138" cy="124" r="108" fill="#082946" opacity="0.94"/>
-      <circle cx="138" cy="124" r="62" fill="none" stroke="#60eaff" stroke-width="2" opacity="0.62"/>
-      <circle cx="138" cy="124" r="18" fill="#f7c95c"/>
-      <g stroke="#68f1ff" stroke-width="3" opacity="0.76" filter="url(#lineGlow)">
-        <path d="M138 124 L70 74"/>
-        <path d="M138 124 L220 66"/>
-        <path d="M138 124 L237 169"/>
-        <path d="M138 124 L104 218"/>
-        <path d="M138 124 L57 153"/>
-      </g>
-      <g fill="#eefcff">
-        <circle cx="70" cy="74" r="13"/>
-        <circle cx="220" cy="66" r="13"/>
-        <circle cx="237" cy="169" r="13"/>
-        <circle cx="104" cy="218" r="13"/>
-        <circle cx="57" cy="153" r="13"/>
+    <text x="0" y="548" fill="#bfefff" font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, Arial, sans-serif" font-size="27" font-weight="700">澳大利亚潮汕青年会 · 协办推介</text>
+  </g>
+
+  <g transform="translate(980 154)" filter="url(#softShadow)">
+    <rect x="0" y="0" width="392" height="506" rx="34" fill="url(#card)"/>
+    <rect x="44" y="50" width="304" height="64" rx="18" fill="#06233e" opacity="0.92"/>
+    <circle cx="86" cy="82" r="10" fill="#34daf2"/>
+    <circle cx="122" cy="82" r="10" fill="#f4c76b"/>
+    <circle cx="158" cy="82" r="10" fill="#7ce9c6"/>
+    <rect x="200" y="72" width="102" height="18" rx="9" fill="#a9e9f2" opacity="0.58"/>
+
+    <g transform="translate(64 162)">
+      <rect x="0" y="0" width="264" height="244" rx="26" fill="#ffffff" opacity="0.82"/>
+      <rect x="34" y="38" width="180" height="17" rx="8.5" fill="#0e7994" opacity="0.76"/>
+      <rect x="34" y="74" width="132" height="13" rx="6.5" fill="#10334e" opacity="0.18"/>
+      <rect x="34" y="108" width="168" height="13" rx="6.5" fill="#10334e" opacity="0.15"/>
+      <rect x="34" y="142" width="116" height="13" rx="6.5" fill="#10334e" opacity="0.13"/>
+      <path d="M38 204 C78 176 114 188 150 156 C180 130 202 120 226 90" fill="none" stroke="#13b7dc" stroke-width="9" stroke-linecap="round"/>
+      <circle cx="226" cy="90" r="11" fill="#f0b84d"/>
+    </g>
+
+    <g transform="translate(84 420)" fill="none" stroke-linecap="round">
+      <path d="M0 30 L48 10 L98 26 L156 0 L218 18" stroke="#0d7f99" stroke-width="7"/>
+      <g fill="#ffffff" stroke="#6cecff" stroke-width="5">
+        <circle cx="0" cy="30" r="9"/>
+        <circle cx="48" cy="10" r="9"/>
+        <circle cx="98" cy="26" r="9"/>
+        <circle cx="156" cy="0" r="9"/>
+        <circle cx="218" cy="18" r="9"/>
       </g>
     </g>
   </g>
 
-  <g transform="translate(156 448)" filter="url(#softShadow)">
-    <rect x="0" y="0" width="432" height="236" rx="32" fill="#061a2d" opacity="0.78" stroke="#9bf2ff" stroke-opacity="0.26"/>
-    <g transform="translate(44 44)" fill="none" stroke-linecap="round">
-      <path d="M0 128 L70 82 L132 98 L210 42 L294 72 L344 16" stroke="#f4c76b" stroke-width="10"/>
-      <path d="M0 128 L70 82 L132 98 L210 42 L294 72 L344 16" stroke="#fff7d6" stroke-width="3" opacity="0.7"/>
-      <g fill="#102f4a" stroke="#84edff" stroke-width="5">
-        <circle cx="0" cy="128" r="11"/>
-        <circle cx="70" cy="82" r="11"/>
-        <circle cx="132" cy="98" r="11"/>
-        <circle cx="210" cy="42" r="11"/>
-        <circle cx="294" cy="72" r="11"/>
-        <circle cx="344" cy="16" r="11"/>
-      </g>
-    </g>
-    <rect x="44" y="190" width="138" height="10" rx="5" fill="#90eaff" opacity="0.44"/>
-    <rect x="204" y="190" width="88" height="10" rx="5" fill="#f4c76b" opacity="0.68"/>
-  </g>
-
-  <g opacity="0.7">
-    <circle cx="1360" cy="728" r="4" fill="#7cf5ff"/>
-    <circle cx="1424" cy="660" r="5" fill="#f5cf75"/>
-    <circle cx="1282" cy="626" r="3" fill="#ffffff"/>
-    <circle cx="1124" cy="742" r="4" fill="#7cf5ff"/>
-    <path d="M1124 742 L1282 626 L1360 728 L1424 660" fill="none" stroke="#bdf8ff" stroke-opacity="0.38" stroke-width="2"/>
+  <g transform="translate(1282 682)" opacity="0.72">
+    <circle cx="0" cy="0" r="5" fill="#7cf5ff"/>
+    <circle cx="70" cy="-64" r="5" fill="#f5cf75"/>
+    <circle cx="132" cy="8" r="4" fill="#ffffff"/>
+    <path d="M0 0 L70 -64 L132 8" fill="none" stroke="#bdf8ff" stroke-opacity="0.5" stroke-width="2"/>
   </g>
 </svg>

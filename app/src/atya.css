@@ -681,6 +681,8 @@ h3 {
   width: min(12rem, 52vw);
   aspect-ratio: 1;
   border-radius: 999px;
+  margin-right: auto;
+  margin-left: auto;
   box-shadow: 0 14px 28px rgba(15, 23, 42, 0.16);
 }
 
