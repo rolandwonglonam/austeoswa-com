@@ -42,6 +42,7 @@ const routeTitles = {
   "/news/3": "活动文章",
   "/news/4": "活动文章",
   "/news/5": "活动文章",
+  "/news/6": "活动文章",
   "/culture": "潮汕文化",
   "/business": "商务与资源",
   "/resources": "资源中心",
@@ -154,8 +155,9 @@ const articleImages = {
   article1: "https://tca-prod-public.oss-cn-shanghai.aliyuncs.com/new/new1-03.webp",
   article2: "https://tca-prod-public.oss-cn-shanghai.aliyuncs.com/new/new1-15.webp",
   article3: "/assets/letter-to-grandma-poster.webp",
-  article4: "/assets/consulate-visit-20260623.png",
-  article5: "/assets/letter-to-grandma-premiere-qld.png",
+  article4: "/assets/consulate-visit-20260623.webp",
+  article5: "/assets/letter-to-grandma-premiere-qld.webp",
+  article6: "/assets/stanley-speaker-huang-xiaomu.jpg",
 };
 
 const homeGrandmaImage = "/assets/letter-to-grandma-premiere.webp";
@@ -268,9 +270,20 @@ const articles = [
       "2026年6月24日晚，由澳大利亚潮汕青年会、澳洲潮州同乡会青年会联合华人影业（CMC Pictures）联合主办的电影《给阿嬷的情书》布里斯班首映礼圆满举行。",
     source: "青年会活动新闻",
   },
+  {
+    id: "6",
+    category: "活动预告",
+    date: "2026年6月26日",
+    image: articleImages.article6,
+    title: "活动预告 | 赋能中心 × Stanley Team「益企AI+」AI重塑企业增长实战沙龙即将开启",
+    summary:
+      "澳大利亚潮汕青年会作为协办单位，诚挚推介将于2026年7月3日在深圳举行的「益企AI+」实战沙龙。30席精品闭门场，手把手带你深入AI落地实践。",
+    source: "青年会合作活动",
+  },
 ];
 
 const newsItems = [
+  articles[5],
   articles[4],
   articles[3],
   articles[2],
@@ -376,7 +389,7 @@ const originalArticlePages = {
     date: "2026年6月24日",
     intro:
       "2026年6月24日晚，由澳大利亚潮汕青年会、澳洲潮州同乡会青年会联合华人影业（CMC Pictures）联合主办的电影《给阿嬷的情书》布里斯班首映礼，在布里斯班 Westfield Garden City Event Cinemas Mt Gravatt 举行。上百名观众到场观影，共同见证这一时刻。首映礼开场仪式由澳大利亚潮汕青年会监事长卢霄霓主持。Logan 市政府代表 Cassidy Shorland、澳大利亚潮汕青年会执行会长王罗湳相继上台致辞，全场反响热烈。《给阿嬷的情书》由导演蓝鸿春执导，以海外潮汕侨胞跨越山海的侨批为核心，通过真实细腻的情感叙事，唤起无数海外华人对故乡与至亲的深切思念。此次布里斯班首映礼是该片澳大利亚巡映的重要一站，次日（6月25日）影片在澳大利亚和新西兰正式公映。本次活动由澳大利亚潮汕青年会联合华人影业（CMC Pictures）共同呈现，赞助支持均来自昆士兰本地的潮汕人。",
-    introImage: "/assets/premiere-cinema-crowd.jpg",
+    introImage: "/assets/premiere-cinema-crowd.webp",
     introImageAlt: "首映礼现场观众入场",
     sections: [
       {
@@ -388,14 +401,14 @@ const originalArticlePages = {
         title: "嘉宾致辞",
         body:
           "开场仪式于晚间6点45分正式启动，两位嘉宾相继登台发言。\n\nCassidy Shorland 代表 Logan 市长出席并发表英文致辞，对澳大利亚潮汕青年会与华人影业共同举办此次首映礼表示肯定。他谈到，潮汕话对很多昆士兰家庭来说是家的声音。可能是祖辈说的语言，是饭桌边的日常，也是跨越时区的电话里那个熟悉的腔调。他指出，Logan 是澳大利亚多元文化社区之一，文化的传承正是通过家庭、社团、节庆与这样的首映礼一代代延续下去。",
-        image: "/assets/premiere-cassidy-speech.jpg",
+        image: "/assets/premiere-cassidy-speech.webp",
         imageAlt: "Cassidy Shorland 代表 Logan 市长致辞",
       },
       {
         title: "执行会长致辞",
         body:
           "澳大利亚潮汕青年会执行会长王罗湳受会长王泽平委托代表主办方发言，感谢 CMC 华人影业团队的信任与支持，感谢中国驻布里斯班总领馆的代表、Logan 市政府代表和知名演员海宇翔的出席，并向当晚的赞助伙伴以及所有参与筹备的志愿者和执行团队致谢。值得一提的是，本次首映礼的赞助商均是昆士兰州本地的企业赞助支持。\n\n他谈到，电影中的\"侨批\"对在场许多人来说并不陌生。从家乡出发、到澳洲落脚，先辈们寄回去的不只是生活费，也是平安和牵挂。他说，澳洲的潮汕二代、三代并不算多，正因如此，更要团结，更要讲做人、讲友情、讲互相扶持，也要为澳大利亚这个社区做出实实在在的贡献。他也希望在澳洲长大的年轻一代知道祖辈走过的路和说过的话。致辞以\"让感动在大洋彼岸延续\"作结。",
-        image: "/assets/premiere-roland-speech.jpg",
+        image: "/assets/premiere-roland-speech.webp",
         imageAlt: "澳大利亚潮汕青年会执行会长王罗湳致辞",
       },
       {
@@ -407,8 +420,61 @@ const originalArticlePages = {
         title: "齐举海报：有情有义",
         body:
           "致辞环节结束后，主持人引领观众集体举起电影海报共同合影留念。\"阿嬷说，做人要有情有义\"——在这里祝《给阿嬷的情书》，海外票房大卖！",
-        image: "/assets/premiere-poster-raise.jpg",
+        image: "/assets/premiere-poster-raise.webp",
         imageAlt: "观众齐举电影海报合影留念",
+      },
+    ],
+  },
+  "6": {
+    image: articleImages.article6,
+    imageAlt: "Stanley Team 讲师黄小木",
+    title: "活动预告 | 赋能中心 × Stanley Team「益企AI+」AI重塑企业增长实战沙龙即将开启",
+    date: "2026年6月26日",
+    intro:
+      "澳大利亚潮汕青年会作为协办单位，诚挚向各位会员及朋友推介一场即将于2026年7月3日在深圳（福田）举行的高质量AI实战沙龙——「益企AI+」AI重塑企业增长实战沙龙。\n\n当AI从\"问答\"走向\"交付\"，先行者已借助其批量生成内容、搭建知识库、抢占GEO推荐位。本次沙龙由深圳（福田）海联大模型和算法赋能服务中心邀请 Stanley Team 进行主题分享，手把手带你深入实践，走完一条完整的企业AI营销落地路径：AI视频内容生产 → 知识库搭建 → GEO抢占AI推荐位。30席精品闭门场，带着问题来，拿着方案走。",
+    sections: [
+      {
+        title: "活动详情",
+        body:
+          "时间：2026年7月3日（周五）14:00–17:30\n地点：华强科创广场1栋402（深圳福田）\n席位：仅30席\n\n指导单位：福田区委统战部\n主办单位：深圳（福田）海联大模型和算法赋能服务中心 / 奥斯比千模加速器 / 深圳市福田区新的社会阶层人士联合会 / Stanley Team\n协办单位：深圳市大数据研究与应用协会 / 星河产业集团产城研究院 / 澳大利亚潮汕商会 / 澳大利亚潮汕青年会",
+      },
+      {
+        title: "议程安排",
+        body:
+          "14:00–14:30　签到入场\n14:30–14:35　主持人开场致辞\n14:35–15:05　Hoody | AI视频内容引擎：企业营销素材的多模态生成工作流\n15:05–15:35　金尘马 | AI知识库搭建：助力内容营销与提效\n15:35–15:45　茶歇与自由交流\n15:45–16:15　黄小木 | GEO 如何助力品牌营销获客\n16:15–16:45　阿川 | AI时代，企业如何抓住增长红利？\n16:45–17:00　互动问答 & 自由交流",
+      },
+      {
+        title: "实力嘉宾 | 黄小木",
+        body:
+          "原中科院、腾讯资深研发团队负责人\nAnthropic 官方认证 Agent 构建与优化专家\n生财有术社群万人AI航海教练\n文生视频工作流 castvideo 作者",
+        image: "/assets/stanley-speaker-huang-xiaomu.jpg",
+        imageAlt: "讲师黄小木",
+      },
+      {
+        title: "实力嘉宾 | Hoody",
+        body:
+          "前字节跳动资深研发\n剪映中国用户增长服务端负责人\nAnthropic 官方认证 API 集成与模型应用专家",
+        image: "/assets/stanley-speaker-hoody.jpg",
+        imageAlt: "讲师 Hoody",
+      },
+      {
+        title: "实力嘉宾 | 阿川",
+        body:
+          "前美团策略分析师\n谷歌认证 AI 教育家\nAnthropic 官方认证 AI 应用专家\nAI 知识博主 / 千人AI社群主理人",
+        image: "/assets/stanley-speaker-achuan.jpg",
+        imageAlt: "讲师阿川",
+      },
+      {
+        title: "实力嘉宾 | 金尘马",
+        body:
+          "北京交通大学计算机硕士\n前美团、阿里巴巴高级研发工程师\n全网头部AI知识博主",
+        image: "/assets/stanley-speaker-jinchen.jpg",
+        imageAlt: "讲师金尘马",
+      },
+      {
+        title: "关于 Stanley Team",
+        body:
+          "Stanley Team 是目前活跃在互联网人工智能领域、独具特色且影响力领先的国际化社群组织。社群成员全网粉丝超百万，累计总曝光超十亿级别。社群由来自国内外拥有行业顶级专业认证的AI技术专家、知名专家学者、企业高管、媒体运营专家及行业专家等组成，定位于领先的国内外大模型深度落地实践，是AI新质生产力研究探索、AI技能培训、企业定制交付三合一的创新型组织。",
       },
     ],
   },
@@ -544,6 +610,7 @@ function titleFor(path) {
   if (path === "/news/3" || path === "/new/letter-to-grandma-premiere") return articles[2].title;
   if (path === "/news/4") return articles[3].title;
   if (path === "/news/5") return articles[4].title;
+  if (path === "/news/6") return articles[5].title;
   return routeTitles[path] || routeTitles[routeAliases[path]] || "首页";
 }
 
@@ -595,6 +662,7 @@ function App() {
         {(path === "/news/3" || path === "/new/letter-to-grandma-premiere") && <OriginalArticlePage article={originalArticlePages["3"]} navigate={navigate} />}
         {path === "/news/4" && <OriginalArticlePage article={originalArticlePages["4"]} navigate={navigate} />}
         {path === "/news/5" && <OriginalArticlePage article={originalArticlePages["5"]} navigate={navigate} />}
+        {path === "/news/6" && <OriginalArticlePage article={originalArticlePages["6"]} navigate={navigate} />}
         {path === "/culture" && <CulturePage />}
         {path === "/business" && <BusinessPage navigate={navigate} />}
         {path === "/resources" && <ResourcesPage navigate={navigate} />}
